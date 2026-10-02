@@ -1,0 +1,29 @@
+[
+    {
+        "id": "fecol-expodema-2026",
+        "titulo": "Estudiantes de ITEC participaron en FECOL-Expodema 2026",
+        "fecha": "2026-09-29",
+        "categoria": "Institucionales",
+        "resumen": "La participación en la feria permitió a estudiantes colaborar con su organización y ejercitar habilidades en un entorno laboral.",
+        "imagen": "img/noticias/fecol-expodema-2026.jpeg",
+        "url": "https://itec-elmolino.edu.ar/el-itec-acompano-a-fecol-expodema-2026-con-la-participacion-activa-de-sus-estudiantes/"
+    },
+    {
+        "id": "nuestra-identidad-2026",
+        "titulo": "Nuestra Identidad: proyectos escolares sobre la producción local",
+        "fecha": "2026-09-22",
+        "categoria": "Institucionales",
+        "resumen": "Nueve escuelas presentaron sus trabajos sobre actividades productivas de Esperanza. El instituto participó en la evaluación de las propuestas.",
+        "imagen": "img/noticias/nuestra-identidad-2026.jpg",
+        "url": "https://itec-elmolino.edu.ar/estudiantes-de-esperanza-pusieron-en-valor-la-identidad-productiva-de-la-ciudad-en-nuestra-identidad-2026/"
+    },
+    {
+        "id": "mas-alla-del-codigo",
+        "titulo": "28 jóvenes completaron el curso Más allá del código",
+        "fecha": "2026-09-15",
+        "categoria": "Cursos y Servicios",
+        "resumen": "Durante catorce semanas, los participantes exploraron herramientas digitales y elaboraron proyectos relacionados con necesidades de su ciudad.",
+        "imagen": "img/noticias/mas-alla-del-codigo.jpeg",
+        "url": "https://itec-elmolino.edu.ar/mas-alla-del-codigo-28-jovenes-finalizaron-una-experiencia-de-formacion-en-tecnologia/"
+    }
+]

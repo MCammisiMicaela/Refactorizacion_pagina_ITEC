@@ -1,0 +1,270 @@
+<template id="plantilla-cabecera">
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <a href="index.html" class="logo" aria-label="ITEC, ir al inicio">
+                <img
+                    src="img/logo.png"
+                    alt="Instituto Tecnológico El Molino"
+                    class="logo-imagen"
+                    width="200"
+                    height="42"
+                >
+            </a>
+
+            <button
+                class="menu-boton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+            >
+                Menú
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav
+                id="menu-principal"
+                class="menu"
+                aria-label="Navegación principal"
+            >
+                <a href="index.html" data-seccion="inicio">
+                    Inicio
+                </a>
+
+                <details class="menu-grupo" data-seccion-menu="institucional">
+                    <summary>Institucional</summary>
+
+                    <div class="submenu">
+                        <a href="paginas/institucional.html">
+                            Ver Institucional
+                        </a>
+
+                        <a href="paginas/institucional.html#quienes-somos">
+                            Quiénes somos
+                        </a>
+                        <a href="paginas/historia.html">
+                            Nuestra historia
+                        </a>
+                        <a href="paginas/institucional.html#mision-vision">
+                            Misión y visión
+                        </a>
+                        <a href="paginas/institucional.html#autoridades">
+                            Autoridades y equipo
+                        </a>
+                        <a href="paginas/infraestructura.html">
+                            Infraestructura
+                        </a>
+                        <a href="paginas/vinculacion.html">
+                            Vinculación institucional
+                        </a>
+                        <a href="paginas/noticias.html">
+                            Noticias
+                        </a>
+                    </div>
+                </details>
+
+                <details class="menu-grupo" data-seccion-menu="formacion">
+                    <summary>Estudiar en ITEC</summary>
+
+                    <div class="submenu">
+                        <a href="paginas/formacion.html">
+                            Conocé nuestra formación
+                        </a>
+                        <a href="paginas/tecnicaturas.html">
+                            Tecnicaturas
+                        </a>
+                        <a href="paginas/formacion-profesional.html">
+                            Formación Profesional
+                        </a>
+                        <a href="paginas/capacitaciones.html">
+                            Capacitaciones
+                        </a>
+                    </div>
+                </details>
+
+                <details class="menu-grupo" data-seccion-menu="ingresantes">
+                    <summary>Ingresantes</summary>
+
+                    <div class="submenu">
+                        <a href="paginas/ingresantes.html">
+                            Información para ingresantes
+                        </a>
+                        <a href="paginas/ingresantes.html#inscripciones">
+                            Inscripciones
+                        </a>
+                        <a href="paginas/ingresantes.html#requisitos">
+                            Requisitos
+                        </a>
+                        <a href="paginas/ingresantes.html#documentacion">
+                            Documentación
+                        </a>
+                        <a href="paginas/ingresantes.html#preguntas-frecuentes">
+                            Preguntas frecuentes
+                        </a>
+                    </div>
+                </details>
+
+                <a href="paginas/servicios.html" data-seccion="servicios">
+                    Servicios para empresas
+                </a>
+
+                <a href="paginas/contacto.html" data-seccion="contacto">
+                    Contacto
+                </a>
+
+                <a
+                    href="paginas/ingresantes.html#inscripciones"
+                    class="menu-inscripcion"
+                >
+                    Inscribirme
+                </a>
+            </nav>
+        </div>
+        <div class="contenedor cabecera-buscador">
+            <form
+                class="buscador-sitio"
+                action="paginas/buscar.html"
+                method="get"
+                role="search"
+                aria-label="Buscar en el sitio"
+            >
+                <label class="solo-lectores" for="busqueda-general">
+                    ¿Qué estás buscando?
+                </label>
+
+                <input
+                    type="search"
+                    id="busqueda-general"
+                    name="q"
+                    placeholder="Buscá carreras, cursos o información"
+                    maxlength="100"
+                    required
+                >
+
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+</template>
+
+<template id="plantilla-pie">
+    <footer class="pie">
+        <div class="contenedor pie-grid">
+            <div class="pie-instituto">
+                <img
+                    class="logo-pie"
+                    src="img/logo.png"
+                    alt="Instituto Tecnológico El Molino"
+                >
+
+                <p>
+                    Formando personas valiosas para la región y sus empresas.
+                </p>
+
+                <span class="linea-roja" aria-hidden="true"></span>
+
+                <div class="redes-pie" aria-label="Redes sociales del instituto">
+
+                    <a
+                        href="https://x.com/ItecElMolino?lang=es"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X del ITEC"
+                    >
+                        <img src="img/iconos/x.png" alt="">
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/itecelmolinoesperanza/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook del ITEC"
+                    >
+                        <img src="img/iconos/facebook.png" alt="">
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/itecelmolino/?hl=es"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram del ITEC"
+                    >
+                        <img src="img/iconos/instagram.png" alt="">
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/channel/UCNzjGtY_djCCKAjd4udFV_g"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube del ITEC"
+                    >
+                        <img src="img/iconos/youtube.png" alt="">
+                    </a>
+
+                </div>
+            </div>
+
+            <div>
+                <h2>Enlaces rápidos</h2>
+
+                <a href="index.html" data-seccion="inicio">
+                    Inicio
+                </a>
+
+                <a href="paginas/institucional.html" data-seccion="institucional">
+                    Institucional
+                </a>
+
+                <a href="paginas/formacion.html" data-seccion="formacion">
+                    Estudiar en ITEC
+                </a>
+
+                <a href="paginas/ingresantes.html" data-seccion="ingresantes">
+                    Ingresantes
+                </a>
+
+                <a href="paginas/servicios.html" data-seccion="servicios">
+                    Servicios para empresas
+                </a>
+
+                <a href="paginas/contacto.html" data-seccion="contacto">
+                    Contacto
+                </a>
+            </div>
+
+            <div>
+                <h2>Información</h2>
+                <p>Atención de lunes a viernes</p>
+                <p>9:00 a 12:00 hs.</p>
+                <p>16:00 a 21:00 hs.</p>
+            </div>
+
+            <div>
+                <h2>Contacto</h2>
+                <a href="tel:+543496426593">03496 426593</a>
+                <a href="mailto:info@itec-elmolino.edu.ar">
+                    info@itec-elmolino.edu.ar
+                </a>
+                <p>
+                    Rivadavia 1390, 1er piso,<br>
+                    Esperanza, Santa Fe.
+                </p>
+            </div>
+        </div>
+
+        <p class="pie-aclaracion">
+            © 2026 Instituto Tecnológico El Molino (ITEC).
+        </p>
+    </footer>
+    <a
+        class="whatsapp-flotante"
+        href="https://wa.me/543496502218?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20ITEC."
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <img src="img/iconos/whatsapp.png" alt="" width="26" height="26">
+        <span>Consultanos</span>
+        <span class="solo-lectores">
+            por WhatsApp, abre otra pestaña
+        </span>
+    </a>
+</template>

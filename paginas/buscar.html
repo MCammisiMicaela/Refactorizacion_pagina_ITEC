@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Buscá información en el sitio del Instituto Tecnológico El Molino.">
+    <title>Buscar | ITEC El Molino</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/busqueda.css">
+
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/componentes.js" defer></script>
+    <script src="../js/busqueda.js" defer></script>
+
+    <script src="../js/sugerencias.js" defer></script>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">
+        Saltar al contenido
+    </a>
+
+    <div id="cabecera-compartida"></div>
+
+    <main id="contenido" class="contenedor pagina-busqueda">
+        <nav class="ruta-busqueda" aria-label="Ruta de navegación">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Buscar</span>
+        </nav>
+
+        <h1>Buscar en ITEC</h1>
+        <p>Encontrá información y accedé directamente al contenido.</p>
+
+        <form
+            class="buscador-sitio"
+            action="buscar.html"
+            method="get"
+            role="search"
+            aria-label="Buscar desde la página de resultados"
+        >
+            <label class="solo-lectores" for="busqueda-resultados">
+                ¿Qué estás buscando?
+            </label>
+
+            <input
+                type="search"
+                id="busqueda-resultados"
+                name="q"
+                placeholder="Escribí lo que necesitás encontrar"
+                maxlength="100"
+                required
+            >
+
+            <button type="submit">Buscar</button>
+        </form>
+
+        <section aria-labelledby="titulo-resultados">
+            <h2 id="titulo-resultados">Resultados</h2>
+
+            <p id="estado-busqueda" role="status" aria-live="polite">
+                Escribí una palabra o una frase para buscar.
+            </p>
+
+            <ul id="resultados-busqueda" class="resultados-busqueda"></ul>
+        </section>
+
+        <noscript>
+            <p>
+                Para utilizar el buscador, activá JavaScript.
+                También podés
+                <a href="contacto.html">consultarnos desde Contacto</a>.
+            </p>
+        </noscript>
+    </main>
+
+    <div id="pie-compartido"></div>
+</body>
+</html>

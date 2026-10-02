@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medios de contacto, horarios de atención y ubicación del Instituto Tecnológico El Molino.">
+
+    <title>Contacto | Instituto Tecnológico El Molino</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/componentes.js" defer></script>
+    <script src="../js/contacto.js" defer></script>
+
+    <script src="../js/sugerencias.js" defer></script>
+</head>
+<body data-seccion="contacto">
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <div id="cabecera-compartida"></div>
+
+    <main id="contenido">
+        <section
+            id="inicio"
+            class="presentacion contenedor"
+            aria-labelledby="titulo-contacto"
+        >
+            <p class="ruta">
+                Inicio <span aria-hidden="true">/</span>
+                <strong>Contacto</strong>
+            </p>
+
+            <h1 id="titulo-contacto">Contacto</h1>
+
+            <p class="presentacion-texto">
+                Estamos para ayudarte. Comunicate con ITEC de forma rápida
+                y sencilla.
+            </p>
+
+            <span class="linea-roja" aria-hidden="true"></span>
+        </section>
+
+        <section
+            id="canales"
+            class="canales contenedor"
+            aria-label="Medios de contacto"
+        >
+            <article class="tarjeta-contacto">
+                <div class="tarjeta-icono icono-whatsapp" aria-hidden="true">
+                    <img src="../img/iconos/whatsapp.png" alt="">
+                </div>
+
+                <h2>WhatsApp</h2>
+                <p>Consultas rápidas y atención directa.</p>
+
+                <a
+                    class="boton-contacto boton-whatsapp"
+                    href="https://wa.me/543496502218"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Escribinos
+                    <span class="solo-lectores">
+                        por WhatsApp, abre otra pestaña
+                    </span>
+                </a>
+            </article>
+
+            <article class="tarjeta-contacto">
+                <div class="tarjeta-icono" aria-hidden="true">
+                    <img src="../img/iconos/correo.png" alt="">
+                </div>
+
+                <h2>Correo electrónico</h2>
+                <p>Escribinos para información académica e institucional.</p>
+
+                <a
+                    class="boton-contacto"
+                    href="mailto:info@itec-elmolino.edu.ar"
+                >
+                    Enviar email
+                </a>
+            </article>
+
+            <article class="tarjeta-contacto">
+                <div class="tarjeta-icono" aria-hidden="true">
+                    <img src="../img/iconos/telefono.png" alt="">
+                </div>
+
+                <h2>Teléfono</h2>
+                <p>Atención en horarios administrativos.</p>
+
+                <a class="boton-contacto" href="tel:+543496426593">
+                    03496 426593
+                </a>
+            </article>
+
+            <article class="tarjeta-contacto">
+                <div class="tarjeta-icono" aria-hidden="true">
+                    <img src="../img/iconos/ubicacion.png" alt="">
+                </div>
+
+                <h2>Dirección</h2>
+                <p>Rivadavia 1390, 1er piso, Esperanza, Santa Fe.</p>
+
+                <a class="boton-contacto" href="#ubicacion">
+                    Ver ubicación
+                </a>
+            </article>
+        </section>
+
+        <section
+            id="consulta"
+            class="seccion-consulta contenedor"
+            aria-labelledby="titulo-consulta"
+        >
+            <div class="formulario-tarjeta">
+                <span class="linea-roja" aria-hidden="true"></span>
+
+                <h2 id="titulo-consulta">Envíanos tu consulta</h2>
+                <p>Completá el formulario para preparar un correo a ITEC.</p>
+                <p class="campos-obligatorios">
+                    Los campos con * son obligatorios.
+                </p>
+
+                <form id="formulario-contacto" novalidate>
+                    <div class="formulario-fila">
+                        <div class="campo">
+                            <label for="nombre">
+                                Nombre y apellido
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                autocomplete="name"
+                                minlength="3"
+                                maxlength="100"
+                                required
+                            >
+
+                            <small
+                                class="mensaje-error"
+                                id="error-nombre"
+                            ></small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="correo">
+                                Correo electrónico
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                autocomplete="email"
+                                maxlength="150"
+                                required
+                            >
+
+                            <small
+                                class="mensaje-error"
+                                id="error-correo"
+                            ></small>
+                        </div>
+                    </div>
+
+                    <div class="formulario-fila">
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                autocomplete="tel"
+                                maxlength="30"
+                            >
+
+                            <small
+                                class="mensaje-error"
+                                id="error-telefono"
+                            ></small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="motivo">
+                                Motivo de consulta
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="Tecnicaturas">Tecnicaturas</option>
+                                <option value="Inscripciones">Inscripciones</option>
+                                <option value="Formación Profesional">
+                                    Formación Profesional
+                                </option>
+                                <option value="Capacitaciones">
+                                    Capacitaciones
+                                </option>
+                                <option value="Servicios para empresas">
+                                    Servicios para empresas
+                                </option>
+                                <option value="Otra consulta">
+                                    Otra consulta
+                                </option>
+                            </select>
+
+                            <small
+                                class="mensaje-error"
+                                id="error-motivo"
+                            ></small>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">
+                            Mensaje <span aria-hidden="true">*</span>
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            minlength="10"
+                            maxlength="2000"
+                            placeholder="Contanos tu consulta..."
+                            required
+                        ></textarea>
+
+                        <small
+                            class="mensaje-error"
+                            id="error-mensaje"
+                        ></small>
+                    </div>
+
+                    <div class="campo-aceptacion">
+                        <input
+                            type="checkbox"
+                            id="aceptacion"
+                            name="aceptacion"
+                            required
+                        >
+
+                        <label for="aceptacion">
+                            Acepto que mis datos se utilicen para responder
+                            esta consulta.
+                            <span aria-hidden="true">*</span>
+                        </label>
+                    </div>
+
+                    <small
+                        class="mensaje-error"
+                        id="error-aceptacion"
+                    ></small>
+
+                    <button type="submit" class="boton-enviar">
+                        Preparar consulta
+                    </button>
+
+                    <p
+                        id="resultado-formulario"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <p class="nota-formulario">
+                        Se abrirá tu aplicación de correo. Revisá el mensaje
+                        y presioná Enviar allí para completar la consulta.
+                    </p>
+                </form>
+            </div>
+
+            <aside
+                class="informacion-util"
+                aria-labelledby="titulo-informacion"
+            >
+                <h2 id="titulo-informacion">Información útil</h2>
+
+                <div class="horario-atencion">
+                    <img
+                        class="icono-horario"
+                        src="../img/iconos/reloj.png"
+                        alt=""
+                        width="30"
+                        height="30"
+                    >
+
+                    <div>
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a viernes</p>
+                        <strong>
+                            9:00 a 12:00 hs. | 16:00 a 21:00 hs.
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="otros-canales">
+                    <h3>Nuestros canales</h3>
+
+                    <div class="enlaces-canales">
+                        <a
+                            href="https://wa.me/543496502218"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="../img/iconos/whatsapp.png" alt="">
+                            WhatsApp
+                        </a>
+
+                        <a href="mailto:info@itec-elmolino.edu.ar">
+                            <img src="../img/iconos/correo.png" alt="">
+                            Correo
+                        </a>
+
+                        <a href="tel:+543496426593">
+                            <img src="../img/iconos/telefono.png" alt="">
+                            Teléfono
+                        </a>
+                    </div>
+                </div>
+
+                <img
+                    class="imagen-informacion"
+                    src="../img/edificio-itec2.png"
+                    alt=""
+                    loading="lazy"
+                >
+            </aside>
+        </section>
+
+        <section
+            id="ubicacion"
+            class="ubicacion contenedor"
+            aria-labelledby="ubicacion-titulo"
+        >
+            <h2 id="ubicacion-titulo">Cómo llegar</h2>
+            <p>Visitá nuestras instalaciones en Esperanza, Santa Fe.</p>
+            <span class="linea-roja" aria-hidden="true"></span>
+
+            <div class="ubicacion-grid">
+                <iframe
+                    title="Mapa de Rivadavia 1390, Esperanza, Santa Fe"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Rivadavia%201390%2C%20Esperanza%2C%20Santa%20Fe&output=embed"
+                ></iframe>
+
+                <div class="direccion">
+                    <img
+                        class="pin"
+                        src="../img/iconos/ubicacion.png"
+                        alt=""
+                    >
+
+                    <h3>Instituto Tecnológico<br>El Molino</h3>
+
+                    <address>
+                        Rivadavia 1390, 1er piso,<br>
+                        Esperanza, Santa Fe.
+                    </address>
+
+                    <div class="direccion-acciones">
+                        <a
+                            class="boton"
+                            href="https://www.google.com/maps/search/?api=1&query=Rivadavia+1390%2C+Esperanza%2C+Santa+Fe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Abrir en Maps
+                        </a>
+
+                        <button id="copiar" class="boton" type="button">
+                            Copiar dirección
+                        </button>
+                    </div>
+
+                    <p
+                        id="copiado"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="cierre contenedor"
+            aria-labelledby="titulo-ayuda"
+        >
+            <div>
+                <h2 id="titulo-ayuda">
+                    ¿Tenés dudas sobre inscripciones o carreras?
+                </h2>
+                <p>Nuestro equipo está listo para ayudarte.</p>
+            </div>
+
+            <div class="cierre-botones">
+                <a
+                    class="boton"
+                    href="https://wa.me/543496502218"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Escribinos por WhatsApp
+                </a>
+
+                <a class="boton" href="mailto:info@itec-elmolino.edu.ar">
+                    Consultar por email
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="pie-compartido"></div>
+</body>
+</html>

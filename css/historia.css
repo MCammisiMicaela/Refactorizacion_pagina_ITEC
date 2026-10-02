@@ -1,0 +1,127 @@
+.pagina-historia {
+    padding-block: 28px 48px;
+}
+
+.historia-ruta ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.historia-ruta li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: #626973;
+}
+
+.historia-ruta a {
+    color: var(--rojo-oscuro);
+    text-underline-offset: 4px;
+}
+
+.historia-ruta [aria-current="page"] {
+    color: #555e69;
+}
+
+.historia-presentacion {
+    max-width: 780px;
+    margin-bottom: 40px;
+}
+
+.historia-presentacion .linea-roja,
+.historia-etapa > .linea-roja {
+    margin-bottom: 14px;
+}
+
+.historia-presentacion h1 {
+    margin: 0 0 18px;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.historia-bajada {
+    margin: 0 0 16px;
+    color: #555e69;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.historia-contexto {
+    margin: 0;
+    padding: 14px 18px;
+    border-left: 3px solid var(--rojo);
+    background-color: #fafafa;
+    color: #555e69;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.historia-etapa {
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.historia-etapa > h2 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 3vw, 32px);
+    line-height: 1.25;
+}
+
+.historia-lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--borde);
+}
+
+.historia-hito {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-block: 20px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.historia-hito h3 {
+    margin: 0;
+    color: var(--rojo-oscuro);
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.historia-hito p {
+    margin: 0;
+    color: #555e69;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.historia-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.historia-acciones .boton {
+    min-height: 44px;
+    padding: 11px 16px;
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    .historia-hito {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (min-width: 900px) {
+    .pagina-historia {
+        padding-bottom: 60px;
+    }
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "titulo": "Contacto",
+        "descripcion": "Comunicate con ITEC por WhatsApp, correo electrónico o teléfono.",
+        "url": "paginas/contacto.html",
+        "palabras": "contacto consultar consultas whatsapp correo email telefono"
+    },
+    {
+        "titulo": "Formulario de consulta",
+        "descripcion": "Prepará un correo con tu consulta para el instituto.",
+        "url": "paginas/contacto.html#consulta",
+        "palabras": "formulario mensaje consulta informacion"
+    },
+    {
+        "titulo": "Horarios de atención",
+        "descripcion": "Consultá los horarios de atención y los canales disponibles.",
+        "url": "paginas/contacto.html#titulo-informacion",
+        "palabras": "horarios atencion dias atender"
+    },
+    {
+        "titulo": "Ubicación y cómo llegar",
+        "descripcion": "Encontrá el mapa y la dirección del instituto en Esperanza, Santa Fe.",
+        "url": "paginas/contacto.html#ubicacion",
+        "palabras": "ubicacion direccion mapa llegar donde esperanza santa fe"
+    },
+    {
+    "titulo": "Historia del instituto",
+    "descripcion": "Recorrido histórico de ITEC entre 1998 y 2023, presentado con motivo de su 25.º aniversario.",
+    "url": "paginas/historia.html",
+    "palabras": "historia trayectoria aniversario fundacion origen hitos institucional 25 años"
+    },
+    {
+    "titulo": "Inicio",
+    "descripcion": "Presentación de ITEC, propuestas de formación, noticias, servicios y accesos de contacto.",
+    "url": "index.html",
+    "palabras": "inicio portada principal instituto itec el molino"
+},
+{
+    "titulo": "Boletín informativo",
+    "descripcion": "Probá el formulario de suscripción a novedades del prototipo académico.",
+    "url": "index.html#boletin",
+    "palabras": "boletin novedades newsletter suscripcion suscribirme"
+}
+]
