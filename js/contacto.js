@@ -236,3 +236,70 @@ if (botonCopiar && estadoCopiado) {
         }
     });
 }
+
+function completarConsultaDeServicio() {
+    const parametros = new URLSearchParams(window.location.search);
+
+    if (parametros.has("carrera")) {
+        return;
+    }
+
+    const servicios = new Map([
+        [
+            "servicios-tecnologicos",
+            {
+                nombre: "Servicios Tecnológicos",
+                indicacion: "Necesito consultar por el siguiente material, pieza o ensayo:"
+            }
+        ],
+        [
+            "uvt",
+            {
+                nombre: "Unidad de Vinculación Tecnológica",
+                indicacion: "Quisiera recibir orientación sobre el siguiente proyecto:"
+            }
+        ],
+        [
+            "asistencia-tecnica",
+            {
+                nombre: "Asistencia Técnica y Consultoría",
+                indicacion: "Necesitamos acompañamiento en la siguiente área o proceso:"
+            }
+        ],
+        [
+            "capacitacion-empresas",
+            {
+                nombre: "Capacitación para empresas",
+                indicacion: "Nos interesa una capacitación sobre el siguiente tema:"
+            }
+        ],
+        [
+            "orientacion-empresas",
+            {
+                nombre: "Servicios para empresas",
+                indicacion: "Quisiera consultar qué servicio corresponde a esta necesidad:"
+            }
+        ]
+    ]);
+
+    const servicio = servicios.get(parametros.get("servicio"));
+    const campoMotivo = document.getElementById("motivo");
+    const campoMensaje = document.getElementById("mensaje");
+
+    if (!servicio || !campoMotivo || !campoMensaje) {
+        return;
+    }
+
+    if (!campoMotivo.value) {
+        campoMotivo.value = "Servicios para empresas";
+    }
+
+    if (!campoMensaje.value.trim()) {
+        campoMensaje.value =
+            `Hola, quisiera recibir información sobre ${servicio.nombre}.\n\n` +
+            `Empresa u organización: \n\n` +
+            `${servicio.indicacion}\n`;
+    }
+}
+
+completarConsultaDeServicio();

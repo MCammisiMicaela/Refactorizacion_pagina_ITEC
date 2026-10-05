@@ -76,5 +76,35 @@
   "descripcion": "Tecnicatura de tres años orientada a la prevención de riesgos y la seguridad laboral. Consultá su perfil y plan de estudios.",
   "url": "paginas/carreras/seguridad-higiene.html",
   "palabras": "tecnicatura carrera seguridad higiene medio ambiente trabajo laboral riesgos prevencion salud accidentes auditorias"
+},
+{
+  "titulo": "Servicios para empresas",
+  "descripcion": "Conocé los servicios tecnológicos, la vinculación tecnológica, la consultoría y las propuestas de capacitación para empresas.",
+  "palabras": "empresas organizaciones industria servicios asesoramiento",
+  "url": "paginas/servicios.html"
+},
+{
+  "titulo": "Servicios Tecnológicos",
+  "descripcion": "Consultá sobre ensayos destructivos, no destructivos, metalografía y soldadura.",
+  "palabras": "ensayos materiales calidad traccion dureza metales tintas penetrantes ultrasonido metalografia soldadura",
+  "url": "paginas/servicios.html#servicios-tecnologicos"
+},
+{
+  "titulo": "Unidad de Vinculación Tecnológica (UVT)",
+  "descripcion": "Información sobre acompañamiento a proyectos productivos, innovación y transferencia tecnológica.",
+  "palabras": "uvt vinculacion tecnologia innovacion proyectos investigacion desarrollo programas",
+  "url": "paginas/servicios.html#uvt"
+},
+{
+  "titulo": "Asistencia Técnica y Consultoría",
+  "descripcion": "Consultá por asistencia en recursos humanos, calidad, producción, automatización y gestión empresarial.",
+  "palabras": "consultoria asesoramiento asistencia tecnica recursos humanos calidad automatizacion produccion negocios marketing",
+  "url": "paginas/servicios.html#asistencia-tecnica"
+},
+{
+  "titulo": "Capacitación para empresas",
+  "descripcion": "Información sobre cursos, talleres y seminarios para la formación y actualización de equipos de trabajo.",
+  "palabras": "capacitacion empresas cursos talleres seminarios personal equipos formacion interna",
+  "url": "paginas/servicios.html#capacitacion-empresas"
 }
 ]
