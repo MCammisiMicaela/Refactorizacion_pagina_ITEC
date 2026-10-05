@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detalle de noticia del Instituto Tecnológico El Molino.">
+    <title>Noticia | ITEC El Molino</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/noticias.css">
+
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/componentes.js" defer></script>
+    <script src="../js/sugerencias.js" defer></script>
+    <script src="../js/noticia-detalle.js" defer></script>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">
+        Saltar al contenido
+    </a>
+
+    <div id="cabecera-compartida"></div>
+
+    <main id="contenido" class="contenedor pagina-noticia-detalle">
+        <nav class="ruta-noticias" aria-label="Ruta de navegación">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <a href="noticias.html">Noticias</a>
+            <span aria-hidden="true">/</span>
+            <span id="ruta-noticia-titulo" aria-current="page">Detalle</span>
+        </nav>
+
+        <div id="estado-noticia-detalle" class="noticias-estado" role="status" aria-live="polite">
+            Cargando noticia…
+        </div>
+
+        <article id="noticia-detalle" class="noticia-detalle-articulo"></article>
+
+        <section class="noticias-relacionadas" aria-labelledby="titulo-relacionadas">
+            <h2 id="titulo-relacionadas">Otras noticias recientes</h2>
+            <div id="contenedor-noticias-relacionadas" class="noticias-grid"></div>
+        </section>
+
+        <noscript>
+            <p class="noticias-estado">
+                Para ver el contenido completo de la noticia, activá JavaScript en tu navegador.
+            </p>
+        </noscript>
+    </main>
+
+    <div id="pie-compartido"></div>
+</body>
+</html>

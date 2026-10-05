@@ -85,11 +85,11 @@ async function cargarNoticiasDestacadas() {
 
             const enlace = document.createElement("a");
             enlace.className = "noticia-enlace";
-            enlace.href = new URL(noticia.url, raizInicio).href;
-            enlace.textContent = "Leer en el sitio oficial";
+            enlace.href = new URL(`paginas/noticia.html?id=${encodeURIComponent(noticia.id)}`, raizInicio).href;
+            enlace.innerHTML = `Leer noticia completa <span aria-hidden="true">→</span>`;
             enlace.setAttribute(
                 "aria-label",
-                `Leer en el sitio oficial: ${noticia.titulo}`
+                `Leer noticia completa: ${noticia.titulo}`
             );
 
             contenido.append(categoria, fecha, titulo, resumen, enlace);

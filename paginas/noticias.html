@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Noticias, novedades institucionales, actividades y eventos del Instituto Tecnológico El Molino en Esperanza, Santa Fe.">
+    <title>Noticias | ITEC El Molino</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/noticias.css">
+
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/componentes.js" defer></script>
+    <script src="../js/sugerencias.js" defer></script>
+    <script src="../js/noticias.js" defer></script>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">
+        Saltar al contenido
+    </a>
+
+    <div id="cabecera-compartida"></div>
+
+    <main id="contenido" class="contenedor pagina-noticias">
+        <nav class="ruta-noticias" aria-label="Ruta de navegación">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Noticias</span>
+        </nav>
+
+        <h1>Noticias e Institucionales</h1>
+        <p>Enterate de las novedades, actividades académicas y eventos de la comunidad ITEC.</p>
+
+        <!-- Barra de herramientas: Búsqueda y Filtros -->
+        <section class="noticias-filtros" aria-label="Filtros de noticias">
+            <div class="noticias-campo-filtro">
+                <label for="busqueda-noticias">Buscar noticia</label>
+                <input
+                    type="search"
+                    id="busqueda-noticias"
+                    placeholder="Buscá por título o tema..."
+                    maxlength="100"
+                >
+            </div>
+
+            <div class="noticias-campo-filtro">
+                <label for="filtro-categoria">Categoría</label>
+                <select id="filtro-categoria">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="Institucionales">Institucionales</option>
+                    <option value="Cursos y Servicios">Cursos y Servicios</option>
+                    <option value="Vinculación">Vinculación</option>
+                </select>
+            </div>
+
+            <div class="noticias-campo-filtro">
+                <label for="filtro-anio">Año</label>
+                <select id="filtro-anio">
+                    <option value="todos">Todos los años</option>
+                </select>
+            </div>
+
+            <button type="button" id="limpiar-filtros" class="boton-limpiar-filtros">
+                Limpiar filtros
+            </button>
+        </section>
+
+        <!-- Mensaje de estado accesible -->
+        <div id="estado-noticias" class="noticias-estado" role="status" aria-live="polite">
+            Cargando noticias…
+        </div>
+
+        <!-- Listado principal de noticias en tarjetas -->
+        <div id="contenedor-noticias" class="noticias-grid"></div>
+
+        <!-- Paginación -->
+        <nav id="paginacion-noticias" class="noticias-paginacion" aria-label="Navegación de páginas"></nav>
+
+        <noscript>
+            <p class="noticias-estado">
+                Para ver el listado completo de noticias y usar los filtros, activá JavaScript en tu navegador.
+            </p>
+        </noscript>
+    </main>
+
+    <div id="pie-compartido"></div>
+</body>
+</html>

@@ -40,5 +40,11 @@
     "descripcion": "Probá el formulario de suscripción a novedades del prototipo académico.",
     "url": "index.html#boletin",
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
+},
+{
+    "titulo": "Noticias e Institucionales",
+    "descripcion": "Novedades, comunicados, eventos y archivo histórico de publicaciones de ITEC.",
+    "url": "paginas/noticias.html",
+    "palabras": "noticias novedades comunicados publicaciones eventos archivo historico"
 }
 ]
