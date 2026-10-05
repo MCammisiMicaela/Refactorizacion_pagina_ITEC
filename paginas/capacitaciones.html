@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desarrollo de capacitaciones abiertas y formación a medida para empresas y profesionales en el Instituto Tecnológico El Molino (ITEC).">
+
+    <title>Capacitaciones y Desarrollo Profesional | Instituto Tecnológico El Molino</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/capacitaciones.css">
+
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/componentes.js" defer></script>
+    <script src="../js/capacitaciones.js" defer></script>
+</head>
+<body data-seccion="formacion">
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <div id="cabecera-compartida"></div>
+
+    <main id="contenido">
+        <!-- 1. Presentación e Introducción -->
+        <section
+            id="inicio"
+            class="presentacion-capacitaciones contenedor"
+            aria-labelledby="titulo-capacitaciones"
+        >
+            <p class="ruta">
+                Inicio <span aria-hidden="true">/</span>
+                Estudiar en ITEC <span aria-hidden="true">/</span>
+                <strong>Capacitaciones</strong>
+            </p>
+
+            <h1 id="titulo-capacitaciones">Capacitaciones y Desarrollo Profesional</h1>
+
+            <p class="presentacion-texto">
+                Programas intensivos de formación continua orientados a desarrollar 
+                competencias técnicas, tecnológicas y de gestión aplicadas a las 
+                demandas del sector productivo.
+            </p>
+
+            <span class="linea-roja" aria-hidden="true"></span>
+        </section>
+
+        <!-- 2. Explicación de Destinatarios -->
+        <section
+            id="destinatarios"
+            class="seccion-destinatarios"
+            aria-labelledby="titulo-destinatarios"
+        >
+            <div class="contenedor">
+                <h2 id="titulo-destinatarios" class="destinatarios-titulo">
+                    Formación orientada a personas y organizaciones
+                </h2>
+                <p class="destinatarios-subtitulo">
+                    Diseñamos nuestras capacitaciones según las necesidades concretas de cada perfil:
+                </p>
+
+                <div class="destinatarios-grid">
+                    <article class="tarjeta-destinatario">
+                        <div class="destinatario-icono" aria-hidden="true">👤</div>
+                        <h3>Público General y Estudiantes</h3>
+                        <p>
+                            Cursos de formación profesional práctica para rápida inserción laboral, 
+                            adquisición de primeros oficios técnicos y desarrollo de habilidades personales.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta-destinatario">
+                        <div class="destinatario-icono" aria-hidden="true">⚙️</div>
+                        <h3>Profesionales y Técnicos</h3>
+                        <p>
+                            Actualización técnica de alto nivel en automatización, tecnologías CNC, 
+                            calidad industrial, energías renovables y competencias de gestión.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta-destinatario">
+                        <div class="destinatario-icono" aria-hidden="true">🏢</div>
+                        <h3>Empresas y PyMEs</h3>
+                        <p>
+                            Programas in-company y capacitaciones a medida para perfeccionar 
+                            los equipos de trabajo, mejorar procesos productivos y promover el liderazgo.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 y 5. Oferta de Capacitaciones con Filtros Dinámicos -->
+        <section
+            id="oferta"
+            class="seccion-oferta contenedor"
+            aria-labelledby="titulo-oferta"
+        >
+            <h2 id="titulo-oferta" class="solo-lectores">Nuestra oferta académica</h2>
+
+            <!-- Pestañas por Tipo -->
+            <div class="contenedor-tabs" role="tablist" aria-label="Filtrar oferta por tipo de destinatario">
+                <button
+                    type="button"
+                    class="tab-btn activo"
+                    role="tab"
+                    aria-selected="true"
+                    data-tipo="todas"
+                    id="tab-todas"
+                >
+                    Todas las capacitaciones
+                </button>
+                <button
+                    type="button"
+                    class="tab-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-tipo="abierta"
+                    id="tab-abiertas"
+                >
+                    Capacitaciones Abiertas
+                </button>
+                <button
+                    type="button"
+                    class="tab-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-tipo="empresa"
+                    id="tab-empresas"
+                >
+                    Propuestas para Empresas
+                </button>
+            </div>
+
+            <!-- Barra de Filtros -->
+            <div class="barra-filtros" role="search" aria-label="Filtros de búsqueda de capacitaciones">
+                <div class="filtro-campo-busqueda">
+                    <label for="busqueda-texto" class="solo-lectores">Buscar por palabra clave</label>
+                    <input
+                        type="search"
+                        id="busqueda-texto"
+                        placeholder="Buscar por título, temática o palabra clave..."
+                        maxlength="100"
+                    >
+                </div>
+
+                <div class="filtro-select">
+                    <label for="filtro-area" class="solo-lectores">Filtrar por Área</label>
+                    <select id="filtro-area">
+                        <option value="todas">Todas las áreas</option>
+                        <option value="industria">Industria y Metalmecánica</option>
+                        <option value="tecnologia">Tecnología y Automatización</option>
+                        <option value="gestion">Gestión y PyMEs</option>
+                        <option value="seguridad">Seguridad e Higiene</option>
+                    </select>
+                </div>
+
+                <div class="filtro-select">
+                    <label for="filtro-estado" class="solo-lectores">Filtrar por Estado</label>
+                    <select id="filtro-estado">
+                        <option value="todos">Todos los estados</option>
+                        <option value="abierta">Inscripción Abierta</option>
+                        <option value="proximamente">Próximamente</option>
+                    </select>
+                </div>
+
+                <button
+                    type="button"
+                    id="btn-limpiar-filtros"
+                    class="boton-limpiar-filtros"
+                >
+                    Limpiar filtros
+                </button>
+            </div>
+
+            <!-- Estado de Resultados -->
+            <div id="estado-capacitaciones" class="estado-capacitaciones" aria-live="polite">
+                Cargando capacitaciones…
+            </div>
+
+            <!-- Grid de Tarjetas (Rellenado por JavaScript) -->
+            <div id="grid-capacitaciones" class="capacitaciones-grid"></div>
+        </section>
+
+        <!-- 6. Acceso para Capacitación a Medida -->
+        <section id="a-medida" class="contenedor">
+            <div class="seccion-a-medida">
+                <div class="a-medida-contenido">
+                    <h2>¿Buscás una capacitación a medida para tu empresa?</h2>
+                    <p>
+                        Diseñamos trayectos formativos in-company adaptados a los procesos, 
+                        tecnologías y necesidades específicas de tu equipo de trabajo.
+                    </p>
+                </div>
+                <button
+                    type="button"
+                    class="boton-medida boton-solicitar-medida"
+                    id="btn-abrir-medida"
+                >
+                    Solicitar propuesta a medida
+                </button>
+            </div>
+        </section>
+
+        <!-- 3 y 4. Modal Accesible de Detalle de Capacitación (<dialog>) -->
+        <dialog id="modal-detalle" class="modal-dialog" aria-labelledby="modal-detalle-titulo">
+            <div class="modal-header">
+                <div class="modal-header-titulos">
+                    <span id="modal-detalle-badge-area" class="badge badge-area"></span>
+                    <span id="modal-detalle-badge-estado" class="badge"></span>
+                    <h2 id="modal-detalle-titulo"></h2>
+                </div>
+                <button
+                    type="button"
+                    class="modal-cerrar"
+                    id="btn-cerrar-detalle"
+                    aria-label="Cerrar detalles de la capacitación"
+                >
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-grid-meta">
+                    <div class="meta-item">
+                        <strong>Modalidad</strong>
+                        <span id="modal-detalle-modalidad"></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Duración</strong>
+                        <span id="modal-detalle-duracion"></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Horarios</strong>
+                        <span id="modal-detalle-horarios"></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Inicio Previsto</strong>
+                        <span id="modal-detalle-inicio"></span>
+                    </div>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Descripción</h4>
+                    <p id="modal-detalle-descripcion"></p>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Audiencia Principal</h4>
+                    <p id="modal-detalle-audiencia"></p>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Requisitos</h4>
+                    <ul id="modal-detalle-requisitos" class="modal-lista"></ul>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Programa / Temario</h4>
+                    <ul id="modal-detalle-temario" class="modal-lista"></ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="boton"
+                    id="btn-secundario-detalle"
+                >
+                    Cerrar
+                </button>
+                <a
+                    href="contacto.html"
+                    class="boton menu-inscripcion"
+                    id="btn-inscripcion-modal"
+                    style="text-decoration:none;"
+                >
+                    Consultar e Inscribirme
+                </a>
+            </div>
+        </dialog>
+
+        <!-- 6. Modal Accesible para Consulta a Medida (<dialog>) -->
+        <dialog id="modal-a-medida" class="modal-dialog" aria-labelledby="modal-medida-titulo">
+            <div class="modal-header">
+                <div class="modal-header-titulos">
+                    <span class="badge badge-empresa">Servicio In-Company</span>
+                    <h2 id="modal-medida-titulo">Solicitud de Capacitación a Medida</h2>
+                </div>
+                <button
+                    type="button"
+                    class="modal-cerrar"
+                    id="btn-cerrar-medida"
+                    aria-label="Cerrar formulario de capacitación a medida"
+                >
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div id="mensaje-exito-medida" class="mensaje-exito" style="display: none;">
+                    <strong>¡Solicitud enviada con éxito!</strong> Nos pondremos en contacto a la brevedad para coordinar la propuesta formativa de su empresa.
+                </div>
+
+                <form id="form-a-medida" class="modal-form">
+                    <div class="campo-grupo">
+                        <label for="empresa-nombre">Nombre de la Empresa u Organización *</label>
+                        <input type="text" id="empresa-nombre" name="empresa" required placeholder="Ej: Metalúrgica Esperanza S.A.">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="contacto-nombre">Persona de Contacto *</label>
+                        <input type="text" id="contacto-nombre" name="contacto" required placeholder="Nombre y Apellido">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="contacto-email">Correo Electrónico *</label>
+                        <input type="email" id="contacto-email" name="email" required placeholder="ejemplo@empresa.com">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="contacto-telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="contacto-telefono" name="telefono" required placeholder="Ej: 03496 15000000">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="tematica-interes">Área o Temática de Interés *</label>
+                        <select id="tematica-interes" name="tematica" required>
+                            <option value="">Seleccione una temática...</option>
+                            <option value="Industria y Metalmecánica">Industria y Metalmecánica</option>
+                            <option value="Tecnología y Automatización">Tecnología y Automatización</option>
+                            <option value="Liderazgo y Gestión de Equipos">Liderazgo y Gestión de Equipos</option>
+                            <option value="Seguridad e Higiene Industrial">Seguridad e Higiene Industrial</option>
+                            <option value="Otra temática a medida">Otra temática personalizada</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="detalles-consulta">Detalles o necesidades específicas</label>
+                        <textarea id="detalles-consulta" name="detalles" placeholder="Describa brevemente la cantidad de participantes, modalidad preferida u objetivos del entrenamiento..."></textarea>
+                    </div>
+
+                    <div class="modal-footer" style="padding: 16px 0 0; background: none; border: none;">
+                        <button type="button" class="boton" id="btn-cancelar-medida">Cancelar</button>
+                        <button type="submit" class="boton" style="background-color: var(--rojo); color: #fff;">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+    </main>
+
+    <div id="pie-compartido"></div>
+</body>
+</html>

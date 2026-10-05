@@ -40,5 +40,11 @@
     "descripcion": "Probá el formulario de suscripción a novedades del prototipo académico.",
     "url": "index.html#boletin",
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
+},
+{
+    "titulo": "Capacitaciones y Desarrollo Profesional",
+    "descripcion": "Formación continua, cursos abiertos y capacitaciones a medida para empresas y profesionales.",
+    "url": "paginas/capacitaciones.html",
+    "palabras": "capacitaciones cursos talleres in-company cnc automatizacion liderazgo plc calidad empresas seguridad higiene"
 }
 ]
