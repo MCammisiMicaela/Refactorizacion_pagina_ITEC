@@ -40,5 +40,41 @@
     "descripcion": "Probá el formulario de suscripción a novedades del prototipo académico.",
     "url": "index.html#boletin",
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
+},
+{
+  "titulo": "Desarrollo de Software",
+  "descripcion": "Tecnicatura de tres años. Consultá el perfil profesional, el plan de estudios y la información de ingreso.",
+  "url": "paginas/carreras/desarrollo-software.html",
+  "palabras": "tecnicatura carrera software desarrollo programacion programas aplicaciones informatica sistemas codigo bases datos"
+},
+{
+  "titulo": "Gestión Industrial",
+  "descripcion": "Tecnicatura de tres años vinculada con la gestión administrativa, comercial y productiva. Conocé su plan de estudios.",
+  "url": "paginas/carreras/gestion-industrial.html",
+  "palabras": "tecnicatura carrera gestion industrial administracion empresas produccion finanzas compras ventas costos calidad"
+},
+{
+  "titulo": "Mantenimiento Industrial",
+  "descripcion": "Tecnicatura de tres años orientada al mantenimiento del equipamiento industrial. Consultá su formación e ingreso.",
+  "url": "paginas/carreras/mantenimiento-industrial.html",
+  "palabras": "tecnicatura carrera mantenimiento industrial equipos maquinas mecanica electricidad electronica hidraulica neumatica refrigeracion"
+},
+{
+  "titulo": "Logística",
+  "descripcion": "Tecnicatura de tres años vinculada con transporte, almacenamiento y distribución. Consultá el plan de estudios y el ingreso.",
+  "url": "paginas/carreras/logistica.html",
+  "palabras": "tecnicatura carrera logistica transporte almacenamiento almacen deposito distribucion despacho abastecimiento inventarios"
+},
+{
+  "titulo": "Gestión de Energías Renovables, Uso Racional y Eficiencia Energética",
+  "descripcion": "Tecnicatura de tres años orientada a los sistemas energéticos. Sin apertura de inscripciones para el ciclo lectivo 2026.",
+  "url": "paginas/carreras/energias-renovables.html",
+  "palabras": "tecnicatura carrera gestion energia energias renovables eficiencia energetica uso racional solar eolica biomasa"
+},
+{
+  "titulo": "Seguridad, Higiene y Medio Ambiente en el Trabajo",
+  "descripcion": "Tecnicatura de tres años orientada a la prevención de riesgos y la seguridad laboral. Consultá su perfil y plan de estudios.",
+  "url": "paginas/carreras/seguridad-higiene.html",
+  "palabras": "tecnicatura carrera seguridad higiene medio ambiente trabajo laboral riesgos prevencion salud accidentes auditorias"
 }
 ]
