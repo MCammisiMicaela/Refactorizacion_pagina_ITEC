@@ -42,9 +42,83 @@
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
 },
 {
+ feature/desarrollo-noticias
     "titulo": "Noticias e Institucionales",
     "descripcion": "Novedades, comunicados, eventos y archivo histórico de publicaciones de ITEC.",
     "url": "paginas/noticias.html",
     "palabras": "noticias novedades comunicados publicaciones eventos archivo historico"
+
+ feature/desarrollo-capacitaciones
+    "titulo": "Capacitaciones y Desarrollo Profesional",
+    "descripcion": "Formación continua, cursos abiertos y capacitaciones a medida para empresas y profesionales.",
+    "url": "paginas/capacitaciones.html",
+    "palabras": "capacitaciones cursos talleres in-company cnc automatizacion liderazgo plc calidad empresas seguridad higiene"
+
+  "titulo": "Desarrollo de Software",
+  "descripcion": "Tecnicatura de tres años. Consultá el perfil profesional, el plan de estudios y la información de ingreso.",
+  "url": "paginas/carreras/desarrollo-software.html",
+  "palabras": "tecnicatura carrera software desarrollo programacion programas aplicaciones informatica sistemas codigo bases datos"
+},
+{
+  "titulo": "Gestión Industrial",
+  "descripcion": "Tecnicatura de tres años vinculada con la gestión administrativa, comercial y productiva. Conocé su plan de estudios.",
+  "url": "paginas/carreras/gestion-industrial.html",
+  "palabras": "tecnicatura carrera gestion industrial administracion empresas produccion finanzas compras ventas costos calidad"
+},
+{
+  "titulo": "Mantenimiento Industrial",
+  "descripcion": "Tecnicatura de tres años orientada al mantenimiento del equipamiento industrial. Consultá su formación e ingreso.",
+  "url": "paginas/carreras/mantenimiento-industrial.html",
+  "palabras": "tecnicatura carrera mantenimiento industrial equipos maquinas mecanica electricidad electronica hidraulica neumatica refrigeracion"
+},
+{
+  "titulo": "Logística",
+  "descripcion": "Tecnicatura de tres años vinculada con transporte, almacenamiento y distribución. Consultá el plan de estudios y el ingreso.",
+  "url": "paginas/carreras/logistica.html",
+  "palabras": "tecnicatura carrera logistica transporte almacenamiento almacen deposito distribucion despacho abastecimiento inventarios"
+},
+{
+  "titulo": "Gestión de Energías Renovables, Uso Racional y Eficiencia Energética",
+  "descripcion": "Tecnicatura de tres años orientada a los sistemas energéticos. Sin apertura de inscripciones para el ciclo lectivo 2026.",
+  "url": "paginas/carreras/energias-renovables.html",
+  "palabras": "tecnicatura carrera gestion energia energias renovables eficiencia energetica uso racional solar eolica biomasa"
+},
+{
+  "titulo": "Seguridad, Higiene y Medio Ambiente en el Trabajo",
+  "descripcion": "Tecnicatura de tres años orientada a la prevención de riesgos y la seguridad laboral. Consultá su perfil y plan de estudios.",
+  "url": "paginas/carreras/seguridad-higiene.html",
+  "palabras": "tecnicatura carrera seguridad higiene medio ambiente trabajo laboral riesgos prevencion salud accidentes auditorias"
+},
+{
+  "titulo": "Servicios para empresas",
+  "descripcion": "Conocé los servicios tecnológicos, la vinculación tecnológica, la consultoría y las propuestas de capacitación para empresas.",
+  "palabras": "empresas organizaciones industria servicios asesoramiento",
+  "url": "paginas/servicios.html"
+},
+{
+  "titulo": "Servicios Tecnológicos",
+  "descripcion": "Consultá sobre ensayos destructivos, no destructivos, metalografía y soldadura.",
+  "palabras": "ensayos materiales calidad traccion dureza metales tintas penetrantes ultrasonido metalografia soldadura",
+  "url": "paginas/servicios.html#servicios-tecnologicos"
+},
+{
+  "titulo": "Unidad de Vinculación Tecnológica (UVT)",
+  "descripcion": "Información sobre acompañamiento a proyectos productivos, innovación y transferencia tecnológica.",
+  "palabras": "uvt vinculacion tecnologia innovacion proyectos investigacion desarrollo programas",
+  "url": "paginas/servicios.html#uvt"
+},
+{
+  "titulo": "Asistencia Técnica y Consultoría",
+  "descripcion": "Consultá por asistencia en recursos humanos, calidad, producción, automatización y gestión empresarial.",
+  "palabras": "consultoria asesoramiento asistencia tecnica recursos humanos calidad automatizacion produccion negocios marketing",
+  "url": "paginas/servicios.html#asistencia-tecnica"
+},
+{
+  "titulo": "Capacitación para empresas",
+  "descripcion": "Información sobre cursos, talleres y seminarios para la formación y actualización de equipos de trabajo.",
+  "palabras": "capacitacion empresas cursos talleres seminarios personal equipos formacion interna",
+  "url": "paginas/servicios.html#capacitacion-empresas"
+main
+ main
 }
 ]
