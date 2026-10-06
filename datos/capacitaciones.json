@@ -1,188 +1,102 @@
 [
-    {
-        "id": "cap-01",
-        "titulo": "Operación y Programación de Tornos y Centros CNC",
-        "tipo": "abierta",
-        "area": "industria",
-        "areaNombre": "Industria y Metalmecánica",
-        "descripcionCorta": "Formación práctica integral en lenguaje de programación ISO, simulación en computadora y mecanizado real en taller.",
-        "descripcionDetallada": "Este trayecto formativo proporciona las competencias técnicas necesarias para operar y programar centro de mecanizado y torno CNC. Se trabaja con software de simulación CNC en gabinete informático y luego se realizan prácticas directas en el laboratorio de máquinas-herramientas del ITEC.",
-        "audiencia": "Operarios metalmecánicos, técnicos, estudiantes de ingeniería y personas interesadas en la manufactura avanzada.",
-        "modalidad": "Presencial (Laboratorio CNC)",
-        "duracion": "40 horas (8 semanas)",
-        "horarios": "Martes y Jueves de 18:30 a 21:00 hs",
-        "estado": "abierta",
-        "estadoEtiqueta": "Inscripción Abierta",
-        "inicio": "15 de Noviembre 2026",
-        "requisitos": [
-            "Conocimientos básicos de dibujo técnico",
-            "Manejo básico de PC",
-            "Secundario completo o en curso"
-        ],
-        "temario": [
-            "Módulo 1: Fundamentos de la tecnología CNC y ejes de coordenadas.",
-            "Módulo 2: Programación en código G y M (ISO).",
-            "Módulo 3: Utilización de simuladores virtuales de mecanizado.",
-            "Módulo 4: Montaje de herramientas, alineación y decalajes.",
-            "Módulo 5: Práctica operativa en piezas reales en torno y fresadora CNC."
-        ]
-    },
-    {
-        "id": "cap-02",
-        "titulo": "Liderazgo y Gestión de Equipos de Trabajo",
-        "tipo": "empresa",
-        "area": "gestion",
-        "areaNombre": "Gestión y PyMEs",
-        "descripcionCorta": "Capacitación ejecutiva orientada a potenciar habilidades directivas, comunicación asertiva y resolución de conflictos.",
-        "descripcionDetallada": "Programa diseñado a la medida de organizaciones y mandos medios que buscan consolidar liderazgos positivos, optimizar los canales de comunicación interna, mejorar el clima laboral y alcanzar objetivos operativos eficaces.",
-        "audiencia": "Supervisores, jefes de área, coordinadores de planta y dueños de empresas/PyMEs.",
-        "modalidad": "Híbrida (Sesiones virtuales + Talleres presenciales)",
-        "duracion": "30 horas (6 semanas)",
-        "horarios": "A convenir según disponibilidad de la empresa",
-        "estado": "proximamente",
-        "estadoEtiqueta": "Próximamente",
-        "inicio": "A demanda / In-company",
-        "requisitos": [
-            "Coordinar o liderar personas en la organización"
-        ],
-        "temario": [
-            "Módulo 1: El rol del líder en la industria actual.",
-            "Módulo 2: Comunicación asertiva y feedback constructivo.",
-            "Módulo 3: Gestión del tiempo y delegación efectiva.",
-            "Módulo 4: Manejo de conflictos y negociación interna.",
-            "Módulo 5: Evaluación del desempeño y motivación de equipos."
-        ]
-    },
-    {
-        "id": "cap-03",
-        "titulo": "Automatización Industrial con PLC y Neumática",
-        "tipo": "abierta",
-        "area": "tecnologia",
-        "areaNombre": "Tecnología y Automatización",
-        "descripcionCorta": "Capacitación en lógica programable, sensores industriales, actuadores neumáticos y esquemas de control.",
-        "descripcionDetallada": "Curso práctico donde los participantes aprenden a diseñar, cablear y programar automatismos secuenciales utilizando autómatas programables (PLC Siemens LOGO! / S7-1200) combinados con componentes neumáticos e hidráulicos en tableros de laboratorio.",
-        "audiencia": "Técnicos electromecánicos, electricistas industriales, mantenimiento y estudiantes avanzados.",
-        "modalidad": "Presencial (Laboratorio de Neumática)",
-        "duracion": "48 horas (10 semanas)",
-        "horarios": "Miércoles de 18:00 a 21:30 hs",
-        "estado": "abierta",
-        "estadoEtiqueta": "Inscripción Abierta",
-        "inicio": "20 de Noviembre 2026",
-        "requisitos": [
-            "Conocimientos previos de electricidad básica",
-            "Manejo de computadoras a nivel usuario"
-        ],
-        "temario": [
-            "Módulo 1: Componentes neumáticos e hidráulicos de potencia.",
-            "Módulo 2: Simulación de circuitos con software interactivo.",
-            "Módulo 3: Introducción a la arquitectura y lenguaje Ladder en PLC.",
-            "Módulo 4: Sensores inductivos, capacitivos y ópticos.",
-            "Módulo 5: Diagnóstico de fallas y puesta en marcha de proyectos."
-        ]
-    },
-    {
-        "id": "cap-04",
-        "titulo": "Seguridad e Higiene en Ambientes Industriales",
-        "tipo": "empresa",
-        "area": "seguridad",
-        "areaNombre": "Seguridad e Higiene",
-        "descripcionCorta": "Herramientas conceptuales y prácticas para la prevención de riesgos del trabajo y normativas Ley 19.587.",
-        "descripcionDetallada": "Propuesta formativa adaptada a las necesidades de cada planta industrial o establecimiento productivo. Permite actualizar el protocolo de prevención de accidentes, identificación de peligros, ergonomía y uso de EPP.",
-        "audiencia": "Comités de higiene y seguridad, delegados de planta, mandos medios y personal operario.",
-        "modalidad": "Presencial In-Company o Aula ITEC",
-        "duracion": "20 horas (4 encuentros)",
-        "horarios": "A convenir con la empresa contratante",
-        "estado": "abierta",
-        "estadoEtiqueta": "Inscripción Abierta",
-        "inicio": "Disponible todo el año",
-        "requisitos": [
-            "Sin requisitos previos"
-        ],
-        "temario": [
-            "Módulo 1: Marco normativo de Higiene y Seguridad en Argentina.",
-            "Módulo 2: Mapa de riesgos y análisis seguro de trabajo (AST).",
-            "Módulo 3: Ergonomía laboral y prevención de lesiones.",
-            "Módulo 4: Riesgo eléctrico, incendios y evacuación.",
-            "Módulo 5: Cultura preventiva y uso consciente de EPP."
-        ]
-    },
-    {
-        "id": "cap-05",
-        "titulo": "Gestión de Calidad e Introducción a la Norma ISO 9001",
-        "tipo": "abierta",
-        "area": "gestion",
-        "areaNombre": "Gestión y PyMEs",
-        "descripcionCorta": "Principios de gestión de procesos, auditorías internas y mejora continua en PyMEs de la región.",
-        "descripcionDetallada": "Formación integral para comprender la estructura de alto nivel de las normas ISO 9001:2015. Se enseñará a mapear procesos, redactar procedimientos, establecer indicadores clave (KPI) y abordar la gestión de riesgos.",
-        "audiencia": "Responsables de calidad, auditores en formación, emprendedores y personal de procesos.",
-        "modalidad": "Virtual (Clases sincrónicas en vivo + plataforma)",
-        "duracion": "36 horas (9 semanas)",
-        "horarios": "Lunes de 19:00 a 21:30 hs",
-        "estado": "proximamente",
-        "estadoEtiqueta": "Próximamente",
-        "inicio": "10 de Diciembre 2026",
-        "requisitos": [
-            "Conexión a internet estable y micrófono",
-            "Experiencia o interés en procesos organizacionales"
-        ],
-        "temario": [
-            "Módulo 1: Fundamentos del enfoque basado en procesos.",
-            "Módulo 2: Estructura y cláusulas de la ISO 9001:2015.",
-            "Módulo 3: Pensamiento basado en riesgos y oportunidades.",
-            "Módulo 4: Redacción de procedimientos e indicadores.",
-            "Módulo 5: Técnicas de auditoría interna y no conformidades."
-        ]
-    },
-    {
-        "id": "cap-06",
-        "titulo": "Electricidad Industrial y Tableros de Control",
-        "tipo": "abierta",
-        "area": "tecnologia",
-        "areaNombre": "Tecnología y Automatización",
-        "descripcionCorta": "Diseño, armado y mantenimiento de tableros eléctricos de comando y protección de motores.",
-        "descripcionDetallada": "Curso práctico enfocado en el aprendizaje de esquemas eléctricos unifilares y multifilares, arranque directo y estrella-triángulo de motores trifásicos, protecciones termomagnéticas y diferenciales, y variadores de frecuencia.",
-        "audiencia": "Electricistas domiciliarios que deseen volcarse a la industria, estudiantes técnicos y personal de mantenimiento.",
-        "modalidad": "Presencial (Laboratorio de Electricidad)",
-        "duracion": "40 horas (8 semanas)",
-        "horarios": "Viernes de 18:00 a 21:30 hs",
-        "estado": "abierta",
-        "estadoEtiqueta": "Inscripción Abierta",
-        "inicio": "18 de Noviembre 2026",
-        "requisitos": [
-            "Conocimientos elementales de electricidad o experiencia previa"
-        ],
-        "temario": [
-            "Módulo 1: Conceptos de tensión, corriente trifásica y potencia.",
-            "Módulo 2: Simbología eléctrica e interpretación de planos.",
-            "Módulo 3: Contactores, relés térmicos y temporizadores.",
-            "Módulo 4: Maniobra y protección de motores trifásicos.",
-            "Módulo 5: Armado práctico de tablero en panel de pruebas."
-        ]
-    },
-    {
-        "id": "cap-07",
-        "titulo": "Soldadura TIG y MIG-MAG Aplicada",
-        "tipo": "empresa",
-        "area": "industria",
-        "areaNombre": "Industria y Metalmecánica",
-        "descripcionCorta": "Técnicas avanzadas de soldadura por arco bajo gas protector para aceros inoxidables y al carbono.",
-        "descripcionDetallada": "Entrenamiento de alta especialización enfocado en el perfeccionamiento de la técnica de soldadura para operarios del sector metalúrgico. Prácticas directas con regulación de parámetros de máquinas, tipos de gases y preparación de juntas.",
-        "audiencia": "Soldadores en actividad, personal de fabricación de maquinaria agrícola e instalaciones metálicas.",
-        "modalidad": "Presencial (Taller de Soldadura ITEC)",
-        "duracion": "50 horas (10 semanas)",
-        "horarios": "Sábados de 08:30 a 12:30 hs",
-        "estado": "abierta",
-        "estadoEtiqueta": "Inscripción Abierta",
-        "inicio": "A demanda / Grupos de empresa",
-        "requisitos": [
-            "Experiencia previa en soldadura básica electrodo"
-        ],
-        "temario": [
-            "Módulo 1: Fundamentos de soldadura por gas inerte y activo.",
-            "Módulo 2: Configuración y ajuste de equipos MIG-MAG.",
-            "Módulo 3: Técnica TIG para acero al carbono e inoxidable.",
-            "Módulo 4: Defectología de soldadura y control visual de calidad.",
-            "Módulo 5: Normas de seguridad en procesos de soldeo."
-        ]
-    }
+  {
+    "id": "gestion-productividad",
+    "titulo": "Gestión de Mejora de la Productividad",
+    "tipo": "trayecto",
+    "area": "gestion",
+    "areaNombre": "Gestión",
+    "descripcionCorta": "Trayecto de capacitación publicado por el instituto.",
+    "descripcionDetallada": "Consultá al ITEC el alcance y las condiciones de una próxima edición.",
+    "audiencia": "Personas con experiencia relacionada con el trayecto.",
+    "modalidad": "Consultar al instituto",
+    "duracion": "Consultar al instituto",
+    "horarios": "Consultar al instituto",
+    "estado": "consultar",
+    "estadoEtiqueta": "Consultar convocatoria",
+    "inicio": "Fecha no confirmada",
+    "requisitos": [],
+    "temario": [],
+    "fuente": "https://itec-elmolino.edu.ar/trayectos-formativos/",
+    "fechaVerificacion": "2026-10-06"
+  },
+  {
+    "id": "gestion-calidad",
+    "titulo": "Gestión de la calidad",
+    "tipo": "trayecto",
+    "area": "gestion",
+    "areaNombre": "Gestión",
+    "descripcionCorta": "Trayecto de capacitación publicado por el instituto.",
+    "descripcionDetallada": "Consultá al ITEC el alcance y las condiciones de una próxima edición.",
+    "audiencia": "Personas con experiencia relacionada con el trayecto.",
+    "modalidad": "Consultar al instituto",
+    "duracion": "Consultar al instituto",
+    "horarios": "Consultar al instituto",
+    "estado": "consultar",
+    "estadoEtiqueta": "Consultar convocatoria",
+    "inicio": "Fecha no confirmada",
+    "requisitos": [],
+    "temario": [],
+    "fuente": "https://itec-elmolino.edu.ar/trayectos-formativos/",
+    "fechaVerificacion": "2026-10-06"
+  },
+  {
+    "id": "sistemas-informaticos-gestion",
+    "titulo": "Sistemas informáticos de gestión",
+    "tipo": "trayecto",
+    "area": "tecnologia",
+    "areaNombre": "Tecnología",
+    "descripcionCorta": "Trayecto de capacitación publicado por el instituto.",
+    "descripcionDetallada": "Consultá al ITEC el alcance y las condiciones de una próxima edición.",
+    "audiencia": "Personas con experiencia relacionada con el trayecto.",
+    "modalidad": "Consultar al instituto",
+    "duracion": "Consultar al instituto",
+    "horarios": "Consultar al instituto",
+    "estado": "consultar",
+    "estadoEtiqueta": "Consultar convocatoria",
+    "inicio": "Fecha no confirmada",
+    "requisitos": [],
+    "temario": [],
+    "fuente": "https://itec-elmolino.edu.ar/trayectos-formativos/",
+    "fechaVerificacion": "2026-10-06"
+  },
+  {
+    "id": "diseno-asistido",
+    "titulo": "Diseño asistido por computadora",
+    "tipo": "trayecto",
+    "area": "tecnologia",
+    "areaNombre": "Tecnología",
+    "descripcionCorta": "Trayecto de capacitación publicado por el instituto.",
+    "descripcionDetallada": "Consultá al ITEC el alcance y las condiciones de una próxima edición.",
+    "audiencia": "Personas con experiencia relacionada con el trayecto.",
+    "modalidad": "Consultar al instituto",
+    "duracion": "Consultar al instituto",
+    "horarios": "Consultar al instituto",
+    "estado": "consultar",
+    "estadoEtiqueta": "Consultar convocatoria",
+    "inicio": "Fecha no confirmada",
+    "requisitos": [],
+    "temario": [],
+    "fuente": "https://itec-elmolino.edu.ar/trayectos-formativos/",
+    "fechaVerificacion": "2026-10-06"
+  },
+  {
+    "id": "capacitacion-a-medida",
+    "titulo": "Capacitación a medida para empresas",
+    "tipo": "empresa",
+    "area": "a-definir",
+    "areaNombre": "Área a definir",
+    "descripcionCorta": "Cursos, talleres y seminarios según las necesidades de la organización.",
+    "descripcionDetallada": "Presentá la necesidad de formación de tu equipo y consultá qué propuesta puede desarrollar el instituto.",
+    "audiencia": "Empresas y organizaciones.",
+    "modalidad": "A consultar según la propuesta",
+    "duracion": "A consultar según la propuesta",
+    "horarios": "A consultar según la propuesta",
+    "estado": "consultar",
+    "estadoEtiqueta": "Consultar propuesta",
+    "inicio": "A consultar con el instituto",
+    "requisitos": [],
+    "temario": [],
+    "fuente": "https://itec-elmolino.edu.ar/capacitaciones/",
+    "fechaVerificacion": "2026-10-06"
+  }
 ]

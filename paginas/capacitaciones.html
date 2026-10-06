@@ -14,6 +14,7 @@
     <script src="../js/navegacion.js" defer></script>
     <script src="../js/componentes.js" defer></script>
     <script src="../js/capacitaciones.js" defer></script>
+    <script src="../js/sugerencias.js" defer></script>
 </head>
 <body data-seccion="formacion">
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
@@ -21,30 +22,44 @@
     <div id="cabecera-compartida"></div>
 
     <main id="contenido">
-        <!-- 1. Presentación e Introducción -->
         <section
             id="inicio"
             class="presentacion-capacitaciones contenedor"
             aria-labelledby="titulo-capacitaciones"
-        >
-            <p class="ruta">
-                Inicio <span aria-hidden="true">/</span>
-                Estudiar en ITEC <span aria-hidden="true">/</span>
-                <strong>Capacitaciones</strong>
-            </p>
+            >
+            <nav class="capacitaciones-ruta" aria-label="Ruta de navegación">
+                <ol>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="formacion.html">Estudiar en ITEC</a></li>
+                <li>
+                    <span aria-current="page">Capacitaciones</span>
+                </li>
+                </ol>
+            </nav>
 
-            <h1 id="titulo-capacitaciones">Capacitaciones y Desarrollo Profesional</h1>
+            <div class="capacitaciones-encabezado">
+                <span class="linea-roja" aria-hidden="true"></span>
 
-            <p class="presentacion-texto">
-                Programas intensivos de formación continua orientados a desarrollar 
-                competencias técnicas, tecnológicas y de gestión aplicadas a las 
-                demandas del sector productivo.
-            </p>
+                <h1 id="titulo-capacitaciones">Capacitaciones</h1>
 
-            <span class="linea-roja" aria-hidden="true"></span>
+                <p class="presentacion-texto">
+                    Formación y actualización para personas que trabajan en organizaciones,
+                    mediante cursos, talleres y seminarios abiertos al público
+                    o a medida de una empresa.
+                </p>
+
+                <div class="capacitaciones-acciones">
+                <a class="boton capacitaciones-boton-principal" href="#oferta">
+                    Explorar propuestas
+                </a>
+
+                <a class="boton" href="#a-medida">
+                    Capacitación para mi empresa
+                </a>
+                </div>
+            </div>
         </section>
 
-        <!-- 2. Explicación de Destinatarios -->
         <section
             id="destinatarios"
             class="seccion-destinatarios"
@@ -89,7 +104,6 @@
             </div>
         </section>
 
-        <!-- 3 y 5. Oferta de Capacitaciones con Filtros Dinámicos -->
         <section
             id="oferta"
             class="seccion-oferta contenedor"
@@ -97,41 +111,69 @@
         >
             <h2 id="titulo-oferta" class="solo-lectores">Nuestra oferta académica</h2>
 
-            <!-- Pestañas por Tipo -->
-            <div class="contenedor-tabs" role="tablist" aria-label="Filtrar oferta por tipo de destinatario">
+            <div class="capacitaciones-aviso">
+                <h2>Trayectos y propuestas de capacitación</h2>
+                <p>
+                    La inclusión de una propuesta en este catálogo no significa
+                    que tenga inscripciones abiertas. Consultá al instituto
+                    las próximas convocatorias y condiciones de cursado.
+                </p>
+                <p>
+                    Información contrastada con el sitio oficial el
+                    <time datetime="2026-10-06">6 de octubre de 2026</time>.
+                </p>
+
+                <details>
+                    <summary>Información general de los trayectos</summary>
+                    <p>
+                        Los trayectos relacionan la experiencia laboral con fundamentos
+                        técnicos. El instituto contempla una evaluación de conocimientos
+                        previos para orientar el recorrido formativo.
+                    </p>
+                    <p>
+                        La página oficial indica que el ITEC emite un certificado
+                        que acredita la duración y aprobación del trayecto.
+                        Consultá las condiciones de la edición que te interese.
+                    </p>
+                </details>
+            </div>
+
+            <div
+                class="contenedor-tabs"
+                role="group"
+                aria-label="Filtrar propuestas por tipo"
+                >
                 <button
                     type="button"
                     class="tab-btn activo"
-                    role="tab"
-                    aria-selected="true"
+                    aria-pressed="true"
                     data-tipo="todas"
                     id="tab-todas"
                 >
-                    Todas las capacitaciones
+                    Todas las propuestas
                 </button>
+
                 <button
                     type="button"
                     class="tab-btn"
-                    role="tab"
-                    aria-selected="false"
-                    data-tipo="abierta"
-                    id="tab-abiertas"
+                    aria-pressed="false"
+                    data-tipo="trayecto"
+                    id="tab-trayectos"
                 >
-                    Capacitaciones Abiertas
+                    Trayectos formativos
                 </button>
+
                 <button
                     type="button"
                     class="tab-btn"
-                    role="tab"
-                    aria-selected="false"
+                    aria-pressed="false"
                     data-tipo="empresa"
                     id="tab-empresas"
                 >
-                    Propuestas para Empresas
+                    Para empresas
                 </button>
             </div>
 
-            <!-- Barra de Filtros -->
             <div class="barra-filtros" role="search" aria-label="Filtros de búsqueda de capacitaciones">
                 <div class="filtro-campo-busqueda">
                     <label for="busqueda-texto" class="solo-lectores">Buscar por palabra clave</label>
@@ -147,10 +189,9 @@
                     <label for="filtro-area" class="solo-lectores">Filtrar por Área</label>
                     <select id="filtro-area">
                         <option value="todas">Todas las áreas</option>
-                        <option value="industria">Industria y Metalmecánica</option>
-                        <option value="tecnologia">Tecnología y Automatización</option>
-                        <option value="gestion">Gestión y PyMEs</option>
-                        <option value="seguridad">Seguridad e Higiene</option>
+                        <option value="gestion">Gestión</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="a-definir">Área a definir</option>
                     </select>
                 </div>
 
@@ -158,8 +199,11 @@
                     <label for="filtro-estado" class="solo-lectores">Filtrar por Estado</label>
                     <select id="filtro-estado">
                         <option value="todos">Todos los estados</option>
-                        <option value="abierta">Inscripción Abierta</option>
+                        <option value="consultar">Consultar convocatoria o propuesta</option>
+                        <option value="abierta">Inscripción abierta</option>
                         <option value="proximamente">Próximamente</option>
+                        <option value="cerrada">Inscripción cerrada</option>
+                        <option value="finalizado">Finalizado</option>
                     </select>
                 </div>
 
@@ -297,9 +341,13 @@
             </div>
 
             <div class="modal-body">
-                <div id="mensaje-exito-medida" class="mensaje-exito" style="display: none;">
-                    <strong>¡Solicitud enviada con éxito!</strong> Nos pondremos en contacto a la brevedad para coordinar la propuesta formativa de su empresa.
-                </div>
+                <div
+                    id="mensaje-exito-medida"
+                    class="mensaje-exito"
+                    role="status"
+                    aria-live="polite"
+                    style="display: none;"
+                ></div>
 
                 <form id="form-a-medida" class="modal-form">
                     <div class="campo-grupo">
@@ -338,6 +386,11 @@
                         <label for="detalles-consulta">Detalles o necesidades específicas</label>
                         <textarea id="detalles-consulta" name="detalles" placeholder="Describa brevemente la cantidad de participantes, modalidad preferida u objetivos del entrenamiento..."></textarea>
                     </div>
+
+                    <p id="aviso-correo-medida">
+                    Al continuar se intentará abrir tu aplicación de correo.
+                    Revisá el mensaje y presioná Enviar allí para completar la consulta.
+                    </p>
 
                     <div class="modal-footer" style="padding: 16px 0 0; background: none; border: none;">
                         <button type="button" class="boton" id="btn-cancelar-medida">Cancelar</button>

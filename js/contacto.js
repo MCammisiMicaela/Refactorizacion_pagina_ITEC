@@ -303,3 +303,34 @@ function completarConsultaDeServicio() {
 }
 
 completarConsultaDeServicio();
+
+function completarConsultaDeCapacitacion() {
+    const parametros = new URLSearchParams(window.location.search);
+
+    if (parametros.has("carrera") || parametros.has("servicio")) {
+        return;
+    }
+
+    const capacitacion = (parametros.get("capacitacion") || "")
+        .trim()
+        .slice(0, 200);
+
+    const campoMotivo = document.getElementById("motivo");
+    const campoMensaje = document.getElementById("mensaje");
+
+    if (!capacitacion || !campoMotivo || !campoMensaje) {
+        return;
+    }
+
+    if (!campoMotivo.value) {
+        campoMotivo.value = "Capacitaciones";
+    }
+
+    if (!campoMensaje.value.trim()) {
+        campoMensaje.value =
+            `Hola, quisiera recibir información sobre la capacitación "${capacitacion}".\n\n` +
+            "Me gustaría consultar su disponibilidad, requisitos y condiciones de cursado.";
+    }
+}
+
+completarConsultaDeCapacitacion();

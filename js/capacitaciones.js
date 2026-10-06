@@ -39,6 +39,18 @@ function normalizarTexto(texto) {
         .trim();
 }
 
+function claseEstadoCapacitacion(estado) {
+    const clases = {
+        abierta: "badge-abierta",
+        proximamente: "badge-proximamente",
+        consultar: "badge-consultar",
+        cerrada: "badge-cerrada",
+        finalizado: "badge-finalizado"
+    };
+
+    return clases[estado] || "badge-consultar";
+}
+
 // Cargar datos JSON de capacitaciones
 async function cargarCapacitaciones() {
     try {
@@ -123,7 +135,7 @@ function renderizarTarjetas(lista) {
     }
 
     estadoCapacitaciones.textContent =
-        `Mostrando ${cantidad} ${cantidad === 1 ? "capacitación disponible" : "capacitaciones disponibles"}.`;
+        `Mostrando ${cantidad} ${cantidad === 1 ? "propuesta" : "propuestas"}.`;
 
     const fragmento = document.createDocumentFragment();
 
@@ -131,14 +143,8 @@ function renderizarTarjetas(lista) {
         const tarjeta = document.createElement("article");
         tarjeta.className = "tarjeta-capacitacion";
 
-        // Badges de Área y Estado
-        const claseBadgeEstado = item.estado === "abierta"
-            ? "badge-abierta"
-            : item.estado === "proximamente"
-            ? "badge-proximamente"
-            : "badge-empresa";
-
-        const etiquetaTipo = item.tipo === "empresa" ? "Para Empresas" : item.estadoEtiqueta;
+        const claseBadgeEstado = claseEstadoCapacitacion(item.estado);
+        const etiquetaTipo = item.estadoEtiqueta;
 
         tarjeta.innerHTML = `
             <div class="tarjeta-header">
@@ -150,12 +156,12 @@ function renderizarTarjetas(lista) {
                 <p class="descripcion">${item.descripcionCorta}</p>
                 <ul class="tarjeta-meta">
                     <li>
-                        <span class="tarjeta-meta-icono">📍</span>
-                        <span><strong>Modalidad:</strong> ${item.modalidad}</span>
+                        <strong>Modalidad:</strong>
+                        <span>${item.modalidad}</span>
                     </li>
                     <li>
-                        <span class="tarjeta-meta-icono">⏱️</span>
-                        <span><strong>Duración:</strong> ${item.duracion}</span>
+                        <strong>Duración:</strong>
+                        <span>${item.duracion}</span>
                     </li>
                 </ul>
             </div>
@@ -194,7 +200,7 @@ function restablecerFiltros() {
     botonesTabs.forEach(btn => {
         const esTodas = btn.dataset.tipo === "todas";
         btn.classList.toggle("activo", esTodas);
-        btn.setAttribute("aria-selected", esTodas ? "true" : "false");
+        btn.setAttribute("aria-pressed", esTodas ? "true" : "false");
     });
 
     aplicarFiltros();
@@ -209,9 +215,8 @@ function abrirModalDetalle(item) {
 
     const badgeEstado = document.getElementById("modal-detalle-badge-estado");
     badgeEstado.textContent = item.estadoEtiqueta;
-    badgeEstado.className = `badge ${
-        item.estado === "abierta" ? "badge-abierta" : "badge-proximamente"
-    }`;
+    badgeEstado.className =
+        `badge ${claseEstadoCapacitacion(item.estado)}`;
 
     document.getElementById("modal-detalle-modalidad").textContent = item.modalidad;
     document.getElementById("modal-detalle-duracion").textContent = item.duracion;
@@ -220,27 +225,42 @@ function abrirModalDetalle(item) {
     document.getElementById("modal-detalle-descripcion").textContent = item.descripcionDetallada;
     document.getElementById("modal-detalle-audiencia").textContent = item.audiencia;
 
-    // Lista de Requisitos
     const ulRequisitos = document.getElementById("modal-detalle-requisitos");
     ulRequisitos.replaceChildren();
-    (item.requisitos || []).forEach(req => {
-        const li = document.createElement("li");
-        li.textContent = req;
-        ulRequisitos.appendChild(li);
+
+    const requisitos = item.requisitos?.length
+        ? item.requisitos
+        : ["Consultá al instituto los requisitos específicos de esta propuesta."];
+
+    requisitos.forEach(requisito => {
+        const elemento = document.createElement("li");
+        elemento.textContent = requisito;
+        ulRequisitos.appendChild(elemento);
     });
 
-    // Lista de Temario
     const ulTemario = document.getElementById("modal-detalle-temario");
     ulTemario.replaceChildren();
-    (item.temario || []).forEach(tema => {
-        const li = document.createElement("li");
-        li.textContent = tema;
-        ulTemario.appendChild(li);
+
+    const temario = item.temario?.length
+        ? item.temario
+        : ["Solicitá el programa y los contenidos correspondientes a la edición que te interesa."];
+
+    temario.forEach(tema => {
+        const elemento = document.createElement("li");
+        elemento.textContent = tema;
+        ulTemario.appendChild(elemento);
     });
 
     // Actualizar enlace de inscripción
     const btnInscripcion = document.getElementById("btn-inscripcion-modal");
-    btnInscripcion.href = `contacto.html?asunto=${encodeURIComponent("Consulta por " + item.titulo)}`;
+    const parametrosConsulta = new URLSearchParams({
+        capacitacion: item.titulo
+    });
+
+    btnInscripcion.href =
+        `contacto.html?${parametrosConsulta.toString()}#consulta`;
+
+    btnInscripcion.textContent = "Consultar esta capacitación";
 
     modalDetalle.showModal();
 }
@@ -252,11 +272,11 @@ function inicializarEventos() {
         btn.addEventListener("click", () => {
             botonesTabs.forEach(b => {
                 b.classList.remove("activo");
-                b.setAttribute("aria-selected", "false");
+                b.setAttribute("aria-pressed", "false");
             });
 
             btn.classList.add("activo");
-            btn.setAttribute("aria-selected", "true");
+            btn.setAttribute("aria-pressed", "true");
 
             filtroTipo = btn.dataset.tipo;
             aplicarFiltros();
@@ -322,16 +342,57 @@ function inicializarEventos() {
         });
     }
 
-    // Envío del Formulario A Medida
     if (formAMedida) {
-        formAMedida.addEventListener("submit", (e) => {
-            e.preventDefault();
-            mensajeExitoMedida.style.display = "block";
-            formAMedida.style.display = "none";
+        formAMedida.addEventListener("submit", (evento) => {
+            evento.preventDefault();
 
-            setTimeout(() => {
-                modalMedida.close();
-            }, 3000);
+            if (!formAMedida.reportValidity()) {
+                return;
+            }
+
+            const datos = new FormData(formAMedida);
+
+            const obtenerTexto = (nombre) =>
+                String(datos.get(nombre) || "").trim();
+
+            const empresa = obtenerTexto("empresa");
+            const contacto = obtenerTexto("contacto");
+            const email = obtenerTexto("email");
+            const telefono = obtenerTexto("telefono");
+            const tematica = obtenerTexto("tematica");
+            const detalles = obtenerTexto("detalles");
+
+            if (!empresa || !contacto || !email || !telefono || !tematica) {
+                mensajeExitoMedida.textContent =
+                    "Completá los campos obligatorios. No ingreses solamente espacios.";
+
+                mensajeExitoMedida.style.display = "block";
+                return;
+            }
+
+            const asunto = `Consulta de capacitación para empresas: ${tematica}`;
+
+            const cuerpo =
+                `Empresa u organización: ${empresa}\n` +
+                `Persona de contacto: ${contacto}\n` +
+                `Correo electrónico: ${email}\n` +
+                `Teléfono: ${telefono}\n` +
+                `Temática de interés: ${tematica}\n\n` +
+                `Detalles de la consulta:\n${detalles || "Sin detalles adicionales."}`;
+
+            const enlaceCorreo =
+                "mailto:info@itec-elmolino.edu.ar" +
+                `?subject=${encodeURIComponent(asunto)}` +
+                `&body=${encodeURIComponent(cuerpo)}`;
+
+            mensajeExitoMedida.textContent =
+                "Intentamos abrir tu aplicación de correo con la consulta preparada. " +
+                "Revisá el mensaje y presioná Enviar allí. " +
+                "Si no se abre, podés escribir a info@itec-elmolino.edu.ar.";
+
+            mensajeExitoMedida.style.display = "block";
+
+            window.location.href = enlaceCorreo;
         });
     }
 }
