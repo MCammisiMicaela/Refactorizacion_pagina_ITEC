@@ -42,6 +42,12 @@
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
 },
 {
+ feature/desarrollo-capacitaciones
+    "titulo": "Capacitaciones y Desarrollo Profesional",
+    "descripcion": "Formación continua, cursos abiertos y capacitaciones a medida para empresas y profesionales.",
+    "url": "paginas/capacitaciones.html",
+    "palabras": "capacitaciones cursos talleres in-company cnc automatizacion liderazgo plc calidad empresas seguridad higiene"
+=======
   "titulo": "Desarrollo de Software",
   "descripcion": "Tecnicatura de tres años. Consultá el perfil profesional, el plan de estudios y la información de ingreso.",
   "url": "paginas/carreras/desarrollo-software.html",
@@ -106,5 +112,6 @@
   "descripcion": "Información sobre cursos, talleres y seminarios para la formación y actualización de equipos de trabajo.",
   "palabras": "capacitacion empresas cursos talleres seminarios personal equipos formacion interna",
   "url": "paginas/servicios.html#capacitacion-empresas"
+main
 }
 ]
