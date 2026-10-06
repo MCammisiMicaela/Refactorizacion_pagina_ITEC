@@ -1,0 +1,192 @@
+.pagina-vinculacion {
+    padding-top: 28px;
+    padding-bottom: 48px;
+}
+
+.vinculacion-ruta ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.vinculacion-ruta li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: #626973;
+}
+
+.vinculacion-ruta a {
+    color: var(--rojo-oscuro);
+    text-underline-offset: 4px;
+}
+
+.vinculacion-ruta [aria-current="page"] {
+    color: #555e69;
+}
+
+.vinculacion-presentacion {
+    max-width: 780px;
+    margin-bottom: 40px;
+}
+
+.vinculacion-presentacion .linea-roja {
+    margin-bottom: 14px;
+}
+
+.vinculacion-presentacion h1 {
+    margin: 0 0 16px;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.vinculacion-presentacion > p {
+    margin: 0;
+    color: #555e69;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.vinculacion-nivel {
+    margin-bottom: 40px;
+}
+
+.vinculacion-titulo .linea-roja {
+    margin-bottom: 14px;
+}
+
+.vinculacion-titulo h2 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.vinculacion-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+}
+
+.vinculacion-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-top: 3px solid var(--rojo);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.vinculacion-logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 90px;
+    margin-bottom: 20px;
+}
+
+.vinculacion-tarjeta h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.vinculacion-tarjeta p {
+    margin: 0 0 20px;
+    color: #555e69;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.vinculacion-tarjeta .boton {
+    margin-top: auto;
+    min-height: 44px;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media (min-width: 700px) {
+    .vinculacion-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 900px) {
+    .pagina-vinculacion {
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .vinculacion-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+.vinculacion-red {
+    margin-top: 40px;
+}
+
+.vinculacion-red h3 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.vinculacion-red-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vinculacion-red-lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.vinculacion-red-lista img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.vinculacion-red-lista span {
+    color: #555e69;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (min-width: 700px) {
+    .vinculacion-grid-doble {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vinculacion-red-lista {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1000px) {
+    .vinculacion-grid-doble {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

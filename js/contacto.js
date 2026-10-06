@@ -1,111 +1,305 @@
 const formulario = document.getElementById("formulario-contacto");
 const resultado = document.getElementById("resultado-formulario");
 
+const carrerasConsulta = new Map([
+    ["desarrollo-software", "Desarrollo de Software"],
+    ["gestion-industrial", "Gestión Industrial"],
+    ["mantenimiento-industrial", "Mantenimiento Industrial"],
+    ["logistica", "Logística"],
+    [
+        "energias-renovables",
+        "Gestión de Energías Renovables, Uso Racional y Eficiencia Energética"
+    ],
+    [
+        "seguridad-higiene",
+        "Seguridad, Higiene y Medio Ambiente en el Trabajo"
+    ]
+]);
+
 function mostrarError(campo, mensaje) {
     const entrada = document.getElementById(campo);
     const contenedorError = document.getElementById(`error-${campo}`);
 
     contenedorError.textContent = mensaje;
-    entrada.setAttribute("aria-invalid", mensaje ? "true" : "false");
+    entrada.setAttribute("aria-invalid", String(Boolean(mensaje)));
+
+    const descripciones = new Set(
+        (entrada.getAttribute("aria-describedby") || "")
+            .split(/\s+/)
+            .filter(Boolean)
+    );
 
     if (mensaje) {
-        entrada.setAttribute("aria-describedby", `error-${campo}`);
+        descripciones.add(contenedorError.id);
+    } else {
+        descripciones.delete(contenedorError.id);
+    }
+
+    if (descripciones.size > 0) {
+        entrada.setAttribute(
+            "aria-describedby",
+            [...descripciones].join(" ")
+        );
     } else {
         entrada.removeAttribute("aria-describedby");
     }
 }
 
-formulario.addEventListener("submit", function (evento) {
-    evento.preventDefault();
+function completarConsultaDeCarrera() {
+    const parametros = new URLSearchParams(window.location.search);
+    const identificador = parametros.get("carrera");
+    const carrera = carrerasConsulta.get(identificador);
 
-    resultado.textContent = "";
-
-    const nombre = document.getElementById("nombre").value.trim();
-    const correo = document.getElementById("correo").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const motivo = document.getElementById("motivo").value;
-    const mensaje = document.getElementById("mensaje").value.trim();
-    const aceptacion = document.getElementById("aceptacion").checked;
-
-    let hayErrores = false;
-    let primerCampoConError = null;
-
-    function validarCampo(campo, mensajeError) {
-        mostrarError(campo, mensajeError);
-
-        if (mensajeError) {
-            hayErrores = true;
-
-            if (!primerCampoConError) {
-                primerCampoConError = document.getElementById(campo);
-            }
-        }
-    }
-
-    validarCampo(
-        "nombre",
-        nombre.length < 3
-            ? "Ingresá tu nombre y apellido."
-            : ""
-    );
-
-    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
-
-    validarCampo(
-        "correo",
-        correoValido ? "" : "Ingresá un correo electrónico válido."
-    );
-
-    const telefonoValido =
-        telefono === "" || /^[+\d\s().-]{6,30}$/.test(telefono);
-
-    validarCampo(
-        "telefono",
-        telefonoValido
-            ? ""
-            : "Ingresá un teléfono válido o dejá el campo vacío."
-    );
-
-    validarCampo(
-        "motivo",
-        motivo ? "" : "Seleccioná un motivo de consulta."
-    );
-
-    validarCampo(
-        "mensaje",
-        mensaje.length >= 10
-            ? ""
-            : "Escribí tu consulta."
-    );
-
-    validarCampo(
-        "aceptacion",
-        aceptacion
-            ? ""
-            : "Debés aceptar el uso de tus datos para responder la consulta."
-    );
-
-    if (hayErrores) {
-        primerCampoConError.focus();
+    if (!carrera || !formulario) {
         return;
     }
 
-    const asunto = `Consulta ITEC: ${motivo}`;
+    const campoMensaje = document.getElementById("mensaje");
+    const campoMotivo = document.getElementById("motivo");
 
-    const cuerpo =
-        `Nombre y apellido: ${nombre}\n` +
-        `Correo: ${correo}\n` +
-        `Teléfono: ${telefono || "No informado"}\n` +
-        `Motivo: ${motivo}\n\n` +
-        `Mensaje:\n${mensaje}`;
+    if (!campoMotivo.value) {
+        campoMotivo.value = "Inscripciones";
+    }
 
-    const enlaceCorreo =
-        `mailto:info@itec.edu.ar` +
-        `?subject=${encodeURIComponent(asunto)}` +
-        `&body=${encodeURIComponent(cuerpo)}`;
+    if (!campoMensaje.value.trim()) {
+        campoMensaje.value = identificador === "energias-renovables"
+            ? `Hola, quisiera consultar por próximas convocatorias para la Tecnicatura Superior en ${carrera}.`
+            : `Hola, quisiera recibir información sobre la inscripción a la Tecnicatura Superior en ${carrera}.`;
+    }
+}
 
-    resultado.textContent =
-        "Se abrirá tu aplicación de correo. Revisá el mensaje y presioná Enviar allí para completar la consulta.";
+if (formulario && resultado) {
+    const campos = [
+        "nombre",
+        "correo",
+        "telefono",
+        "motivo",
+        "mensaje",
+        "aceptacion"
+    ];
 
-    window.location.href = enlaceCorreo;
-});
+    campos.forEach(id => {
+        const entrada = document.getElementById(id);
+
+        const evento = entrada.matches(
+            'select, input[type="checkbox"]'
+        )
+            ? "change"
+            : "input";
+
+        entrada.addEventListener(evento, () => {
+            resultado.textContent = "";
+
+            if (entrada.getAttribute("aria-invalid") === "true") {
+                mostrarError(id, "");
+            }
+        });
+    });
+
+    formulario.addEventListener("submit", evento => {
+        evento.preventDefault();
+        resultado.textContent = "";
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const motivo = document.getElementById("motivo").value;
+        const mensaje = document.getElementById("mensaje").value.trim();
+        const aceptacion = document.getElementById("aceptacion").checked;
+
+        let primerCampoConError = null;
+
+        function validarCampo(id, mensajeError) {
+            mostrarError(id, mensajeError);
+
+            if (mensajeError && !primerCampoConError) {
+                primerCampoConError = document.getElementById(id);
+            }
+        }
+
+        validarCampo(
+            "nombre",
+            nombre.length >= 3 && nombre.length <= 100
+                ? ""
+                : "Ingresá tu nombre y apellido, entre 3 y 100 caracteres."
+        );
+
+        const correoValido =
+            correo.length <= 150 &&
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+
+        validarCampo(
+            "correo",
+            correoValido
+                ? ""
+                : "Ingresá un correo electrónico válido."
+        );
+
+        const digitosTelefono = telefono.replace(/\D/g, "");
+
+        const telefonoValido =
+            telefono === "" ||
+            (
+                telefono.length <= 30 &&
+                /^\+?[\d\s().-]+$/.test(telefono) &&
+                digitosTelefono.length >= 6 &&
+                digitosTelefono.length <= 15
+            );
+
+        validarCampo(
+            "telefono",
+            telefonoValido
+                ? ""
+                : "Ingresá un teléfono con entre 6 y 15 dígitos o dejá el campo vacío."
+        );
+
+        validarCampo(
+            "motivo",
+            motivo ? "" : "Seleccioná un motivo de consulta."
+        );
+
+        validarCampo(
+            "mensaje",
+            mensaje.length >= 10 && mensaje.length <= 2000
+                ? ""
+                : "Escribí una consulta de entre 10 y 2000 caracteres."
+        );
+
+        validarCampo(
+            "aceptacion",
+            aceptacion
+                ? ""
+                : "Debés aceptar el uso de tus datos para responder la consulta."
+        );
+
+        if (primerCampoConError) {
+            resultado.textContent =
+                "Revisá los campos indicados antes de continuar.";
+
+            primerCampoConError.focus();
+            return;
+        }
+
+        const asunto = `Consulta ITEC: ${motivo}`;
+
+        const cuerpo = [
+            `Nombre y apellido: ${nombre}`,
+            `Correo: ${correo}`,
+            `Teléfono: ${telefono || "No informado"}`,
+            `Motivo: ${motivo}`,
+            "",
+            "Mensaje:",
+            mensaje
+        ].join("\n");
+
+        const enlaceCorreo =
+            "mailto:info@itec-elmolino.edu.ar" +
+            `?subject=${encodeURIComponent(asunto)}` +
+            `&body=${encodeURIComponent(cuerpo)}`;
+
+        resultado.textContent =
+            "La consulta está preparada. Se intentará abrir tu aplicación " +
+            "de correo: revisá el mensaje y presioná Enviar allí. " +
+            "Si no se abre, podés escribir a info@itec-elmolino.edu.ar.";
+
+        window.location.href = enlaceCorreo;
+    });
+
+    completarConsultaDeCarrera();
+}
+
+const botonCopiar = document.getElementById("copiar");
+const estadoCopiado = document.getElementById("copiado");
+
+if (botonCopiar && estadoCopiado) {
+    const direccion =
+        "Rivadavia 1390, 1er piso, Esperanza, Santa Fe.";
+
+    botonCopiar.addEventListener("click", async () => {
+        estadoCopiado.textContent = "";
+        botonCopiar.disabled = true;
+
+        try {
+            if (!navigator.clipboard?.writeText) {
+                throw new Error("El navegador no permite copiar automáticamente.");
+            }
+
+            await navigator.clipboard.writeText(direccion);
+
+            estadoCopiado.textContent =
+                "Dirección copiada al portapapeles.";
+        } catch {
+            estadoCopiado.textContent =
+                `No pudimos copiar automáticamente. Podés seleccionar y copiar esta dirección: ${direccion}`;
+        } finally {
+            botonCopiar.disabled = false;
+        }
+    });
+}
+
+function completarConsultaDeServicio() {
+    const parametros = new URLSearchParams(window.location.search);
+
+    if (parametros.has("carrera")) {
+        return;
+    }
+
+    const servicios = new Map([
+        [
+            "servicios-tecnologicos",
+            {
+                nombre: "Servicios Tecnológicos",
+                indicacion: "Necesito consultar por el siguiente material, pieza o ensayo:"
+            }
+        ],
+        [
+            "uvt",
+            {
+                nombre: "Unidad de Vinculación Tecnológica",
+                indicacion: "Quisiera recibir orientación sobre el siguiente proyecto:"
+            }
+        ],
+        [
+            "asistencia-tecnica",
+            {
+                nombre: "Asistencia Técnica y Consultoría",
+                indicacion: "Necesitamos acompañamiento en la siguiente área o proceso:"
+            }
+        ],
+        [
+            "capacitacion-empresas",
+            {
+                nombre: "Capacitación para empresas",
+                indicacion: "Nos interesa una capacitación sobre el siguiente tema:"
+            }
+        ],
+        [
+            "orientacion-empresas",
+            {
+                nombre: "Servicios para empresas",
+                indicacion: "Quisiera consultar qué servicio corresponde a esta necesidad:"
+            }
+        ]
+    ]);
+
+    const servicio = servicios.get(parametros.get("servicio"));
+    const campoMotivo = document.getElementById("motivo");
+    const campoMensaje = document.getElementById("mensaje");
+
+    if (!servicio || !campoMotivo || !campoMensaje) {
+        return;
+    }
+
+    if (!campoMotivo.value) {
+        campoMotivo.value = "Servicios para empresas";
+    }
+
+    if (!campoMensaje.value.trim()) {
+        campoMensaje.value =
+            `Hola, quisiera recibir información sobre ${servicio.nombre}.\n\n` +
+            `Empresa u organización: \n\n` +
+            `${servicio.indicacion}\n`;
+    }
+}
+
+completarConsultaDeServicio();

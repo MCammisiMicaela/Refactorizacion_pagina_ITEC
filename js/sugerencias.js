@@ -116,11 +116,40 @@ function iniciarSugerencias() {
                     return;
                 }
 
+                const palabrasConsulta = texto.split(/\s+/);
+
                 coincidencias = contenidos
-                    .filter(contenido =>
-                        normalizarSugerencia(contenido.titulo)
-                            .startsWith(texto)
-                    )
+                    .filter(contenido => {
+                        const titulo = normalizarSugerencia(contenido.titulo);
+
+                        const palabrasClave = Array.isArray(contenido.palabras)
+                            ? contenido.palabras.join(" ")
+                            : contenido.palabras || "";
+
+                        const palabrasContenido = normalizarSugerencia(
+                            `${contenido.titulo} ${palabrasClave}`
+                        )
+                            .split(/[^\p{L}\p{N}]+/u)
+                            .filter(Boolean);
+
+                        return titulo.startsWith(texto) ||
+                            palabrasConsulta.every(palabraConsulta =>
+                                palabrasContenido.some(palabraContenido =>
+                                    palabraContenido.startsWith(palabraConsulta)
+                                )
+                            );
+                    })
+                    .sort((primero, segundo) => {
+                        const prioridadPrimero = normalizarSugerencia(
+                            primero.titulo
+                        ).startsWith(texto);
+
+                        const prioridadSegundo = normalizarSugerencia(
+                            segundo.titulo
+                        ).startsWith(texto);
+
+                        return Number(prioridadSegundo) - Number(prioridadPrimero);
+                    })
                     .slice(0, 6);
 
                 lista.replaceChildren();
