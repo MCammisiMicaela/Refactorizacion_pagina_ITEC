@@ -42,12 +42,18 @@
     "palabras": "boletin novedades newsletter suscripcion suscribirme"
 },
 {
+ feature/desarrollo-noticias
+    "titulo": "Noticias e Institucionales",
+    "descripcion": "Novedades, comunicados, eventos y archivo histórico de publicaciones de ITEC.",
+    "url": "paginas/noticias.html",
+    "palabras": "noticias novedades comunicados publicaciones eventos archivo historico"
+
  feature/desarrollo-capacitaciones
     "titulo": "Capacitaciones y Desarrollo Profesional",
     "descripcion": "Formación continua, cursos abiertos y capacitaciones a medida para empresas y profesionales.",
     "url": "paginas/capacitaciones.html",
     "palabras": "capacitaciones cursos talleres in-company cnc automatizacion liderazgo plc calidad empresas seguridad higiene"
-=======
+
   "titulo": "Desarrollo de Software",
   "descripcion": "Tecnicatura de tres años. Consultá el perfil profesional, el plan de estudios y la información de ingreso.",
   "url": "paginas/carreras/desarrollo-software.html",
@@ -113,5 +119,6 @@
   "palabras": "capacitacion empresas cursos talleres seminarios personal equipos formacion interna",
   "url": "paginas/servicios.html#capacitacion-empresas"
 main
+ main
 }
 ]

@@ -6,7 +6,12 @@
         "categoria": "Institucionales",
         "resumen": "La participación en la feria permitió a estudiantes colaborar con su organización y ejercitar habilidades en un entorno laboral.",
         "imagen": "img/noticias/fecol-expodema-2026.jpeg",
-        "url": "https://itec-elmolino.edu.ar/el-itec-acompano-a-fecol-expodema-2026-con-la-participacion-activa-de-sus-estudiantes/"
+        "contenido": [
+            "Estudiantes de distintas carreras del Instituto Tecnológico El Molino participaron activamente durante el desarrollo de FECOL-Expodema 2026, la tradicional feria multisectorial de Esperanza.",
+            "La experiencia permitió a los alumnos integrarse a los equipos de organización y atención en el predio, aplicando competencias profesionales y de comunicación aprendidas durante la cursada.",
+            "Desde la institución se destacó la importancia de estas instancias prácticas que conectan el ámbito académico con el entramado productivo y de servicios de la región."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/el-itec-acompano-a-fecol-expodema-2026-con-la-participacion-activa-de-sus-estudiantes/"
     },
     {
         "id": "nuestra-identidad-2026",
@@ -15,7 +20,12 @@
         "categoria": "Institucionales",
         "resumen": "Nueve escuelas presentaron sus trabajos sobre actividades productivas de Esperanza. El instituto participó en la evaluación de las propuestas.",
         "imagen": "img/noticias/nuestra-identidad-2026.jpg",
-        "url": "https://itec-elmolino.edu.ar/estudiantes-de-esperanza-pusieron-en-valor-la-identidad-productiva-de-la-ciudad-en-nuestra-identidad-2026/"
+        "contenido": [
+            "Nueve instituciones educativas de Esperanza formaron parte de la edición 2026 del certamen 'Nuestra Identidad', una iniciativa orientada a promover el conocimiento de las industrias y servicios locales entre los jóvenes.",
+            "Docentes y especialistas del ITEC colaboraron en la evaluación técnica de los proyectos presentados por los alumnos, valorando la innovación, el trabajo en equipo y el diagnóstico del sector productivo.",
+            "La actividad finalizó con una muestra de trabajos abiertos a la comunidad donde se visibilizó el potencial transformador de las nuevas generaciones."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/estudiantes-de-esperanza-pusieron-en-valor-la-identidad-productiva-de-la-ciudad-en-nuestra-identidad-2026/"
     },
     {
         "id": "mas-alla-del-codigo",
@@ -24,6 +34,67 @@
         "categoria": "Cursos y Servicios",
         "resumen": "Durante catorce semanas, los participantes exploraron herramientas digitales y elaboraron proyectos relacionados con necesidades de su ciudad.",
         "imagen": "img/noticias/mas-alla-del-codigo.jpeg",
-        "url": "https://itec-elmolino.edu.ar/mas-alla-del-codigo-28-jovenes-finalizaron-una-experiencia-de-formacion-en-tecnologia/"
+        "contenido": [
+            "Con la entrega de certificados, concluyó la capacitación 'Más allá del código', un trayecto formativo destinado a jóvenes interesados en el desarrollo tecnológico y la solución de problemas mediante herramientas digitales.",
+            "A lo largo de catorce semanas, los participantes abordaron metodologías ágiles, programación web y análisis de datos aplicados a desafíos reales planteados por instituciones de la ciudad.",
+            "El grupo docente resaltó el compromiso de las y los egresados y anunció la apertura de nuevas comisiones para los próximos meses."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/mas-alla-del-codigo-28-jovenes-finalizaron-una-experiencia-de-formacion-en-tecnologia/"
+    },
+    {
+        "id": "jornada-vinculacion-2025",
+        "titulo": "Jornada de Vinculación Tecnológica para PYMES de la región",
+        "fecha": "2025-11-10",
+        "categoria": "Vinculación",
+        "resumen": "Representantes de más de veinte empresas participaron de un encuentro para conocer líneas de financiamiento y asistencia técnica.",
+        "imagen": "img/noticias/fecol-expodema-2026.jpeg",
+        "contenido": [
+            "El ITEC albergó la Jornada Anual de Vinculación Tecnológica destinada a pequeñas y medianas empresas industriales del departamento Las Colonias.",
+            "Durante el encuentro se presentaron los servicios de laboratorio de ensayos de materiales, asesoramiento en gestión de calidad y programas de apoyo del Estado provincial.",
+            "Los empresarios destacaron el valor de contar con un centro de referencia local para acompañar los procesos de modernización productiva."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/institucional/noticias/"
+    },
+    {
+        "id": "taller-automatizacion-2025",
+        "titulo": "Nuevo taller práctico en Automatización y Neumática Industrial",
+        "fecha": "2025-06-18",
+        "categoria": "Cursos y Servicios",
+        "resumen": "Apertura de inscripciones para el trayecto intensivo de formación en entornos industriales automatizados.",
+        "imagen": "img/noticias/mas-alla-del-codigo.jpeg",
+        "contenido": [
+            "En respuesta a las demandas del sector metalmecánico, el instituto lanzó una nueva propuesta formativa focalizada en circuitos neumáticos y controladores lógicos programables (PLC).",
+            "La capacitación se desarrollará íntegramente en las aulas taller del instituto con equipamiento de nivel industrial.",
+            "Las clases comenzarán el próximo mes y contarán con cupos limitados para garantizar el aprendizaje práctico de cada participante."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/institucional/noticias/"
+    },
+    {
+        "id": "aniversario-itec-2024",
+        "titulo": "El ITEC conmemoró su trayectoria institucional junto a la comunidad",
+        "fecha": "2024-10-05",
+        "categoria": "Institucionales",
+        "resumen": "Autoridades, docentes y exalumnos se reunieron en una ceremonia especial para repasar los hitos del instituto.",
+        "imagen": "img/noticias/nuestra-identidad-2026.jpg",
+        "contenido": [
+            "En un emotivo acto institucional, la comunidad educativa del Instituto Tecnológico El Molino celebró sus años de labor continuada al servicio de la formación técnica y superior.",
+            "Durante la ceremonia se rindió homenaje a los fundadores y se entregaron reconocimientos a empresas patrocinadoras del programa Empresas que Educan.",
+            "La jornada culminó con un recorrido guiado por las obras de ampliación de los laboratorios y aulas informáticas."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/institucional/noticias/"
+    },
+    {
+        "id": "convenio-universitario-2024",
+        "titulo": "Firma de convenio para articulación universitaria de carreras técnicas",
+        "fecha": "2024-04-12",
+        "categoria": "Vinculación",
+        "resumen": "El acuerdo facilitará la homologación de materias para graduados del ITEC que continúen sus estudios de grado.",
+        "imagen": "img/noticias/fecol-expodema-2026.jpeg",
+        "contenido": [
+            "El ITEC suscribió un importante convenio de articulación académica que permitirá a las y los egresados de las tecnicaturas continuar su formación en carreras universitarias vinculadas con la ingeniería y la tecnología.",
+            "Este acuerdo reconoce la carga horaria y los contenidos desarrollados en el instituto, acortando los plazos de cursada para obtener el título de grado.",
+            "Se trata de un avance estratégico en el fortalecimiento del proyecto institucional y en las oportunidades laborales de la región."
+        ],
+        "urlOficial": "https://itec-elmolino.edu.ar/institucional/noticias/"
     }
 ]
