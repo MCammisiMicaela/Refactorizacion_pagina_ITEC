@@ -362,9 +362,20 @@ function inicializarEventos() {
             const tematica = obtenerTexto("tematica");
             const detalles = obtenerTexto("detalles");
 
-            if (!empresa || !contacto || !email || !telefono || !tematica) {
+            if (!empresa || !contacto || !email || !tematica) {
                 mensajeExitoMedida.textContent =
                     "Completá los campos obligatorios. No ingreses solamente espacios.";
+
+                mensajeExitoMedida.style.display = "block";
+                return;
+            }
+
+            const telefonoValido =
+                telefono === "" || /^[+0-9()\s.-]{6,30}$/.test(telefono);
+
+            if (!telefonoValido) {
+                mensajeExitoMedida.textContent =
+                    "Ingresá un teléfono válido o dejá el campo vacío.";
 
                 mensajeExitoMedida.style.display = "block";
                 return;
@@ -376,7 +387,7 @@ function inicializarEventos() {
                 `Empresa u organización: ${empresa}\n` +
                 `Persona de contacto: ${contacto}\n` +
                 `Correo electrónico: ${email}\n` +
-                `Teléfono: ${telefono}\n` +
+                `Teléfono: ${telefono || "No informado"}\n` +
                 `Temática de interés: ${tematica}\n\n` +
                 `Detalles de la consulta:\n${detalles || "Sin detalles adicionales."}`;
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrollo de capacitaciones abiertas y formación a medida para empresas y profesionales en el Instituto Tecnológico El Molino (ITEC).">
+    <meta name="description" content="Conocé los trayectos formativos, las capacitaciones abiertas y las propuestas a medida del Instituto Tecnológico El Molino.">
 
     <title>Capacitaciones y Desarrollo Profesional | Instituto Tecnológico El Molino</title>
 
@@ -66,38 +66,39 @@
             aria-labelledby="titulo-destinatarios"
         >
             <div class="contenedor">
+                <span class="linea-roja" aria-hidden="true"></span>
                 <h2 id="titulo-destinatarios" class="destinatarios-titulo">
                     Formación orientada a personas y organizaciones
                 </h2>
                 <p class="destinatarios-subtitulo">
-                    Diseñamos nuestras capacitaciones según las necesidades concretas de cada perfil:
+                    Las propuestas pueden ser abiertas al público o prepararse junto con una empresa u organización.
                 </p>
 
                 <div class="destinatarios-grid">
                     <article class="tarjeta-destinatario">
-                        <div class="destinatario-icono" aria-hidden="true">👤</div>
-                        <h3>Público General y Estudiantes</h3>
+                        <div class="destinatario-icono" aria-hidden="true">01</div>
+                        <h3>Personas que trabajan en organizaciones</h3>
                         <p>
-                            Cursos de formación profesional práctica para rápida inserción laboral, 
-                            adquisición de primeros oficios técnicos y desarrollo de habilidades personales.
+                            Formación, actualización y perfeccionamiento vinculados
+                            con las tareas y demandas de las organizaciones.
                         </p>
                     </article>
 
                     <article class="tarjeta-destinatario">
-                        <div class="destinatario-icono" aria-hidden="true">⚙️</div>
-                        <h3>Profesionales y Técnicos</h3>
+                        <div class="destinatario-icono" aria-hidden="true">02</div>
+                        <h3>Público general</h3>
                         <p>
-                            Actualización técnica de alto nivel en automatización, tecnologías CNC, 
-                            calidad industrial, energías renovables y competencias de gestión.
+                            Los cursos, talleres y seminarios también pueden ofrecerse
+                            abiertos al público. Consultá las convocatorias vigentes.
                         </p>
                     </article>
 
                     <article class="tarjeta-destinatario">
-                        <div class="destinatario-icono" aria-hidden="true">🏢</div>
-                        <h3>Empresas y PyMEs</h3>
+                        <div class="destinatario-icono" aria-hidden="true">03</div>
+                        <h3>Empresas y organizaciones</h3>
                         <p>
-                            Programas in-company y capacitaciones a medida para perfeccionar 
-                            los equipos de trabajo, mejorar procesos productivos y promover el liderazgo.
+                            Capacitaciones internas generadas a medida de las
+                            necesidades de cada empresa u organización.
                         </p>
                     </article>
                 </div>
@@ -109,17 +110,16 @@
             class="seccion-oferta contenedor"
             aria-labelledby="titulo-oferta"
         >
-            <h2 id="titulo-oferta" class="solo-lectores">Nuestra oferta académica</h2>
-
             <div class="capacitaciones-aviso">
-                <h2>Trayectos y propuestas de capacitación</h2>
+                <span class="linea-roja" aria-hidden="true"></span>
+                <h2 id="titulo-oferta">Trayectos y propuestas de capacitación</h2>
                 <p>
                     La inclusión de una propuesta en este catálogo no significa
                     que tenga inscripciones abiertas. Consultá al instituto
                     las próximas convocatorias y condiciones de cursado.
                 </p>
                 <p>
-                    Información contrastada con el sitio oficial el
+                    Datos contrastados con el sitio oficial el
                     <time datetime="2026-10-06">6 de octubre de 2026</time>.
                 </p>
 
@@ -191,7 +191,7 @@
                         <option value="todas">Todas las áreas</option>
                         <option value="gestion">Gestión</option>
                         <option value="tecnologia">Tecnología</option>
-                        <option value="a-definir">Área a definir</option>
+                        <option value="a-medida">A medida</option>
                     </select>
                 </div>
 
@@ -200,10 +200,7 @@
                     <select id="filtro-estado">
                         <option value="todos">Todos los estados</option>
                         <option value="consultar">Consultar convocatoria o propuesta</option>
-                        <option value="abierta">Inscripción abierta</option>
-                        <option value="proximamente">Próximamente</option>
-                        <option value="cerrada">Inscripción cerrada</option>
-                        <option value="finalizado">Finalizado</option>
+
                     </select>
                 </div>
 
@@ -225,14 +222,16 @@
             <div id="grid-capacitaciones" class="capacitaciones-grid"></div>
         </section>
 
-        <!-- 6. Acceso para Capacitación a Medida -->
-        <section id="a-medida" class="contenedor">
+
+        <section id="a-medida" class="contenedor" aria-labelledby="titulo-a-medida">
             <div class="seccion-a-medida">
                 <div class="a-medida-contenido">
-                    <h2>¿Buscás una capacitación a medida para tu empresa?</h2>
+                    <span class="linea-roja" aria-hidden="true"></span>
+                    <h2 id="titulo-a-medida">¿Necesitás capacitar a tu equipo?</h2>
                     <p>
-                        Diseñamos trayectos formativos in-company adaptados a los procesos, 
-                        tecnologías y necesidades específicas de tu equipo de trabajo.
+                        El ITEC ofrece cursos, talleres y seminarios internos según las
+                        necesidades de cada organización. Contanos qué necesitás y consultá
+                        si es posible preparar una propuesta a medida.
                     </p>
                 </div>
                 <button
@@ -240,12 +239,12 @@
                     class="boton-medida boton-solicitar-medida"
                     id="btn-abrir-medida"
                 >
-                    Solicitar propuesta a medida
+                    Consultar capacitación a medida
                 </button>
             </div>
         </section>
 
-        <!-- 3 y 4. Modal Accesible de Detalle de Capacitación (<dialog>) -->
+
         <dialog id="modal-detalle" class="modal-dialog" aria-labelledby="modal-detalle-titulo">
             <div class="modal-header">
                 <div class="modal-header-titulos">
@@ -278,7 +277,7 @@
                         <span id="modal-detalle-horarios"></span>
                     </div>
                     <div class="meta-item">
-                        <strong>Inicio Previsto</strong>
+                        <strong>Convocatoria</strong>
                         <span id="modal-detalle-inicio"></span>
                     </div>
                 </div>
@@ -289,7 +288,7 @@
                 </div>
 
                 <div class="modal-seccion">
-                    <h4>Audiencia Principal</h4>
+                    <h4>Destinatarios</h4>
                     <p id="modal-detalle-audiencia"></p>
                 </div>
 
@@ -299,7 +298,7 @@
                 </div>
 
                 <div class="modal-seccion">
-                    <h4>Programa / Temario</h4>
+                    <h4>Contenidos</h4>
                     <ul id="modal-detalle-temario" class="modal-lista"></ul>
                 </div>
             </div>
@@ -318,17 +317,17 @@
                     id="btn-inscripcion-modal"
                     style="text-decoration:none;"
                 >
-                    Consultar e Inscribirme
+                    Consultar esta propuesta
                 </a>
             </div>
         </dialog>
 
-        <!-- 6. Modal Accesible para Consulta a Medida (<dialog>) -->
+
         <dialog id="modal-a-medida" class="modal-dialog" aria-labelledby="modal-medida-titulo">
             <div class="modal-header">
                 <div class="modal-header-titulos">
                     <span class="badge badge-empresa">Servicio In-Company</span>
-                    <h2 id="modal-medida-titulo">Solicitud de Capacitación a Medida</h2>
+                    <h2 id="modal-medida-titulo">Consultar una capacitación a medida</h2>
                 </div>
                 <button
                     type="button"
@@ -366,35 +365,43 @@
                     </div>
 
                     <div class="campo-grupo">
-                        <label for="contacto-telefono">Teléfono / WhatsApp *</label>
-                        <input type="tel" id="contacto-telefono" name="telefono" required placeholder="Ej: 03496 15000000">
+                        <label for="contacto-telefono">Teléfono / WhatsApp (opcional)</label>
+                        <input
+                            type="tel"
+                            id="contacto-telefono"
+                            name="telefono"
+                            autocomplete="tel"
+                            maxlength="30"
+                            placeholder="Ej.: 03496 123456"
+                        >
                     </div>
 
                     <div class="campo-grupo">
-                        <label for="tematica-interes">Área o Temática de Interés *</label>
-                        <select id="tematica-interes" name="tematica" required>
-                            <option value="">Seleccione una temática...</option>
-                            <option value="Industria y Metalmecánica">Industria y Metalmecánica</option>
-                            <option value="Tecnología y Automatización">Tecnología y Automatización</option>
-                            <option value="Liderazgo y Gestión de Equipos">Liderazgo y Gestión de Equipos</option>
-                            <option value="Seguridad e Higiene Industrial">Seguridad e Higiene Industrial</option>
-                            <option value="Otra temática a medida">Otra temática personalizada</option>
-                        </select>
+                        <label for="tematica-interes">Tema o necesidad de capacitación *</label>
+                        <input
+                            type="text"
+                            id="tematica-interes"
+                            name="tematica"
+                            required
+                            maxlength="150"
+                            placeholder="Contanos qué necesita capacitar tu equipo"
+                        >
                     </div>
 
                     <div class="campo-grupo">
                         <label for="detalles-consulta">Detalles o necesidades específicas</label>
-                        <textarea id="detalles-consulta" name="detalles" placeholder="Describa brevemente la cantidad de participantes, modalidad preferida u objetivos del entrenamiento..."></textarea>
+                        <textarea id="detalles-consulta" name="detalles" placeholder="Contanos brevemente qué necesitás y para cuántas personas."></textarea>
                     </div>
 
                     <p id="aviso-correo-medida">
-                    Al continuar se intentará abrir tu aplicación de correo.
-                    Revisá el mensaje y presioná Enviar allí para completar la consulta.
+                        Este formulario prepara un correo de consulta; no registra una
+                        inscripción ni envía datos automáticamente. Revisá el mensaje y
+                        presioná Enviar en tu aplicación de correo.
                     </p>
 
-                    <div class="modal-footer" style="padding: 16px 0 0; background: none; border: none;">
+                    <div class="modal-footer modal-footer-medida">
                         <button type="button" class="boton" id="btn-cancelar-medida">Cancelar</button>
-                        <button type="submit" class="boton" style="background-color: var(--rojo); color: #fff;">Enviar Solicitud</button>
+                        <button type="submit" class="boton boton-enviar-medida">Preparar correo de consulta</button>
                     </div>
                 </form>
             </div>

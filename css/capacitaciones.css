@@ -967,3 +967,42 @@ dialog[open] {
         transition: none !important;
     }
 }
+
+
+.destinatario-icono {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+.capacitaciones-aviso .linea-roja,
+.seccion-destinatarios > .contenedor > .linea-roja,
+.a-medida-contenido > .linea-roja {
+    margin-bottom: 14px;
+}
+
+.tarjeta-destinatario,
+.tarjeta-capacitacion {
+    transition: none;
+}
+
+.tarjeta-destinatario:hover,
+.tarjeta-capacitacion:hover {
+    transform: none;
+}
+
+.boton-enviar-medida {
+    border: 0;
+    background-color: var(--rojo);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.boton-enviar-medida:hover {
+    background-color: #b90510;
+}
+
+.modal-footer-medida {
+    padding: 16px 0 0;
+    border: 0;
+    background: transparent;
+}
