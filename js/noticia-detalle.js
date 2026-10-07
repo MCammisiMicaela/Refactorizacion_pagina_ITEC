@@ -1,4 +1,4 @@
-const raizProyecto = new URL("../", document.currentScript.src);
+const raizNoticiaDetalle = new URL("../", document.currentScript.src);
 
 const formatoFecha = new Intl.DateTimeFormat("es-AR", {
     day: "numeric",
@@ -25,7 +25,7 @@ async function cargarDetalleNoticia() {
 
     try {
         const respuesta = await fetch(
-            new URL("datos/noticias.json", raizProyecto)
+            new URL("datos/noticias.json", raizNoticiaDetalle)
         );
 
         if (!respuesta.ok) {
@@ -109,7 +109,7 @@ function renderizarNoticia(noticia, contenedor) {
         figura.className = "noticia-detalle-figura";
 
         const imagen = document.createElement("img");
-        imagen.src = new URL(noticia.imagen, raizProyecto).href;
+        imagen.src = new URL(noticia.imagen, raizNoticiaDetalle).href;
         imagen.alt = "";
         imagen.className = "noticia-detalle-imagen";
 
@@ -180,7 +180,7 @@ function cargarNoticiasRelacionadas(todas, idActual) {
 
         if (noticia.imagen) {
             const imagen = document.createElement("img");
-            imagen.src = new URL(noticia.imagen, raizProyecto).href;
+            imagen.src = new URL(noticia.imagen, raizNoticiaDetalle).href;
             imagen.alt = "";
             imagen.className = "noticia-imagen";
             imagen.loading = "lazy";

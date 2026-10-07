@@ -1,0 +1,419 @@
+.pagina-ingresantes {
+    padding-top: 28px;
+    padding-bottom: 48px;
+}
+
+.ingresantes-ruta ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.ingresantes-ruta li {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ingresantes-ruta li + li::before {
+    content: "/";
+    color: #555e69;
+}
+
+.ingresantes-ruta a {
+    color: #555e69;
+    text-decoration: none;
+    text-underline-offset: 4px;
+}
+
+.ingresantes-ruta a:hover {
+    color: var(--rojo);
+    text-decoration: underline;
+}
+
+.ingresantes-ruta [aria-current="page"] {
+    color: var(--rojo);
+}
+
+.ingresantes-presentacion {
+    max-width: 820px;
+    margin: 32px 0 36px;
+}
+
+.ingresantes-presentacion .linea-roja,
+.ingresantes-titulo .linea-roja,
+.ingresantes-contacto .linea-roja {
+    margin-bottom: 14px;
+}
+
+.ingresantes-etiqueta {
+    margin: 0 0 8px;
+    color: #555e69;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ingresantes-presentacion h1 {
+    margin: 0 0 16px;
+    color: var(--texto);
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.ingresantes-presentacion > p:not(.ingresantes-etiqueta) {
+    max-width: 760px;
+    margin: 0;
+    color: #555e69;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.ingresantes-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pagina-ingresantes .boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    white-space: normal;
+}
+
+.pagina-ingresantes .ingresantes-boton-principal {
+    border-color: var(--rojo);
+    background-color: var(--rojo);
+    color: #ffffff;
+}
+
+.pagina-ingresantes .ingresantes-boton-principal:hover {
+    border-color: var(--rojo-oscuro);
+    background-color: var(--rojo-oscuro);
+}
+
+.ingresantes-accesos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+}
+
+.ingresantes-accesos a {
+    padding: 8px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    color: var(--texto);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.ingresantes-accesos a:hover,
+.ingresantes-accesos a:focus-visible {
+    border-color: var(--rojo);
+    color: var(--rojo-oscuro);
+}
+
+.ingresantes-seccion {
+    margin-top: 52px;
+    scroll-margin-top: 24px;
+}
+
+.ingresantes-titulo h2,
+.ingresantes-contacto h2 {
+    margin: 0 0 18px;
+    color: var(--texto);
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.ingresantes-seccion > p {
+    max-width: 820px;
+    margin: 0 0 18px;
+    color: #555e69;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.ingresantes-aviso {
+    max-width: 900px;
+    margin-top: 24px;
+    padding: 22px 24px;
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--rojo);
+    border-radius: 0 8px 8px 0;
+    background-color: #fafafa;
+}
+
+.ingresantes-aviso h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.ingresantes-aviso p {
+    margin: 0 0 16px;
+    color: #555e69;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ingresantes-pasos {
+    margin-top: 32px;
+}
+
+.ingresantes-pasos h3 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.ingresantes-pasos ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: pasos;
+}
+
+.ingresantes-pasos li {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #555e69;
+    font-size: 15px;
+    line-height: 1.65;
+    counter-increment: pasos;
+}
+
+.ingresantes-pasos li::before {
+    content: counter(pasos);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background-color: #fff0f1;
+    color: var(--rojo-oscuro);
+    font-weight: 700;
+}
+
+.ingresantes-pasos strong {
+    color: var(--texto);
+}
+
+.ingresantes-pasos a,
+.ingresantes-preguntas a {
+    color: var(--rojo-oscuro);
+    text-underline-offset: 3px;
+}
+
+.ingresantes-formulario {
+    max-width: 900px;
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.ingresantes-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.ingresantes-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.ingresantes-campo label,
+.ingresantes-confirmacion label {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.ingresantes-campo label span,
+.ingresantes-confirmacion label span {
+    color: var(--rojo);
+}
+
+.ingresantes-campo input,
+.ingresantes-campo select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd0d7;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--texto);
+    font: inherit;
+    font-size: 15px;
+}
+
+.ingresantes-campo input:focus,
+.ingresantes-campo select:focus {
+    outline: 2px solid var(--rojo);
+    outline-offset: 2px;
+}
+
+.ingresantes-campo [aria-invalid="true"] {
+    border-color: var(--rojo-oscuro);
+}
+
+.ingresantes-confirmacion {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.ingresantes-confirmacion input {
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--rojo);
+    flex: 0 0 auto;
+}
+
+.ingresantes-confirmacion label {
+    font-weight: 400;
+}
+
+.ingresantes-estado {
+    margin: 16px 0 0;
+    color: #245c38;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ingresantes-preguntas {
+    max-width: 900px;
+    border-top: 1px solid var(--borde);
+}
+
+.ingresantes-preguntas details {
+    border-bottom: 1px solid var(--borde);
+}
+
+.ingresantes-preguntas summary {
+    padding: 18px 4px;
+    color: var(--texto);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.ingresantes-preguntas summary:focus-visible {
+    outline: 2px solid var(--rojo);
+    outline-offset: 3px;
+}
+
+.ingresantes-preguntas details p {
+    margin: 0;
+    padding: 0 4px 18px;
+    color: #555e69;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ingresantes-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 56px;
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.ingresantes-contacto h2 {
+    margin-bottom: 8px;
+    font-size: 23px;
+}
+
+.ingresantes-contacto p {
+    margin: 0;
+    color: #555e69;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .ingresantes-pasos ol,
+    .ingresantes-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .ingresantes-contacto {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ingresantes-formulario {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pagina-ingresantes {
+        padding-top: 20px;
+    }
+
+    .ingresantes-ruta ol {
+        margin-bottom: 24px;
+    }
+
+    .ingresantes-acciones,
+    .ingresantes-acciones .boton,
+    .ingresantes-aviso .boton,
+    .ingresantes-contacto .boton,
+    .ingresantes-formulario .boton {
+        width: 100%;
+    }
+
+    .ingresantes-seccion {
+        margin-top: 40px;
+    }
+
+    .ingresantes-accesos {
+        gap: 8px;
+    }
+
+    .ingresantes-accesos a {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    .ingresantes-aviso {
+        padding: 18px;
+    }
+}

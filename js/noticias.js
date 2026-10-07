@@ -1,4 +1,4 @@
-const raizProyecto = new URL("../", document.currentScript.src);
+const raizNoticias = new URL("../", document.currentScript.src);
 
 const estado = {
     todasLasNoticias: [],
@@ -16,6 +16,14 @@ const formatoFecha = new Intl.DateTimeFormat("es-AR", {
     year: "numeric"
 });
 
+function normalizarTexto(texto = "") {
+    return String(texto)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+}
+
 async function inicializarNoticias() {
     const contenedor = document.getElementById("contenedor-noticias");
     const estadoMensaje = document.getElementById("estado-noticias");
@@ -26,7 +34,7 @@ async function inicializarNoticias() {
 
     try {
         const respuesta = await fetch(
-            new URL("datos/noticias.json", raizProyecto)
+            new URL("datos/noticias.json", raizNoticias)
         );
 
         if (!respuesta.ok) {
@@ -76,7 +84,7 @@ function configurarEventos() {
 
     if (inputBusqueda) {
         inputBusqueda.addEventListener("input", (e) => {
-            estado.busqueda = e.target.value.trim().toLowerCase();
+            estado.busqueda = normalizarTexto(e.target.value);
             estado.paginaActual = 1;
             aplicarFiltros();
         });
@@ -116,12 +124,14 @@ function configurarEventos() {
 
 function aplicarFiltros() {
     estado.noticiasFiltradas = estado.todasLasNoticias.filter(noticia => {
+        const textoNoticia = normalizarTexto([
+            noticia.titulo,
+            noticia.resumen,
+            ...(Array.isArray(noticia.contenido) ? noticia.contenido : [])
+        ].join(" "));
+
         const coincideBusqueda =
-            !estado.busqueda ||
-            noticia.titulo.toLowerCase().includes(estado.busqueda) ||
-            noticia.resumen.toLowerCase().includes(estado.busqueda) ||
-            (Array.isArray(noticia.contenido) &&
-                noticia.contenido.some(p => p.toLowerCase().includes(estado.busqueda)));
+            !estado.busqueda || textoNoticia.includes(estado.busqueda);
 
         const coincideCategoria =
             estado.categoria === "todas" || noticia.categoria === estado.categoria;
@@ -175,7 +185,7 @@ function renderizar() {
 
         if (noticia.imagen) {
             const imagen = document.createElement("img");
-            imagen.src = new URL(noticia.imagen, raizProyecto).href;
+            imagen.src = new URL(noticia.imagen, raizNoticias).href;
             imagen.alt = "";
             imagen.className = "noticia-imagen";
             imagen.loading = "lazy";
