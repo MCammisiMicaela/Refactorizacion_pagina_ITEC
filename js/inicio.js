@@ -103,7 +103,7 @@ async function cargarNoticiasDestacadas() {
         console.error(error);
 
         estado.textContent =
-            "No pudimos cargar las noticias. Podés consultarlas en el sitio oficial.";
+            "No pudimos cargar las noticias destacadas. Probá recargar la página.";
     }
 }
 

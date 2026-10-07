@@ -80,7 +80,6 @@
 .noticias-campo-filtro input[type="search"]:focus,
 .noticias-campo-filtro select:focus {
     border-color: var(--rojo);
-    outline: none;
 }
 
 .boton-limpiar-filtros {

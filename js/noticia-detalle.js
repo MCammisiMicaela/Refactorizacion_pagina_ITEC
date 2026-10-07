@@ -58,8 +58,16 @@ async function cargarDetalleNoticia() {
 function mostrarError(mensajeText) {
     const estadoMensaje = document.getElementById("estado-noticia-detalle");
     const contenedor = document.getElementById("noticia-detalle");
+    const titulo = contenedor?.querySelector("#titulo-noticia");
 
-    if (contenedor) contenedor.replaceChildren();
+    if (contenedor) {
+        if (titulo) {
+            titulo.textContent = "Noticia no disponible";
+            contenedor.replaceChildren(titulo);
+        } else {
+            contenedor.replaceChildren();
+        }
+    }
 
     if (estadoMensaje) {
         estadoMensaje.innerHTML = `
@@ -70,6 +78,7 @@ function mostrarError(mensajeText) {
 }
 
 function renderizarNoticia(noticia, contenedor) {
+    const titulo = contenedor.querySelector("#titulo-noticia") || document.createElement("h1");
     contenedor.replaceChildren();
 
     // Encabezado
@@ -92,7 +101,7 @@ function renderizarNoticia(noticia, contenedor) {
 
     meta.append(categoria, fecha);
 
-    const titulo = document.createElement("h1");
+    titulo.id = "titulo-noticia";
     titulo.className = "noticia-detalle-titulo";
     titulo.textContent = noticia.titulo;
 
