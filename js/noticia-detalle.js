@@ -148,17 +148,6 @@ function renderizarNoticia(noticia, contenedor) {
 
     contenedor.append(cuerpo);
 
-    // Fuente oficial de respaldo
-    if (noticia.urlOficial) {
-        const fuente = document.createElement("div");
-        fuente.className = "noticia-detalle-fuente";
-
-        const pFuente = document.createElement("p");
-        pFuente.innerHTML = `Noticia publicada originalmente en el sitio web de ITEC. <a href="${noticia.urlOficial}" target="_blank" rel="noopener noreferrer">Ver nota original en el portal institucional ↗</a>`;
-
-        fuente.append(pFuente);
-        contenedor.append(fuente);
-    }
 }
 
 function cargarNoticiasRelacionadas(todas, idActual) {

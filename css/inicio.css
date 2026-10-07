@@ -1,6 +1,6 @@
 .inicio-presentacion {
     padding-block: 36px;
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
     border-bottom: 1px solid var(--borde);
 }
 
@@ -35,7 +35,7 @@
 .inicio-descripcion {
     max-width: 540px;
     margin: 0 0 24px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 17px;
     line-height: 1.7;
 }
@@ -48,7 +48,7 @@
 
 .inicio-acciones .boton,
 .inicio-tarjeta-formacion .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
     font-weight: 700;
@@ -71,7 +71,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     margin-top: 12px;
     color: var(--rojo-oscuro);
     font-size: 14px;
@@ -106,14 +106,14 @@
 
 .inicio-titulo-seccion h2 {
     margin: 0 0 12px;
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: var(--titulo-seccion);
     line-height: 1.2;
     text-wrap: balance;
 }
 
 .inicio-titulo-seccion p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -132,7 +132,7 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -153,14 +153,14 @@
 .inicio-tarjeta-descripcion {
     flex-grow: 1;
     margin: 0 0 24px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
 
 .inicio-orientacion {
     margin: 24px 0 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.7;
 }
@@ -208,7 +208,7 @@
     padding-block: 48px;
     border-top: 1px solid var(--borde);
     border-bottom: 1px solid var(--borde);
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .inicio-motivos-grid {
@@ -232,7 +232,7 @@
 
 .inicio-motivo p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -280,13 +280,13 @@
 
 .inicio-instituto-descripcion p {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
 
 .inicio-instituto-descripcion .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     margin-top: 4px;
     padding: 11px 16px;
     font-size: 14px;
@@ -322,13 +322,13 @@
 }
 
 .inicio-noticias-cabecera > .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     font-size: 14px;
     text-align: center;
 }
 
 #estado-noticias {
-    color: #555e69;
+    color: var(--texto-secundario);
     line-height: 1.6;
 }
 
@@ -347,7 +347,7 @@
     flex-direction: column;
     min-width: 0;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -378,7 +378,7 @@
 
 .noticia-fecha {
     margin-bottom: 14px;
-    color: #626973;
+    color: var(--texto-secundario);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -393,7 +393,7 @@
 .noticia-resumen {
     flex-grow: 1;
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.7;
 }
@@ -401,7 +401,7 @@
 .noticia-enlace {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     color: var(--rojo-oscuro);
     font-size: 14px;
     font-weight: 700;
@@ -435,19 +435,11 @@
     }
 }
 
-.inicio-instituto-identidad .linea-roja {
-    margin-bottom: 14px;
-}
-
-.inicio-instituto-identidad h2 {
-    margin-bottom: 0;
-}
-
 .inicio-servicios {
     padding-block: 48px;
     border-top: 1px solid var(--borde);
     border-bottom: 1px solid var(--borde);
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .inicio-servicios-grid {
@@ -463,7 +455,7 @@
     min-width: 0;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -477,7 +469,7 @@
 .inicio-servicio p {
     flex-grow: 1;
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -499,7 +491,7 @@
 }
 
 .inicio-servicios-acciones .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
     font-weight: 700;
@@ -537,7 +529,7 @@
     min-width: 0;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -559,7 +551,7 @@
 .inicio-vinculo-descripcion {
     flex-grow: 1;
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -581,13 +573,13 @@
 .inicio-vinculacion-cierre p {
     max-width: 680px;
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.7;
 }
 
 .inicio-vinculacion-cierre .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
     font-weight: 700;
@@ -620,7 +612,7 @@
 .inicio-contacto {
     padding-block: 48px;
     border-top: 1px solid var(--borde);
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .inicio-contacto-grid {
@@ -636,7 +628,7 @@
     min-width: 0;
     padding: 22px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
     color: var(--texto);
     text-decoration: none;
@@ -669,7 +661,7 @@
 }
 
 .inicio-contacto-texto > span {
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.5;
 }
@@ -704,7 +696,7 @@
     gap: 28px;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -727,7 +719,7 @@
 
 .inicio-historia-contenido p {
     margin: 0 0 12px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -755,13 +747,13 @@
 
 .inicio-historia-leyenda {
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.5;
 }
 
 .inicio-historia-acceso .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
     font-weight: 700;
@@ -800,17 +792,11 @@
 .boletin-aviso {
     margin: 0 0 16px;
     padding: 12px 16px;
-    border-left: 3px solid #626973;
+    border-left: 3px solid var(--texto-secundario);
     background-color: #f5f6f7;
     color: #454d57;
     font-size: 14px;
     line-height: 1.6;
-}
-
-.boletin-obligatorios {
-    margin: 0 0 18px;
-    color: #555e69;
-    font-size: 14px;
 }
 
 .boletin-campos {
@@ -834,10 +820,10 @@
 
 .boletin-campo input {
     width: 100%;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 12px;
     border: 1px solid #aeb4bc;
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--texto);
     font-size: 16px;
@@ -859,7 +845,7 @@
 }
 
 .boletin-enviar {
-    min-height: 44px;
+    min-height: var(--alto-control);
     margin-top: 24px;
     padding: 11px 18px;
     background-color: var(--rojo);
@@ -902,7 +888,7 @@
     padding: 16px 18px;
     border: 1px solid var(--borde);
     border-left: 3px solid var(--rojo);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
 }
 
@@ -915,7 +901,7 @@
 
 .inicio-aviso-inscripciones p {
     margin: 0 0 8px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -924,7 +910,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     color: var(--rojo-oscuro);
     font-size: 14px;
     font-weight: 700;
@@ -973,7 +959,7 @@
 
 .organizaciones-grid span {
     max-width: 220px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.5;
     overflow-wrap: anywhere;
@@ -1043,7 +1029,7 @@
     width: 100%;
     max-width: none;
     margin-top: 0;
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .inicio-aviso-inscripciones p {

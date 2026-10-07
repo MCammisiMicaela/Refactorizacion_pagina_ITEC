@@ -16,7 +16,7 @@
 .historia-ruta li + li::before {
     content: "/";
     margin-right: 8px;
-    color: #626973;
+    color: var(--texto-secundario);
 }
 
 .historia-ruta a {
@@ -25,7 +25,7 @@
 }
 
 .historia-ruta [aria-current="page"] {
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .historia-presentacion {
@@ -40,13 +40,13 @@
 
 .historia-presentacion h1 {
     margin: 0 0 18px;
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .historia-bajada {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
 }
@@ -55,8 +55,8 @@
     margin: 0;
     padding: 14px 18px;
     border-left: 3px solid var(--rojo);
-    background-color: #fafafa;
-    color: #555e69;
+    background-color: var(--fondo-suave);
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -96,7 +96,7 @@
 
 .historia-hito p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -108,7 +108,7 @@
 }
 
 .historia-acciones .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
 }

@@ -17,7 +17,7 @@
 .formacion-ruta li + li::before {
     content: "/";
     margin-right: 8px;
-    color: #626973;
+    color: var(--texto-secundario);
 }
 
 .formacion-ruta a {
@@ -26,7 +26,7 @@
 }
 
 .formacion-ruta [aria-current="page"] {
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .formacion-presentacion {
@@ -41,13 +41,13 @@
 
 .formacion-presentacion h1 {
     margin: 0 0 16px;
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .formacion-presentacion > p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
 }
@@ -57,7 +57,7 @@
     padding: 20px 24px;
     border-left: 3px solid var(--rojo);
     border-radius: 0 8px 8px 0;
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .formacion-competencias h2 {
@@ -68,7 +68,7 @@
 
 .formacion-competencias p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -79,7 +79,7 @@
 
 .formacion-titulo h2 {
     margin: 0 0 24px;
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: var(--titulo-seccion);
     line-height: 1.25;
 }
 
@@ -91,7 +91,7 @@
 
 .formacion-grupo h3 {
     margin: 0 0 12px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -115,7 +115,7 @@
     min-height: 90px;
     padding: 12px 16px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -135,8 +135,8 @@
     margin-top: 32px;
     padding: 20px 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .formacion-certificacion img {
@@ -149,7 +149,7 @@
 
 .formacion-certificacion p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -169,7 +169,7 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -181,16 +181,16 @@
 
 .formacion-tarjeta p {
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
 
 .formacion-tarjeta .boton {
     margin-top: auto;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 16px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     text-align: center;
 }
@@ -231,7 +231,7 @@
 .formacion-intro {
     max-width: 780px;
     margin: -8px 0 24px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -244,7 +244,7 @@
 .formacion-trayecto {
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -278,7 +278,7 @@
 }
 
 .formacion-trayecto summary:focus-visible {
-    outline: 3px solid #2167a8;
+    outline: 3px solid var(--foco);
     outline-offset: 3px;
 }
 
@@ -287,7 +287,7 @@
 }
 
 .formacion-trayecto-horas {
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     font-weight: 400;
 }
@@ -317,7 +317,7 @@
 
 .formacion-estado {
     padding: 6px 10px;
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background-color: #fff4df;
     color: #785000;
     font-size: 13px;
@@ -339,7 +339,7 @@
     border: 1px solid var(--borde);
     border-left: 3px solid var(--rojo);
     border-radius: 0 8px 8px 0;
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .formacion-vacio h3 {
@@ -350,15 +350,15 @@
 
 .formacion-vacio p {
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
 
 .formacion-vacio .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 16px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -369,7 +369,7 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -381,7 +381,7 @@
 
 .formacion-aviso {
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -405,10 +405,10 @@
 .formacion-campo select {
     display: block;
     width: 100%;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 12px;
     border: 1px solid #8a9099;
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--texto);
     font-size: 16px;
@@ -432,7 +432,7 @@
 }
 
 .formacion-enviar {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 18px;
     font-size: 15px;
     font-weight: 700;
@@ -467,16 +467,16 @@
 
 .formacion-filtros-titulo {
     margin: 0 6px 0 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     font-weight: 700;
 }
 
 .formacion-filtro {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 8px 16px;
     border: 1px solid var(--rojo);
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--rojo);
     font-size: 15px;
@@ -495,7 +495,7 @@
 
 .formacion-filtros-resumen {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.5;
 }

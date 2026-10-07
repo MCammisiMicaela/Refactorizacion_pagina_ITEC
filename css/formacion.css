@@ -23,11 +23,11 @@
 
 .estudiar-ruta li + li::before {
   content: "/";
-  color: #555e69;
+  color: var(--texto-secundario);
 }
 
 .estudiar-ruta a {
-  color: #555e69;
+  color: var(--texto-secundario);
   text-decoration: none;
   text-underline-offset: 4px;
 }
@@ -53,7 +53,7 @@
 
 .estudiar-etiqueta {
   margin: 0 0 8px;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
@@ -62,39 +62,16 @@
 .estudiar-presentacion h1 {
   margin: 0 0 16px;
   color: var(--texto);
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: var(--titulo-pagina);
   line-height: 1.12;
 }
 
 .estudiar-introduccion {
   max-width: 720px;
   margin: 0;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 18px;
   line-height: 1.7;
-}
-
-.estudiar-acciones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.estudiar-acciones .boton {
-  min-height: 44px;
-  padding: 11px 16px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.estudiar-boton-principal {
-  background-color: var(--rojo);
-  color: #ffffff;
-}
-
-.estudiar-boton-principal:hover {
-  background-color: var(--rojo-oscuro);
 }
 
 .estudiar-seccion {
@@ -104,14 +81,14 @@
 .estudiar-titulo h2 {
   margin: 0 0 14px;
   color: var(--texto);
-  font-size: clamp(26px, 3vw, 34px);
+  font-size: var(--titulo-seccion);
   line-height: 1.25;
 }
 
 .estudiar-bajada {
   max-width: 760px;
   margin: 0 0 24px;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -129,13 +106,13 @@
   padding: 24px;
   border: 1px solid var(--borde);
   border-top: 3px solid var(--rojo);
-  border-radius: 8px;
+  border-radius: var(--radio-tarjeta);
   background-color: #ffffff;
 }
 
 .estudiar-tipo {
   margin: 0 0 10px;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
@@ -150,7 +127,7 @@
 
 .estudiar-tarjeta > p:not(.estudiar-tipo):not(.estudiar-dirigido) {
   margin: 0 0 16px;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -158,9 +135,9 @@
 .estudiar-dirigido {
   margin: 0 0 22px;
   padding: 12px;
-  border-radius: 5px;
+  border-radius: var(--radio-control);
   background-color: #f5f6f7;
-  color: #454d58;
+  color: var(--texto-secundario);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -170,7 +147,7 @@
   justify-content: space-between;
   gap: 12px;
   width: 100%;
-  min-height: 44px;
+  min-height: var(--alto-control);
   margin-top: auto;
   padding: 10px 14px;
   font-size: 14px;
@@ -184,8 +161,8 @@
 .estudiar-eleccion {
   padding: 28px 24px;
   border: 1px solid var(--borde);
-  border-radius: 8px;
-  background-color: #fafafa;
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--fondo-suave);
 }
 
 .estudiar-orientacion-grid {
@@ -208,7 +185,7 @@
 
 .estudiar-orientacion p {
   margin: 0 0 10px;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 15px;
   line-height: 1.6;
 }
@@ -234,7 +211,7 @@
   padding: 22px 24px;
   border-left: 3px solid var(--rojo);
   border-radius: 0 8px 8px 0;
-  background-color: #fafafa;
+  background-color: var(--fondo-suave);
 }
 
 .estudiar-aviso h2 {
@@ -247,13 +224,13 @@
 .estudiar-aviso p {
   max-width: 760px;
   margin: 0;
-  color: #555e69;
+  color: var(--texto-secundario);
   font-size: 15px;
   line-height: 1.7;
 }
 
 .estudiar-aviso .boton {
-  min-height: 44px;
+  min-height: var(--alto-control);
   padding: 11px 16px;
   font-size: 14px;
   font-weight: 700;
@@ -261,7 +238,7 @@
 }
 
 .pagina-estudiar a:focus-visible {
-  outline: 3px solid #2167a8;
+  outline: 3px solid var(--foco);
   outline-offset: 4px;
 }
 
@@ -294,15 +271,6 @@
     margin-top: 28px;
   }
 
-  .estudiar-acciones {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .estudiar-acciones .boton {
-    width: 100%;
-  }
-
   .estudiar-tarjeta {
     padding: 20px;
   }
@@ -333,10 +301,10 @@
 .estudiar-accesos a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 14px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--rojo-oscuro);
     font-size: 14px;
@@ -346,5 +314,5 @@
 
 .estudiar-accesos a:hover {
     border-color: var(--rojo);
-    background-color: #fff3f4;
+    background-color: var(--rojo-suave);
 }

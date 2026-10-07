@@ -1,10 +1,20 @@
 :root {
     --rojo: #e30613;
     --rojo-oscuro: #b90510;
+    --rojo-suave: #fff3f4;
     --verde: #007f3b;
     --texto: #252a34;
-    --texto-secundario: #6c737a;
+    --texto-secundario: #555e69;
     --borde: #e3e5e8;
+    --fondo-suave: #fafafa;
+    --foco: #2167a8;
+    --fuente-base: Arial, Helvetica, sans-serif;
+    --ancho-contenido: 1140px;
+    --alto-control: 44px;
+    --radio-control: 6px;
+    --radio-tarjeta: 8px;
+    --titulo-pagina: clamp(34px, 5vw, 52px);
+    --titulo-seccion: clamp(26px, 3vw, 34px);
 }
 
 * {
@@ -17,7 +27,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuente-base);
     color: var(--texto);
     background-color: #ffffff;
 }
@@ -34,7 +44,7 @@ img {
 }
 
 .contenedor {
-    width: min(1140px, calc(100% - 40px));
+    width: min(var(--ancho-contenido), calc(100% - 40px));
     margin-inline: auto;
 }
 
@@ -47,7 +57,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #2167a8;
+    outline: 3px solid var(--foco);
     outline-offset: 3px;
 }
 
@@ -88,13 +98,15 @@ textarea:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 36px;
-    padding: 8px 14px;
+    min-height: var(--alto-control);
+    padding: 10px 16px;
     border: 1px solid var(--rojo);
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--rojo);
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
     text-decoration: none;
     cursor: pointer;
 }

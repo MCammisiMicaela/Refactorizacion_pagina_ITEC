@@ -22,11 +22,11 @@
 
 .ingresantes-ruta li + li::before {
     content: "/";
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .ingresantes-ruta a {
-    color: #555e69;
+    color: var(--texto-secundario);
     text-decoration: none;
     text-underline-offset: 4px;
 }
@@ -53,7 +53,7 @@
 
 .ingresantes-etiqueta {
     margin: 0 0 8px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     font-weight: 700;
 }
@@ -61,33 +61,26 @@
 .ingresantes-presentacion h1 {
     margin: 0 0 16px;
     color: var(--texto);
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .ingresantes-presentacion > p:not(.ingresantes-etiqueta) {
     max-width: 760px;
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
-}
-
-.ingresantes-acciones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
 }
 
 .pagina-ingresantes .boton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     max-width: 100%;
     padding: 10px 18px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -117,10 +110,10 @@
 .ingresantes-accesos a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 14px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--rojo-oscuro);
     font-size: 14px;
@@ -130,7 +123,7 @@
 
 .ingresantes-accesos a:hover {
     border-color: var(--rojo);
-    background-color: #fff3f4;
+    background-color: var(--rojo-suave);
 }
 
 .ingresantes-accesos a:hover,
@@ -148,14 +141,14 @@
 .ingresantes-contacto h2 {
     margin: 0 0 18px;
     color: var(--texto);
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: var(--titulo-seccion);
     line-height: 1.25;
 }
 
 .ingresantes-seccion > p {
     max-width: 820px;
     margin: 0 0 18px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -167,7 +160,7 @@
     border: 1px solid var(--borde);
     border-left: 4px solid var(--rojo);
     border-radius: 0 8px 8px 0;
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .ingresantes-aviso h3 {
@@ -178,7 +171,7 @@
 
 .ingresantes-aviso p {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.6;
 }
@@ -206,9 +199,9 @@
     min-width: 0;
     padding: 20px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.65;
     counter-increment: pasos;
@@ -242,7 +235,7 @@
     max-width: 900px;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -275,10 +268,10 @@
 .ingresantes-campo input,
 .ingresantes-campo select {
     width: 100%;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 12px;
     border: 1px solid #cbd0d7;
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--texto);
     font: inherit;
@@ -347,7 +340,7 @@
 .ingresantes-preguntas details p {
     margin: 0;
     padding: 0 4px 18px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.7;
 }
@@ -360,8 +353,8 @@
     margin-top: 56px;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .ingresantes-contacto h2 {
@@ -371,7 +364,7 @@
 
 .ingresantes-contacto p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.6;
 }
@@ -401,8 +394,6 @@
         margin-bottom: 24px;
     }
 
-    .ingresantes-acciones,
-    .ingresantes-acciones .boton,
     .ingresantes-aviso .boton,
     .ingresantes-contacto .boton,
     .ingresantes-formulario .boton {

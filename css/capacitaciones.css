@@ -33,11 +33,11 @@
 
 .capacitaciones-ruta li + li::before {
     content: "/";
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .capacitaciones-ruta a {
-    color: #555e69;
+    color: var(--texto-secundario);
     text-decoration: none;
     text-underline-offset: 4px;
 }
@@ -66,7 +66,7 @@
 .capacitaciones-encabezado h1 {
     margin: 0 0 16px;
     color: var(--texto);
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
     letter-spacing: normal;
 }
@@ -74,7 +74,7 @@
 .capacitaciones-encabezado .presentacion-texto {
     max-width: 760px;
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
 }
@@ -91,11 +91,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     max-width: 100%;
     padding: 10px 16px;
     border: 1px solid var(--rojo);
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background: #ffffff;
     color: var(--rojo);
     font-size: 14px;
@@ -132,14 +132,14 @@
 .destinatarios-titulo {
     margin: 0 0 10px;
     color: var(--texto);
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: var(--titulo-seccion);
     line-height: 1.25;
 }
 
 .destinatarios-subtitulo {
     max-width: 760px;
     margin: 0 0 24px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -155,8 +155,8 @@
     padding: 22px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
-    background: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background: var(--fondo-suave);
     transition: none;
 }
 
@@ -173,7 +173,7 @@
     height: 42px;
     margin-bottom: 14px;
     border-radius: 50%;
-    background: #fff3f4;
+    background: var(--rojo-suave);
     color: var(--rojo);
     font-size: 19px;
 }
@@ -187,7 +187,7 @@
 
 .tarjeta-destinatario p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.65;
 }
@@ -203,7 +203,7 @@
     border: 0;
     border-left: 3px solid var(--rojo);
     border-radius: 0 8px 8px 0;
-    background: #fafafa;
+    background: var(--fondo-suave);
 }
 
 .capacitaciones-aviso h2 {
@@ -216,7 +216,7 @@
 .capacitaciones-aviso p {
     max-width: 850px;
     margin: 0 0 12px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.65;
 }
@@ -230,7 +230,7 @@
 }
 
 .capacitaciones-aviso summary {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 12px 0;
     color: var(--texto);
     font-weight: 700;
@@ -253,11 +253,11 @@
 .tab-btn {
     position: relative;
     flex: 0 0 auto;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 14px;
     border: 0;
     background: transparent;
-    color: #555e69;
+    color: var(--texto-secundario);
     font: inherit;
     font-size: 14px;
     font-weight: 700;
@@ -287,8 +287,8 @@
     margin-bottom: 20px;
     padding: 16px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background: var(--fondo-suave);
 }
 
 .filtro-campo-busqueda {
@@ -303,38 +303,20 @@
 .filtro-campo-busqueda input,
 .filtro-select select {
     width: 100%;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 9px 12px;
     border: 1px solid #cfd3d8;
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background: #ffffff;
     color: var(--texto);
     font: inherit;
     font-size: 15px;
 }
 
-.boton-limpiar-filtros {
-    min-height: 44px;
-    padding: 9px 14px;
-    border: 1px solid var(--borde);
-    border-radius: 5px;
-    background: #ffffff;
-    color: var(--rojo);
-    font: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.boton-limpiar-filtros:hover {
-    border-color: var(--rojo);
-    background: #fff3f4;
-}
-
 .estado-capacitaciones {
     min-height: 24px;
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.5;
 }
@@ -353,7 +335,7 @@
     overflow-wrap: anywhere;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background: #ffffff;
     box-shadow: none;
     transition: none;
@@ -376,7 +358,7 @@
     display: inline-flex;
     max-width: 100%;
     padding: 5px 9px;
-    border-radius: 4px;
+    border-radius: var(--radio-control);
     font-size: 12px;
     font-weight: 700;
     line-height: 1.4;
@@ -388,7 +370,7 @@
 .badge-area,
 .badge-consultar {
     background: #f1f2f4;
-    color: #454d58;
+    color: var(--texto-secundario);
 }
 
 .badge-abierta {
@@ -402,14 +384,14 @@
 }
 
 .badge-empresa {
-    background: #fff3f4;
+    background: var(--rojo-suave);
     color: var(--rojo-oscuro);
 }
 
 .badge-cerrada,
 .badge-finalizado {
     background: #f1f2f4;
-    color: #454d58;
+    color: var(--texto-secundario);
 }
 
 .tarjeta-body {
@@ -430,7 +412,7 @@
 .tarjeta-body .descripcion {
     flex: 1;
     margin: 0 0 18px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.65;
 }
@@ -441,7 +423,7 @@
     margin: 0;
     padding: 14px 0 0;
     border-top: 1px solid var(--borde);
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.5;
     list-style: none;
@@ -473,8 +455,8 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
-    background: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background: var(--fondo-suave);
 }
 
 .sin-resultados h3 {
@@ -485,7 +467,7 @@
 
 .sin-resultados p {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     line-height: 1.6;
 }
 
@@ -502,8 +484,8 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
-    background: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background: var(--fondo-suave);
     box-shadow: none;
     color: var(--texto);
 }
@@ -521,17 +503,17 @@
 
 .a-medida-contenido p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.65;
 }
 
 .boton-medida {
     flex: 0 0 auto;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 16px;
     border: 1px solid var(--rojo);
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background: var(--rojo);
     color: #ffffff;
     font: inherit;
@@ -553,7 +535,7 @@
     padding: 0;
     overflow: auto;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background: #ffffff;
     color: var(--texto);
 }
@@ -597,7 +579,7 @@
     width: 44px;
     height: 44px;
     border: 1px solid var(--borde);
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background: #ffffff;
     color: var(--texto);
     font-size: 28px;
@@ -628,8 +610,8 @@
     min-width: 0;
     padding: 14px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
-    background: #fafafa;
+    border-radius: var(--radio-control);
+    background: var(--fondo-suave);
     overflow-wrap: anywhere;
 }
 
@@ -641,7 +623,7 @@
 .meta-item span,
 .modal-seccion p,
 .modal-lista {
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.6;
 }
@@ -698,10 +680,10 @@
 .campo-grupo textarea {
     width: 100%;
     min-width: 0;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 12px;
     border: 1px solid #cfd3d8;
-    border-radius: 5px;
+    border-radius: var(--radio-control);
     background: #ffffff;
     color: var(--texto);
     font: inherit;
@@ -721,7 +703,7 @@
 
 #aviso-correo-medida {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -730,8 +712,8 @@
     padding: 14px 16px;
     border: 1px solid var(--borde);
     border-left: 3px solid var(--rojo);
-    border-radius: 5px;
-    background: #fafafa;
+    border-radius: var(--radio-control);
+    background: var(--fondo-suave);
     color: var(--texto);
     font-size: 15px;
     line-height: 1.6;

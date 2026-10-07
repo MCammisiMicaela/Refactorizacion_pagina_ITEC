@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 24px;
-    color: #626973;
+    color: var(--texto-secundario);
     font-size: 14px;
 }
 
@@ -18,13 +18,13 @@
 
 .pagina-busqueda h1 {
     margin: 0 0 12px;
-    font-size: clamp(30px, 5vw, 44px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .pagina-busqueda > p {
     margin-bottom: 24px;
-    color: #626973;
+    color: var(--texto-secundario);
     line-height: 1.6;
 }
 
@@ -54,7 +54,7 @@
 .resultado-busqueda {
     padding: 20px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
 }
 
 .resultado-busqueda h3 {
@@ -69,6 +69,6 @@
 
 .resultado-busqueda p {
     margin: 0;
-    color: #626973;
+    color: var(--texto-secundario);
     line-height: 1.6;
 }

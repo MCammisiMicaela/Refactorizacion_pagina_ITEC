@@ -12,7 +12,7 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 24px;
-    color: #626973;
+    color: var(--texto-secundario);
     font-size: 14px;
 }
 
@@ -28,13 +28,13 @@
 
 .pagina-noticias h1 {
     margin: 0 0 12px;
-    font-size: clamp(30px, 5vw, 44px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .pagina-noticias > p {
     margin-bottom: 28px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -48,8 +48,8 @@
     margin-bottom: 32px;
     padding: 20px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .noticias-campo-filtro {
@@ -68,10 +68,10 @@
 .noticias-campo-filtro input[type="search"],
 .noticias-campo-filtro select {
     width: 100%;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 8px 12px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--texto);
     font-size: 15px;
@@ -84,22 +84,6 @@
 
 .boton-limpiar-filtros {
     align-self: flex-end;
-    min-height: 44px;
-    padding: 10px 18px;
-    border: 1px solid var(--borde);
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: var(--texto);
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.boton-limpiar-filtros:hover {
-    border-color: var(--rojo-oscuro);
-    background-color: var(--rojo-oscuro);
-    color: #ffffff;
 }
 
 /* Grilla en la página principal de noticias */
@@ -127,7 +111,7 @@
     flex-direction: column;
     min-width: 0;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -164,7 +148,7 @@
 
 .noticia-fecha {
     margin-bottom: 14px;
-    color: #626973;
+    color: var(--texto-secundario);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -179,7 +163,7 @@
 .noticia-resumen {
     flex-grow: 1;
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.6;
 }
@@ -188,7 +172,7 @@
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     color: var(--rojo-oscuro);
     font-size: 14px;
     font-weight: 700;
@@ -215,10 +199,10 @@
     justify-content: center;
     align-items: center;
     min-width: 44px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 8px 14px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     background-color: #ffffff;
     color: var(--texto);
     font-size: 15px;
@@ -246,9 +230,9 @@
 /* Estados */
 .noticias-estado {
     padding: 24px;
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #f8f9fa;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
@@ -279,14 +263,14 @@
 
 .noticia-detalle-categoria {
     padding: 4px 10px;
-    border-radius: 4px;
+    border-radius: var(--radio-control);
     background-color: #fce8e9;
     color: var(--rojo-oscuro);
     font-weight: 700;
 }
 
 .noticia-detalle-fecha {
-    color: #626973;
+    color: var(--texto-secundario);
 }
 
 .noticia-detalle-titulo {
@@ -297,7 +281,7 @@
 }
 
 .noticia-detalle-resumen {
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.6;
     font-weight: 500;
@@ -311,7 +295,7 @@
     display: block;
     width: 100%;
     max-height: 480px;
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     object-fit: cover;
 }
 
@@ -329,19 +313,6 @@
 .noticia-detalle-cuerpo h3 {
     margin: 32px 0 16px;
     color: var(--texto);
-}
-
-.noticia-detalle-fuente {
-    margin-top: 40px;
-    padding-top: 24px;
-    border-top: 1px solid var(--borde);
-    font-size: 14px;
-    color: #626973;
-}
-
-.noticia-detalle-fuente a {
-    color: var(--rojo-oscuro);
-    font-weight: 700;
 }
 
 .noticias-relacionadas {

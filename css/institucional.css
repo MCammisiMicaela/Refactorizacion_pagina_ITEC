@@ -16,7 +16,7 @@
 .institucional-ruta li + li::before {
     content: "/";
     margin-right: 8px;
-    color: #626973;
+    color: var(--texto-secundario);
 }
 
 .institucional-ruta a {
@@ -25,7 +25,7 @@
 }
 
 .institucional-ruta [aria-current="page"] {
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .institucional-presentacion {
@@ -41,13 +41,13 @@
 .institucional-presentacion h1 {
     margin: 0 0 16px;
     color: var(--texto);
-    font-size: clamp(34px, 5vw, 52px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
 }
 
 .institucional-presentacion p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
 }
@@ -63,10 +63,10 @@
 .institucional-accesos a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 10px 14px;
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: var(--radio-control);
     color: var(--rojo-oscuro);
     background-color: #ffffff;
     font-size: 14px;
@@ -76,7 +76,7 @@
 
 .institucional-accesos a:hover {
     border-color: var(--rojo);
-    background-color: #fff3f4;
+    background-color: var(--rojo-suave);
 }
 
 .institucional-seccion {
@@ -90,7 +90,7 @@
 .institucional-titulo h2 {
     margin: 0;
     color: var(--texto);
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: var(--titulo-seccion);
     line-height: 1.25;
 }
 
@@ -110,7 +110,7 @@
 .institucional-proposito p,
 .institucional-historia > p {
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -122,7 +122,7 @@
 }
 
 .pagina-institucional .boton {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 11px 16px;
     font-size: 14px;
     font-weight: 700;
@@ -140,8 +140,8 @@
     padding: 24px;
     border: 1px solid var(--borde);
     border-top: 3px solid var(--rojo);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .institucional-proposito h3 {
@@ -180,22 +180,15 @@
     }
 }
 
-.institucional-nota {
-    margin: 0 0 18px;
-    color: #555e69;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
 .institucional-tabla-contenedor {
     max-width: 100%;
     overflow-x: auto;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
 }
 
 .institucional-tabla-contenedor:focus-visible {
-    outline: 3px solid #2167a8;
+    outline: 3px solid var(--foco);
     outline-offset: 3px;
 }
 
@@ -236,11 +229,11 @@
 }
 
 .institucional-tabla tbody td {
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .institucional-tabla tbody tr:nth-child(even) {
-    background-color: #fafafa;
+    background-color: var(--fondo-suave);
 }
 
 .institucional-tabla tbody tr:last-child th,
@@ -250,7 +243,7 @@
 
 .institucional-tabla-ayuda {
     margin: 12px 0 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -284,7 +277,7 @@
 
 .equipo-integrante dd {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -313,7 +306,7 @@
     min-width: 0;
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -326,7 +319,7 @@
 
 .institucional-tarjeta p {
     margin: 0 0 20px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -336,7 +329,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     margin-top: auto;
     color: var(--rojo);
     font-size: 15px;
@@ -352,7 +345,7 @@
 }
 
 .institucional-enlace:focus-visible {
-    outline: 3px solid #1565c0;
+    outline: 3px solid var(--foco);
     outline-offset: 4px;
     border-radius: 2px;
 }

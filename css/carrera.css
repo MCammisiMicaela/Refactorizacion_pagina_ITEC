@@ -22,11 +22,11 @@
 
 .carrera-ruta li + li::before {
     content: "/";
-    color: #555e69;
+    color: var(--texto-secundario);
 }
 
 .carrera-ruta a {
-    color: #555e69;
+    color: var(--texto-secundario);
     text-decoration: none;
     text-underline-offset: 4px;
 }
@@ -52,7 +52,7 @@
 
 .carrera-nivel {
     margin: 0 0 10px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     font-weight: 700;
 }
@@ -60,7 +60,7 @@
 .carrera-presentacion h1 {
     margin: 0 0 18px;
     color: var(--texto);
-    font-size: clamp(32px, 5vw, 50px);
+    font-size: var(--titulo-pagina);
     line-height: 1.15;
     overflow-wrap: anywhere;
 }
@@ -68,7 +68,7 @@
 .carrera-introduccion {
     max-width: 760px;
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 18px;
     line-height: 1.7;
 }
@@ -85,10 +85,10 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    min-height: 44px;
+    min-height: var(--alto-control);
     max-width: 100%;
     padding: 11px 18px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -116,13 +116,13 @@
     min-width: 0;
     padding: 20px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .carrera-resumen dt {
     margin-bottom: 8px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 14px;
 }
 
@@ -143,11 +143,11 @@
 .carrera-accesos a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 9px 14px;
     border: 1px solid var(--borde);
     border-radius: 22px;
-    color: #454d58;
+    color: var(--texto-secundario);
     font-size: 14px;
     text-decoration: none;
 }
@@ -172,7 +172,7 @@
 .carrera-seccion > p {
     max-width: 850px;
     margin: 0 0 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -182,7 +182,7 @@
     gap: 8px;
     margin: 0 0 20px;
     padding-left: 22px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -191,8 +191,8 @@
 .carrera-aviso {
     padding: 24px;
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    background-color: #fafafa;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--fondo-suave);
 }
 
 .carrera-plan h3,
@@ -209,16 +209,9 @@
 
 .carrera-aviso p {
     margin: 0;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 15px;
     line-height: 1.7;
-}
-
-.carrera-nota {
-    margin: 14px 0 0;
-    color: #555e69;
-    font-size: 13px;
-    line-height: 1.6;
 }
 
 .carrera-preguntas {
@@ -231,7 +224,7 @@
 }
 
 .carrera-preguntas summary {
-    min-height: 44px;
+    min-height: var(--alto-control);
     padding: 14px 8px;
     color: var(--texto);
     font-size: 16px;
@@ -247,7 +240,7 @@
 .carrera-preguntas details p {
     margin: 0;
     padding: 0 8px 16px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -269,7 +262,7 @@
 
 .pagina-carrera a:focus-visible,
 .pagina-carrera summary:focus-visible {
-    outline: 3px solid #1565c0;
+    outline: 3px solid var(--foco);
     outline-offset: 4px;
 }
 
@@ -313,7 +306,7 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
-    border-radius: 8px;
+    border-radius: var(--radio-tarjeta);
     object-fit: cover;
     object-position: center;
 }
@@ -331,7 +324,7 @@
 
 .carrera-fotografia figcaption {
     margin-top: 8px;
-    color: #555e69;
+    color: var(--texto-secundario);
     font-size: 13px;
     line-height: 1.5;
 }
