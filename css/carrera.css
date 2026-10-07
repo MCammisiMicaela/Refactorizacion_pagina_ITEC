@@ -81,16 +81,8 @@
 }
 
 .pagina-carrera .boton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     gap: 8px;
-    min-height: var(--alto-control);
     max-width: 100%;
-    padding: 11px 18px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5;
     text-align: center;
     white-space: normal;
 }

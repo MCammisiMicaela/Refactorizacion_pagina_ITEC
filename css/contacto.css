@@ -152,7 +152,7 @@
 .formulario-tarjeta {
     padding: 25px;
     border: 1px solid var(--borde);
-    border-radius: 7px;
+    border-radius: var(--radio-tarjeta);
     background-color: #ffffff;
 }
 
@@ -273,7 +273,7 @@
 
 #resultado-formulario {
     margin: 12px 0 0;
-    color: #176b35;
+    color: var(--verde-exito);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -441,7 +441,7 @@
 #copiado {
     min-height: 20px;
     margin-bottom: 0;
-    color: #176b35;
+    color: var(--verde-exito);
     font-size: 13px;
     line-height: 1.5;
 }

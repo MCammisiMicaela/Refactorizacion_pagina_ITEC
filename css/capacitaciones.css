@@ -86,31 +86,10 @@
     margin-top: 24px;
 }
 
-.pagina-capacitaciones .boton,
-.pagina-capacitaciones .capacitaciones-acciones .boton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: var(--alto-control);
+.pagina-capacitaciones .boton {
     max-width: 100%;
-    padding: 10px 16px;
-    border: 1px solid var(--rojo);
-    border-radius: var(--radio-control);
-    background: #ffffff;
-    color: var(--rojo);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5;
     text-align: center;
-    text-decoration: none;
     white-space: normal;
-    cursor: pointer;
-}
-
-.pagina-capacitaciones .boton:hover,
-.pagina-capacitaciones .capacitaciones-acciones .boton:hover {
-    background: var(--rojo);
-    color: #ffffff;
 }
 
 .pagina-capacitaciones .capacitaciones-acciones .capacitaciones-boton-principal {
@@ -378,8 +357,8 @@
 }
 
 .badge-abierta {
-    background: #eaf5ed;
-    color: #176b35;
+    background: var(--fondo-verde-exito);
+    color: var(--verde-exito);
 }
 
 .badge-proximamente {

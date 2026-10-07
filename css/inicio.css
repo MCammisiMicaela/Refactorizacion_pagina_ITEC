@@ -861,7 +861,7 @@
 
 .boletin-resultado {
     margin: 16px 0 0;
-    color: #176b35;
+    color: var(--verde-exito);
     font-size: 15px;
     line-height: 1.6;
 }
