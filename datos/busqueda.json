@@ -118,5 +118,41 @@
     "descripcion": "Información sobre cursos, talleres y seminarios para la formación y actualización de equipos de trabajo.",
     "url": "paginas/servicios.html#capacitacion-empresas",
     "palabras": "capacitacion empresas cursos talleres seminarios personal equipos formacion interna"
+  },
+  {
+    "titulo": "Institucional",
+    "descripcion": "Conocé la identidad, la trayectoria y la propuesta institucional del ITEC.",
+    "url": "paginas/institucional.html",
+    "palabras": "institucional instituto identidad trayectoria quienes somos itec molino"
+  },
+  {
+    "titulo": "Infraestructura",
+    "descripcion": "Recorré los espacios, talleres y equipamiento del instituto.",
+    "url": "paginas/infraestructura.html",
+    "palabras": "infraestructura espacios talleres laboratorios equipamiento aulas maquinas instalaciones"
+  },
+  {
+    "titulo": "Vinculación institucional",
+    "descripcion": "Conocé las instituciones y organizaciones vinculadas con el ITEC.",
+    "url": "paginas/vinculacion.html",
+    "palabras": "vinculacion instituciones organizaciones empresas educan adimra red alianzas"
+  },
+  {
+    "titulo": "Estudiar en ITEC",
+    "descripcion": "Explorá las opciones de formación: tecnicaturas, formación profesional y capacitaciones.",
+    "url": "paginas/formacion.html",
+    "palabras": "estudiar formacion oferta educativa tecnicaturas cursos capacitaciones trayectos"
+  },
+  {
+    "titulo": "Formación Profesional",
+    "descripcion": "Conocé los trayectos y cursos de formación profesional disponibles en el sitio.",
+    "url": "paginas/formacion-profesional.html",
+    "palabras": "formacion profesional trayectos cursos competencias oficios capacitacion inscripcion"
+  },
+  {
+    "titulo": "Ingresantes",
+    "descripcion": "Consultá orientación sobre inscripción, requisitos, documentación y carreras.",
+    "url": "paginas/ingresantes.html",
+    "palabras": "ingresantes ingreso inscripcion preinscripcion requisitos documentacion aspirantes"
   }
 ]

@@ -303,3 +303,31 @@
         flex-shrink: 0;
     }
 }
+
+.servicios-accesos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.servicios-accesos a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: var(--rojo-oscuro);
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.servicios-accesos a:hover {
+    border-color: var(--rojo);
+    background-color: #fff3f4;
+}
