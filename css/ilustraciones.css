@@ -1,0 +1,90 @@
+.ilustracion-layout {
+    display: grid;
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: minmax(0, 1.65fr) minmax(180px, 0.35fr);
+    align-items: center;
+    gap: clamp(20px, 3vw, 36px);
+}
+
+.ilustracion-layout.contenedor {
+    width: min(var(--ancho-contenido), calc(100% - 40px));
+    max-width: var(--ancho-contenido);
+    margin-inline: auto;
+}
+
+.ilustracion-layout > .ilustracion-contenido {
+    min-width: 0;
+}
+
+.ilustracion-layout > .ilustracion-seccion {
+    display: flex;
+    width: 100%;
+    max-width: 260px;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    margin: 0;
+}
+
+.ilustracion-seccion img {
+    display: block;
+    width: 100%;
+    height: var(--altura-ilustracion, clamp(150px, 18vw, 220px));
+    max-height: 220px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.ilustracion-seccion--ancha img {
+    height: var(--altura-ilustracion, clamp(150px, 18vw, 220px));
+}
+
+.inicio-historia-panel.ilustracion-layout {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+    padding: 24px;
+}
+
+.inicio-historia-panel .inicio-historia-acceso {
+    padding-top: 20px;
+    padding-left: 0;
+    border-top: 1px solid var(--borde);
+    border-left: 0;
+}
+
+@media (max-width: 760px) {
+    .ilustracion-layout,
+    .inicio-historia-panel.ilustracion-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 0;
+    }
+
+    .inicio-historia-panel.ilustracion-layout {
+        padding: 20px;
+    }
+
+    .ilustracion-layout > .ilustracion-seccion {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        max-width: 220px;
+        justify-self: center;
+    }
+
+    .ilustracion-seccion img,
+    .ilustracion-seccion--ancha img,
+    .servicio-columnas > .ilustracion-layout .ilustracion-seccion img {
+        width: min(100%, 220px);
+        height: clamp(145px, 42vw, 190px);
+    }
+}
+
+@media (min-width: 900px) {
+    .inicio-historia-panel.ilustracion-layout {
+        padding: 32px;
+    }
+}

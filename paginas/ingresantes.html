@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
         name="description"
-        content="Información para quienes quieren ingresar al Instituto Tecnológico El Molino: carreras, consultas y orientación sobre el proceso de ingreso."
+        content="Información para quienes quieren ingresar al Instituto Tecnológico El Molino: tecnicaturas, consultas y orientación sobre el proceso de ingreso."
     >
     <title>Ingresantes | Instituto Tecnológico El Molino</title>
 
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/componentes.css">
     <link rel="stylesheet" href="../css/ingresantes.css">
+    <link rel="stylesheet" href="../css/ilustraciones.css">
 
     <script src="../js/navegacion.js" defer></script>
     <script src="../js/componentes.js" defer></script>
@@ -33,15 +34,27 @@
             </ol>
         </nav>
 
-        <header class="ingresantes-presentacion">
-            <span class="linea-roja" aria-hidden="true"></span>
-            <p class="ingresantes-etiqueta">Tu próximo paso</p>
+        <header class="ingresantes-presentacion ilustracion-layout">
+    <div class="ilustracion-contenido">
+<span class="linea-roja" aria-hidden="true"></span>
+            <p></p>
             <h1>Ingresantes</h1>
             <p>
-                Encontrá orientación para conocer las carreras y consultar
+                Encontrá orientación para conocer las tecnicaturas y consultar
                 cómo iniciar tu ingreso al Instituto Tecnológico El Molino.
             </p>
-        </header>
+    </div>
+    <figure class="ilustracion-seccion" aria-hidden="true">
+    <img
+        src="../img/ilustraciones/ingresantes-fachada.png"
+        alt=""
+        width="941"
+        height="1672"
+        loading="lazy"
+        decoding="async"
+    >
+</figure>
+</header>
 
         <nav class="ingresantes-accesos" aria-label="Secciones para ingresantes">
             <a href="#inscripciones">Inscripciones</a>
@@ -66,7 +79,7 @@
                     Las fechas, el estado de inscripción y el procedimiento para el próximo
                     ciclo lectivo requieren confirmación con el ITEC.
                 </p>
-                <a class="boton" href="contacto.html#consulta">
+                <a class="boton" href="contacto.html?consulta=inscripcion#consulta">
                     Consultar al instituto
                 </a>
             </div>
@@ -75,7 +88,7 @@
                 <h3>Cómo empezar</h3>
                 <ol>
                     <li>
-                        <strong>Elegí una carrera.</strong>
+                        <strong>Elegí una tecnicatura.</strong>
                         <a href="tecnicaturas.html">Conocé las tecnicaturas</a>
                         y seleccioná la propuesta que te interesa.
                     </li>
@@ -111,7 +124,7 @@
                 Consultá al ITEC antes de iniciar el trámite para conocer los requisitos
                 vigentes para las tecnicaturas.
             </p>
-            <a class="boton" href="contacto.html#consulta">
+            <a class="boton" href="contacto.html?consulta=requisitos#consulta">
                 Consultar requisitos
             </a>
         </section>
@@ -130,7 +143,7 @@
                 Consultá al instituto qué presentar, en qué formato y dentro
                 de qué plazo.
             </p>
-            <a class="boton" href="contacto.html#consulta">
+            <a class="boton" href="contacto.html?consulta=documentacion#consulta">
                 Consultar documentación
             </a>
         </section>
@@ -154,11 +167,11 @@
                 <div class="ingresantes-campos">
                     <div class="ingresantes-campo">
                         <label for="carrera-preinscripcion">
-                            Carrera que te interesa
+                            Tecnicatura que te interesa
                             <span aria-hidden="true">*</span>
                         </label>
                         <select id="carrera-preinscripcion" name="carrera" required>
-                            <option value="">Seleccioná una carrera</option>
+                            <option value="">Seleccioná una tecnicatura</option>
                             <option value="desarrollo-software">Desarrollo de Software</option>
                             <option value="gestion-industrial">Gestión Industrial</option>
                             <option value="mantenimiento-industrial">Mantenimiento Industrial</option>
@@ -262,7 +275,7 @@
                     <p>
                         El estado de la convocatoria vigente requiere
                         confirmación del ITEC.
-                        <a href="contacto.html#consulta">Contactá al instituto</a>.
+                        <a href="contacto.html?consulta=inscripcion#consulta">Contactá al instituto</a>.
                     </p>
                 </details>
 
@@ -284,7 +297,7 @@
                 </details>
 
                 <details>
-                    <summary>¿Dónde puedo conocer las carreras?</summary>
+                    <summary>¿Dónde puedo conocer las tecnicaturas?</summary>
                     <p>
                         Visitá la página de
                         <a href="tecnicaturas.html">Tecnicaturas</a>
@@ -300,7 +313,7 @@
                 <h2 id="titulo-contacto-ingreso">¿Tenés otra consulta?</h2>
                 <p>Comunicate con el ITEC para recibir información actualizada.</p>
             </div>
-            <a class="boton ingresantes-boton-principal" href="contacto.html#consulta">
+            <a class="boton ingresantes-boton-principal" href="contacto.html?consulta=orientacion-formacion#consulta">
                 Ir a Contacto
             </a>
         </section>

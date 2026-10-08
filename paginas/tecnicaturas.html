@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/general.css">
   <link rel="stylesheet" href="../css/componentes.css">
   <link rel="stylesheet" href="../css/tecnicaturas.css">
+  <link rel="stylesheet" href="../css/ilustraciones.css">
 
   <script src="../js/navegacion.js" defer></script>
   <script src="../js/componentes.js" defer></script>
@@ -35,13 +36,25 @@
       </ol>
     </nav>
 
-    <header class="tecnicaturas-presentacion">
-      <span class="linea-roja" aria-hidden="true"></span>
-      <h1>Tecnicaturas</h1>
-      <p>
-        Explorá las carreras del instituto y encontrá la propuesta
-        que se adapte a tus intereses.
-      </p>
+    <header class="tecnicaturas-presentacion ilustracion-layout">
+      <div class="ilustracion-contenido">
+        <span class="linea-roja" aria-hidden="true"></span>
+        <h1>Tecnicaturas</h1>
+        <p>
+          Explorá las tecnicaturas del instituto y encontrá la propuesta
+          que se adapte a tus intereses.
+        </p>
+      </div>
+      <figure class="ilustracion-seccion" aria-hidden="true">
+        <img
+          src="../img/ilustraciones/aula-informatica.png"
+          alt=""
+          width="1448"
+          height="1086"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
     </header>
 
     <aside class="tecnicaturas-aviso" aria-labelledby="titulo-inscripciones">
@@ -50,15 +63,15 @@
         Consultá la convocatoria correspondiente al ciclo lectivo
         que te interesa. 
       </p>
-      <a href="contacto.html#consulta">
+      <a href="contacto.html?consulta=fechas-requisitos#consulta">
         Consultar fechas y requisitos
       </a>
     </aside>
 
-    <section class="tecnicaturas-oferta" aria-labelledby="titulo-carreras">
+    <section class="tecnicaturas-oferta" aria-labelledby="titulo-tecnicaturas">
       <div class="tecnicaturas-titulo">
         <span class="linea-roja" aria-hidden="true"></span>
-        <h2 id="titulo-carreras">Conocé nuestras carreras</h2>
+        <h2 id="titulo-tecnicaturas">Conocé nuestras tecnicaturas</h2>
       </div>
 
       <div class="tecnicaturas-grid">
@@ -98,9 +111,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/desarrollo-software.html"
-              aria-label="Ver carrera de Desarrollo de Software"
+              aria-label="Ver tecnicatura de Desarrollo de Software"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -149,9 +162,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/gestion-industrial.html"
-              aria-label="Ver carrera de Gestión Industrial"
+              aria-label="Ver tecnicatura de Gestión Industrial"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -200,9 +213,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/mantenimiento-industrial.html"
-              aria-label="Ver carrera de Mantenimiento Industrial"
+              aria-label="Ver tecnicatura de Mantenimiento Industrial"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -251,9 +264,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/logistica.html"
-              aria-label="Ver carrera de Logística"
+              aria-label="Ver tecnicatura de Logística"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -308,9 +321,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/energias-renovables.html"
-              aria-label="Ver carrera de Gestión de Energías Renovables, Uso Racional y Eficiencia Energética"
+              aria-label="Ver tecnicatura de Gestión de Energías Renovables, Uso Racional y Eficiencia Energética"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -362,9 +375,9 @@
             <a
               class="boton tecnicatura-boton"
               href="carreras/seguridad-higiene.html"
-              aria-label="Ver carrera de Seguridad, Higiene y Medio Ambiente en el Trabajo"
+              aria-label="Ver tecnicatura de Seguridad, Higiene y Medio Ambiente en el Trabajo"
             >
-              Ver carrera <span aria-hidden="true">→</span>
+              Ver tecnicatura <span aria-hidden="true">→</span>
             </a>
 
             <a
@@ -383,13 +396,13 @@
       <div>
         <h2 id="titulo-orientacion">¿Necesitás más información?</h2>
         <p>
-          Consultá al instituto sobre la carrera que te interesa,
+          Consultá al instituto sobre la tecnicatura que te interesa,
           sus condiciones de cursado y el proceso de ingreso.
         </p>
       </div>
 
-      <a class="boton" href="contacto.html#consulta">
-        Consultar por una carrera
+      <a class="boton" href="contacto.html?consulta=orientacion-formacion#consulta">
+        Consultar por una tecnicatura
       </a>
     </section>
   </main>

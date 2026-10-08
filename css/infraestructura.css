@@ -42,6 +42,8 @@
 }
 
 .infraestructura-presentacion {
+    --altura-ilustracion: 150px;
+
     max-width: 760px;
     margin-top: 32px;
 }

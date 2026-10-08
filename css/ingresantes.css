@@ -40,9 +40,33 @@
     color: var(--rojo);
 }
 
-.ingresantes-presentacion {
-    max-width: 820px;
+.ingresantes-presentacion.ilustracion-layout {
+    --altura-ilustracion: clamp(225px, 22vw, 285px);
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+    max-width: none;
     margin: 32px 0 36px;
+}
+
+.ingresantes-presentacion > .ilustracion-seccion {
+    max-width: 310px;
+}
+
+.ingresantes-presentacion .ilustracion-seccion img {
+    max-height: none;
+}
+
+@media (max-width: 760px) {
+    .ingresantes-presentacion.ilustracion-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ingresantes-presentacion > .ilustracion-seccion {
+        max-width: 220px;
+    }
+
+    .ingresantes-presentacion .ilustracion-seccion img {
+        height: clamp(145px, 42vw, 190px);
+    }
 }
 
 .ingresantes-presentacion .linea-roja,

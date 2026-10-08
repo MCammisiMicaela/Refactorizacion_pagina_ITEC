@@ -29,6 +29,8 @@
 }
 
 .historia-presentacion {
+    --altura-ilustracion: 190px;
+
     max-width: 780px;
     margin-bottom: 40px;
 }

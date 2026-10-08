@@ -26,6 +26,20 @@ if (
     selectorCarrera.value = carreraIndicada;
 }
 
+if (carreraIndicada && carrerasDisponibles.has(carreraIndicada)) {
+    document
+        .querySelectorAll('a[href^="contacto.html?consulta="]')
+        .forEach(enlace => {
+            const destino = new URL(enlace.href);
+
+            if (!destino.searchParams.has("carrera")) {
+                destino.searchParams.set("carrera", carreraIndicada);
+            }
+
+            enlace.href = destino.href;
+        });
+}
+
 if (
     formularioPreinscripcion &&
     selectorCarrera &&

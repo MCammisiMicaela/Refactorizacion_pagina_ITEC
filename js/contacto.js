@@ -16,6 +16,69 @@ const carrerasConsulta = new Map([
     ]
 ]);
 
+
+const consultasContextuales = new Map([
+    [
+        "inscripcion",
+        {
+            motivo: "Inscripciones",
+            mensaje: "Hola, quisiera consultar por la convocatoria vigente, las fechas y el procedimiento de inscripción."
+        }
+    ],
+    [
+        "proximas-inscripciones",
+        {
+            motivo: "Inscripciones",
+            mensaje: "Hola, quisiera consultar por próximas inscripciones, fechas y disponibilidad de la propuesta de formación que me interesa."
+        }
+    ],
+    [
+        "fechas-requisitos",
+        {
+            motivo: "Inscripciones",
+            mensaje: "Hola, quisiera consultar las próximas fechas de inscripción y los requisitos de ingreso para la tecnicatura o curso que me interesa."
+        }
+    ],
+    [
+        "requisitos",
+        {
+            motivo: "Requisitos de ingreso",
+            mensaje: "Hola, quisiera consultar cuáles son los requisitos vigentes para ingresar y qué condiciones debo cumplir."
+        }
+    ],
+    [
+        "documentacion",
+        {
+            motivo: "Documentación de ingreso",
+            mensaje: "Hola, quisiera consultar qué documentación debo presentar para el ingreso, en qué formato y dentro de qué plazo."
+        }
+    ],
+    [
+        "orientacion-formacion",
+        {
+            motivo: "Orientación sobre formación",
+            mensaje: "Hola, no sé qué propuesta de formación elegir. Quisiera recibir orientación sobre tecnicaturas, Formación Profesional y capacitaciones."
+        }
+    ]
+]);
+
+function completarConsultaContextual() {
+    const parametros = new URLSearchParams(window.location.search);
+    const consulta = consultasContextuales.get(parametros.get("consulta"));
+    const campoMotivo = document.getElementById("motivo");
+    const campoMensaje = document.getElementById("mensaje");
+
+    if (!consulta || !campoMotivo || !campoMensaje) {
+        return;
+    }
+
+    const carrera = carrerasConsulta.get(parametros.get("carrera"));
+    campoMotivo.value = consulta.motivo;
+    campoMensaje.value = carrera
+        ? `${consulta.mensaje} Tecnicatura de interés: ${carrera}.`
+        : consulta.mensaje;
+}
+
 function mostrarError(campo, mensaje) {
     const entrada = document.getElementById(campo);
     const contenedorError = document.getElementById(`error-${campo}`);
@@ -236,6 +299,8 @@ if (botonCopiar && estadoCopiado) {
         }
     });
 }
+
+completarConsultaContextual();
 
 function completarConsultaDeServicio() {
     const parametros = new URLSearchParams(window.location.search);
