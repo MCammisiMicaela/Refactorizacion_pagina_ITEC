@@ -1,5 +1,6 @@
 const raizProyecto = new URL("../", document.currentScript.src);
 
+// Carga las plantillas compartidas, resuelve sus rutas y las inserta en la página.
 async function cargarComponentes() {
     try {
         const respuesta = await fetch(

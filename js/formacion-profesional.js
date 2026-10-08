@@ -8,6 +8,7 @@ if (formularioNovedades) {
     const resultado = document.getElementById("resultado-novedades");
 
 
+    // Muestra un error de validación asociado al campo correspondiente.
     function mostrarError(campo, mensaje) {
         const error = document.getElementById("error-" + campo.id);
         campo.setAttribute("aria-invalid", "true");
@@ -15,6 +16,7 @@ if (formularioNovedades) {
     }
 
 
+    // Limpia el mensaje de error cuando el campo vuelve a ser válido.
     function limpiarError(campo) {
         const error = document.getElementById("error-" + campo.id);
         campo.removeAttribute("aria-invalid");
@@ -22,6 +24,7 @@ if (formularioNovedades) {
     }
 
 
+    // Comprueba que el nombre tenga una longitud admitida.
     function validarNombre() {
         const nombre = campoNombre.value.trim();
 
@@ -32,6 +35,7 @@ if (formularioNovedades) {
         return "";
     }
 
+    // Verifica que el correo tenga un formato válido.
     function validarCorreo() {
         const correo = campoCorreo.value.trim();
         const formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -43,6 +47,7 @@ if (formularioNovedades) {
         return "";
     }
 
+    // Acepta el celular vacío o con caracteres telefónicos permitidos.
     function validarCelular() {
         const celular = campoCelular.value.trim();
         const formatoCelular = /^[0-9+()\s-]{6,20}$/;
@@ -55,6 +60,7 @@ if (formularioNovedades) {
         return "";
     }
 
+    // Exige seleccionar un trayecto antes de enviar el formulario.
     function validarTrayecto() {
         if (campoTrayecto.value === "") {
             return "Seleccioná el trayecto que te interesa.";
@@ -81,6 +87,7 @@ if (formularioNovedades) {
         });
     });
 
+    // Ejecuta todas las validaciones y presenta el resultado de la demostración.
     formularioNovedades.addEventListener("submit", function (evento) {
         evento.preventDefault();
         resultado.textContent = "";
@@ -121,6 +128,7 @@ const listaTrayectos = document.querySelectorAll(".formacion-trayecto");
 const resumenFiltros = document.getElementById("filtros-resumen");
 
 if (botonesFiltro.length > 0) {
+    // Muestra los cursos del estado elegido y actualiza el resumen accesible.
     const aplicarFiltro = function (filtro) {
         let totalVisibles = 0;
 

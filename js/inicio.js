@@ -1,5 +1,6 @@
 const raizInicio = new URL("../", document.currentScript.src);
 
+// Carga y renderiza las tres noticias más recientes en la portada.
 async function cargarNoticiasDestacadas() {
     const contenedor = document.getElementById("noticias-destacadas");
     const estado = document.getElementById("estado-noticias");

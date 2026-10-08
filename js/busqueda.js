@@ -8,6 +8,7 @@ const listaResultados = document.getElementById("resultados-busqueda");
 
 campoBusqueda.value = consultaBusqueda;
 
+// Quita tildes y diferencias de mayúsculas para comparar consultas.
 function normalizarBusqueda(texto) {
     return texto
         .normalize("NFD")
@@ -16,6 +17,7 @@ function normalizarBusqueda(texto) {
         .trim();
 }
 
+// Sincroniza la consulta con el buscador de la cabecera compartida.
 function completarBuscadorCabecera() {
     const campo = document.getElementById("busqueda-general");
 
@@ -31,6 +33,7 @@ document.addEventListener(
 
 completarBuscadorCabecera();
 
+// Busca en el índice local y presenta resultados o mensajes de estado.
 async function buscarContenido() {
     if (!consultaBusqueda) {
         return;

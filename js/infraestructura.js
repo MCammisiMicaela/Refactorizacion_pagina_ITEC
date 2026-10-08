@@ -6,6 +6,7 @@ const cerrarVisor = document.getElementById("cerrar-visor");
 
 let elementoAnterior = null;
 
+// Abre el visor modal con la imagen seleccionada y guarda el foco de retorno.
 function abrirImagen(imagen, titulo, origen) {
     elementoAnterior = origen;
 
@@ -18,6 +19,7 @@ function abrirImagen(imagen, titulo, origen) {
     document.documentElement.classList.add("visor-abierto");
 }
 
+// Convierte las imágenes de los espacios en controles para abrir el visor.
 document.querySelectorAll(".espacio-imagen").forEach((imagen) => {
     const tarjeta = imagen.closest(".espacio-tarjeta");
     const titulo = tarjeta?.querySelector("h3")?.textContent.trim()
@@ -37,6 +39,7 @@ document.querySelectorAll(".espacio-imagen").forEach((imagen) => {
     });
 });
 
+// Intercepta los enlaces a fotografías y los muestra ampliados en el visor.
 document.querySelectorAll(".infraestructura-foto > a").forEach((enlace) => {
     const imagen = enlace.querySelector("img");
 
@@ -65,6 +68,7 @@ document.querySelectorAll(".infraestructura-foto > a").forEach((enlace) => {
     });
 });
 
+// Cierra el visor y restaura el foco al elemento que lo abrió.
 cerrarVisor.addEventListener("click", () => {
     visorImagen.close();
 });

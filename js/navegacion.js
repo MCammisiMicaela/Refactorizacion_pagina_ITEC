@@ -1,3 +1,4 @@
+// Configura navegación, estado activo, submenús y accesibilidad al cargar la cabecera.
 document.addEventListener("componentes-cargados", function () {
     const encabezado = document.querySelector(".encabezado");
     const menu = document.getElementById("menu-principal");
@@ -11,6 +12,7 @@ document.addEventListener("componentes-cargados", function () {
     const seccionActual = document.body.dataset.seccion;
     const pantallaGrande = window.matchMedia("(min-width: 1100px)");
 
+    // Cierra los submenús excepto el que acaba de abrirse, si corresponde.
     function cerrarGrupos(excepto = null) {
         grupos.forEach(grupo => {
             if (grupo !== excepto) {
@@ -19,6 +21,7 @@ document.addEventListener("componentes-cargados", function () {
         });
     }
 
+    // Cierra el menú móvil y todos sus grupos desplegables.
     function cerrarMenu() {
         menu.classList.remove("menu-abierto");
         botonMenu.setAttribute("aria-expanded", "false");

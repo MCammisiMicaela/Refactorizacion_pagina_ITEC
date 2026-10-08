@@ -1,7 +1,4 @@
-/* ==========================================================================
-   Módulo de Capacitaciones - Lógica JavaScript (ITEC)
-   ========================================================================== */
-
+/* Módulo de Capacitaciones - Lógica JavaScript (ITEC) */
 const raizCapacitaciones = new URL("../", document.currentScript.src);
 
 let todasCapacitaciones = [];
@@ -39,6 +36,7 @@ function normalizarTexto(texto) {
         .trim();
 }
 
+// Relaciona cada estado de una capacitación con su clase visual.
 function claseEstadoCapacitacion(estado) {
     const clases = {
         abierta: "badge-abierta",
@@ -265,7 +263,7 @@ function abrirModalDetalle(item) {
     modalDetalle.showModal();
 }
 
-// Configuración de Eventos UI
+// Registra los controles de filtros y los comportamientos de ambos modales.
 function inicializarEventos() {
     // Pestañas (Tabs)
     botonesTabs.forEach(btn => {
@@ -408,7 +406,7 @@ function inicializarEventos() {
     }
 }
 
-// Inicialización cuando el DOM esté listo
+// Prepara la interfaz y carga la oferta una vez disponible el documento.
 document.addEventListener("DOMContentLoaded", () => {
     inicializarEventos();
     cargarCapacitaciones();

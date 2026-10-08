@@ -62,6 +62,7 @@ const consultasContextuales = new Map([
     ]
 ]);
 
+// Completa el motivo y el mensaje según el tipo de consulta recibido por URL.
 function completarConsultaContextual() {
     const parametros = new URLSearchParams(window.location.search);
     const consulta = consultasContextuales.get(parametros.get("consulta"));
@@ -79,6 +80,7 @@ function completarConsultaContextual() {
         : consulta.mensaje;
 }
 
+// Actualiza el error de un campo y mantiene su asociación accesible.
 function mostrarError(campo, mensaje) {
     const entrada = document.getElementById(campo);
     const contenedorError = document.getElementById(`error-${campo}`);
@@ -108,6 +110,7 @@ function mostrarError(campo, mensaje) {
     }
 }
 
+// Prepara el formulario cuando la consulta se inicia desde una carrera.
 function completarConsultaDeCarrera() {
     const parametros = new URLSearchParams(window.location.search);
     const identificador = parametros.get("carrera");
@@ -131,6 +134,7 @@ function completarConsultaDeCarrera() {
     }
 }
 
+// Valida el formulario y prepara un correo sin enviar datos automáticamente.
 if (formulario && resultado) {
     const campos = [
         "nombre",
@@ -172,6 +176,7 @@ if (formulario && resultado) {
 
         let primerCampoConError = null;
 
+        // Conserva el primer campo inválido para devolver el foco al usuario.
         function validarCampo(id, mensajeError) {
             mostrarError(id, mensajeError);
 
@@ -274,6 +279,7 @@ if (formulario && resultado) {
 const botonCopiar = document.getElementById("copiar");
 const estadoCopiado = document.getElementById("copiado");
 
+// Copia la dirección y comunica si el navegador permitió completar la acción.
 if (botonCopiar && estadoCopiado) {
     const direccion =
         "Rivadavia 1390, 1er piso, Esperanza, Santa Fe.";
@@ -302,6 +308,7 @@ if (botonCopiar && estadoCopiado) {
 
 completarConsultaContextual();
 
+// Completa la consulta inicial para cada servicio destinado a empresas.
 function completarConsultaDeServicio() {
     const parametros = new URLSearchParams(window.location.search);
 
@@ -369,6 +376,7 @@ function completarConsultaDeServicio() {
 
 completarConsultaDeServicio();
 
+// Agrega al mensaje el nombre de la capacitación indicada en la URL.
 function completarConsultaDeCapacitacion() {
     const parametros = new URLSearchParams(window.location.search);
 

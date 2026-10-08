@@ -1,3 +1,4 @@
+/* Organiza la cabecera, navegación adaptable, buscador y pie compartidos. */
 .encabezado {
     position: relative;
     z-index: 10;

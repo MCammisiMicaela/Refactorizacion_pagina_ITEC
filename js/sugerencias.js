@@ -2,6 +2,7 @@ const raizSugerencias = new URL("../", document.currentScript.src);
 
 let contenidosSugerencias;
 
+// Comparte una única carga del índice y permite reintentar si falla.
 function cargarSugerencias() {
     if (!contenidosSugerencias) {
         contenidosSugerencias = fetch(
@@ -23,6 +24,7 @@ function cargarSugerencias() {
     return contenidosSugerencias;
 }
 
+// Normaliza consultas para comparar palabras sin tildes ni mayúsculas.
 function normalizarSugerencia(texto) {
     return texto
         .normalize("NFD")
@@ -31,6 +33,7 @@ function normalizarSugerencia(texto) {
         .trim();
 }
 
+// Inicializa autocompletado accesible en cada buscador de la cabecera.
 function iniciarSugerencias() {
     document.querySelectorAll(".buscador-sitio").forEach(formulario => {
         const campo = formulario.querySelector('input[type="search"]');
@@ -59,6 +62,7 @@ function iniciarSugerencias() {
         let opcionActiva = -1;
         let versionBusqueda = 0;
 
+        // Oculta las opciones y descarta respuestas de búsquedas anteriores.
         function cerrarSugerencias() {
             versionBusqueda++;
             lista.hidden = true;
@@ -67,6 +71,7 @@ function iniciarSugerencias() {
             campo.removeAttribute("aria-activedescendant");
         }
 
+        // Actualiza la opción activa para navegación por teclado.
         function seleccionarOpcion(indice) {
             opcionActiva = indice;
 
@@ -85,6 +90,7 @@ function iniciarSugerencias() {
             }
         }
 
+        // Navega a la página asociada a la sugerencia seleccionada.
         function abrirResultado(indice) {
             const resultado = coincidencias[indice];
 
@@ -95,6 +101,7 @@ function iniciarSugerencias() {
             }
         }
 
+        // Busca coincidencias y actualiza las opciones sin aceptar respuestas obsoletas.
         async function actualizarSugerencias() {
             cerrarSugerencias();
 

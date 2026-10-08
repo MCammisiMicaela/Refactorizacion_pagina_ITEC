@@ -6,6 +6,7 @@ const formatoFecha = new Intl.DateTimeFormat("es-AR", {
     year: "numeric"
 });
 
+// Obtiene la noticia solicitada, actualiza los metadatos y carga relacionadas.
 async function cargarDetalleNoticia() {
     const contenedor = document.getElementById("noticia-detalle");
     const estadoMensaje = document.getElementById("estado-noticia-detalle");
@@ -55,6 +56,7 @@ async function cargarDetalleNoticia() {
     }
 }
 
+// Reemplaza el detalle por un estado de error y un enlace al listado.
 function mostrarError(mensajeText) {
     const estadoMensaje = document.getElementById("estado-noticia-detalle");
     const contenedor = document.getElementById("noticia-detalle");
@@ -77,6 +79,7 @@ function mostrarError(mensajeText) {
     }
 }
 
+// Construye el encabezado, la imagen y el cuerpo de una noticia.
 function renderizarNoticia(noticia, contenedor) {
     const titulo = contenedor.querySelector("#titulo-noticia") || document.createElement("h1");
     contenedor.replaceChildren();
@@ -150,6 +153,7 @@ function renderizarNoticia(noticia, contenedor) {
 
 }
 
+// Muestra hasta tres noticias recientes distintas de la noticia actual.
 function cargarNoticiasRelacionadas(todas, idActual) {
     const contenedorRelacionadas = document.getElementById(
         "contenedor-noticias-relacionadas"

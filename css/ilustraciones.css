@@ -1,3 +1,4 @@
+/* Comparte la disposición responsive entre contenido e ilustraciones. */
 .ilustracion-layout {
     display: grid;
     width: 100%;

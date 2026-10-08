@@ -5,6 +5,7 @@ if (formularioBoletin) {
     const correo = document.getElementById("boletin-correo");
     const resultado = document.getElementById("resultado-boletin");
 
+    // Actualiza el mensaje de error y el estado accesible del campo.
     function mostrarErrorBoletin(campo, mensaje) {
         const error = document.getElementById(`error-${campo.id}`);
 
@@ -22,6 +23,7 @@ if (formularioBoletin) {
         });
     });
 
+    // Valida los datos y muestra el resultado de la demostración de suscripción.
     formularioBoletin.addEventListener("submit", function (evento) {
         evento.preventDefault();
         resultado.textContent = "";

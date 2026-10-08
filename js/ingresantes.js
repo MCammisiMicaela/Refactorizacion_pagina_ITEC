@@ -18,6 +18,7 @@ const carrerasDisponibles = new Map([
 const parametrosIngreso = new URLSearchParams(window.location.search);
 const carreraIndicada = parametrosIngreso.get("carrera");
 
+// Conserva la carrera elegida y la propaga a los enlaces de contacto.
 if (
     selectorCarrera &&
     carreraIndicada &&
@@ -47,10 +48,12 @@ if (
     botonSimular &&
     estadoPreinscripcion
 ) {
+    // Quita el error telefónico cuando la persona vuelve a editar el campo.
     campoTelefono.addEventListener("input", () => {
         campoTelefono.setCustomValidity("");
     });
 
+    // Valida los campos y presenta una simulación sin almacenar información.
     botonSimular.addEventListener("click", () => {
         estadoPreinscripcion.textContent = "";
         campoTelefono.setCustomValidity("");

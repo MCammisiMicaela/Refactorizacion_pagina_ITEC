@@ -16,6 +16,7 @@ const formatoFecha = new Intl.DateTimeFormat("es-AR", {
     year: "numeric"
 });
 
+// Normaliza texto para que la búsqueda no distinga tildes ni mayúsculas.
 function normalizarTexto(texto = "") {
     return String(texto)
         .normalize("NFD")
@@ -24,6 +25,7 @@ function normalizarTexto(texto = "") {
         .trim();
 }
 
+// Carga las noticias y conecta filtros, selector de años y renderizado.
 async function inicializarNoticias() {
     const contenedor = document.getElementById("contenedor-noticias");
     const estadoMensaje = document.getElementById("estado-noticias");
@@ -54,6 +56,7 @@ async function inicializarNoticias() {
     }
 }
 
+// Completa el selector con los años presentes en las noticias.
 function poblarSelectorAnios(noticias) {
     const selectorAnio = document.getElementById("filtro-anio");
     if (!selectorAnio) return;
@@ -76,6 +79,7 @@ function poblarSelectorAnios(noticias) {
     });
 }
 
+// Conecta los controles de búsqueda, categoría, año y limpieza de filtros.
 function configurarEventos() {
     const inputBusqueda = document.getElementById("busqueda-noticias");
     const selectCategoria = document.getElementById("filtro-categoria");
@@ -122,6 +126,7 @@ function configurarEventos() {
     }
 }
 
+// Calcula las noticias coincidentes, las ordena y actualiza la vista.
 function aplicarFiltros() {
     estado.noticiasFiltradas = estado.todasLasNoticias.filter(noticia => {
         const textoNoticia = normalizarTexto([
@@ -147,6 +152,7 @@ function aplicarFiltros() {
     renderizar();
 }
 
+// Renderiza la página actual de resultados y su control de paginación.
 function renderizar() {
     const contenedor = document.getElementById("contenedor-noticias");
     const estadoMensaje = document.getElementById("estado-noticias");
@@ -239,6 +245,7 @@ function renderizar() {
     renderizarPaginacion(totalPaginas, contenedorPaginacion);
 }
 
+// Genera controles anterior, numéricos y siguiente según la página actual.
 function renderizarPaginacion(totalPaginas, contenedorPaginacion) {
     contenedorPaginacion.replaceChildren();
 
@@ -299,6 +306,7 @@ function renderizarPaginacion(totalPaginas, contenedorPaginacion) {
     contenedorPaginacion.append(fragmento);
 }
 
+// Lleva el foco visual al inicio del contenido después de cambiar de página.
 function desplazarAlInicio() {
     const puntoEnfoque = document.getElementById("contenido");
     if (puntoEnfoque) {

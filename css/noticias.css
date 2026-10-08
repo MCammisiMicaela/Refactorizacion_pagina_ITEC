@@ -1,5 +1,7 @@
 /* Estilos específicos para la sección y detalle de noticias */
 
+/* Agrupa filtros, tarjetas, paginación, estados y contenido del detalle. */
+
 .pagina-noticias,
 .pagina-noticia-detalle {
     min-height: 55vh;
