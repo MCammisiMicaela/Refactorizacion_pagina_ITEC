@@ -805,3 +805,30 @@
         transition-duration: 0.01ms !important;
     }
 }
+
+#modal-a-medida,
+#modal-a-medida .modal-body,
+#modal-a-medida #form-a-medida,
+#modal-a-medida .campo-grupo {
+    min-width: 0;
+}
+
+#modal-a-medida #form-a-medida {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#modal-a-medida .campo-grupo input,
+#modal-a-medida .campo-grupo select,
+#modal-a-medida .campo-grupo textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    #modal-a-medida #form-a-medida {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
