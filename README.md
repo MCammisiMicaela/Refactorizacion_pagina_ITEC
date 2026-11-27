@@ -4,7 +4,7 @@
 
 Proyecto integrador · Tecnicatura Superior en Desarrollo de Software · Programación II · 2026
 
-**[Ver demo del sitio](https://mcammisimicaela.github.io/Refactorizacion_pagina_ITEC/) · [Explorar código fuente](https://github.com/MCammisiMicaela/Refactorizacion_pagina_ITEC)
+[**Ver demo del sitio**](https://mcammisimicaela.github.io/Refactorizacion_pagina_ITEC/) · [**Explorar código fuente**](https://github.com/MCammisiMicaela/Refactorizacion_pagina_ITEC)
 
 <p align="center">
   <img src="capturas/01-inicio.webp" alt="Página de Inicio del prototipo ITEC, con accesos a tecnicaturas e inscripciones" width="900">
