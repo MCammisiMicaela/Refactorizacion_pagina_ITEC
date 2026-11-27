@@ -5,7 +5,7 @@
 Proyecto integrador · Tecnicatura Superior en Desarrollo de Software · Programación II · 2026
 
 <p align="center">
-  <img src="img/ilustraciones/edificio-itec-horizontal.png" alt="Ilustración del edificio de ITEC incluida en el prototipo" width="850">
+  <img src="capturas/01-inicio.webp" alt="Página de Inicio del prototipo ITEC, con accesos a tecnicaturas e inscripciones" width="900">
 </p>
 
 ## Descripción
@@ -41,29 +41,35 @@ Como primera etapa analizamos las secciones de Inicio, Institucional, Formación
 
 El rediseño integra además estructuras HTML semánticas, controles de navegación por teclado y estilos adaptativos.
 
-## Imágenes del proyecto
+## Capturas del prototipo
 
-Los siguientes recursos gráficos forman parte de las páginas desarrolladas para el prototipo.
+Las siguientes pantallas corresponden al sitio web desarrollado para el proyecto y muestran la estructura de navegación, las páginas académicas y los módulos de información.
 
 <table>
   <tr>
     <td width="50%">
-      <img src="img/carreras/desarrollo-software.jpeg" alt="Imagen utilizada en la sección de la carrera Desarrollo de Software" width="400">
-      <p align="center"><strong>Desarrollo de Software</strong></p>
+      <img src="capturas/02-tecnicaturas.webp" alt="Tarjetas de las tecnicaturas con sus datos académicos y enlaces" width="500">
+      <p align="center"><strong>Tecnicaturas</strong></p>
     </td>
     <td width="50%">
-      <img src="img/infraestructura/laboratorio-cnc.jpg" alt="Laboratorio CNC representado en la sección Infraestructura" width="400">
-      <p align="center"><strong>Infraestructura</strong></p>
+      <img src="capturas/03-desarrollo-software.webp" alt="Página individual de la tecnicatura en Desarrollo de Software" width="500">
+      <p align="center"><strong>Desarrollo de Software</strong></p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="img/formacion-profesional/soldadores.png" alt="Imagen utilizada en Formación Profesional" width="400">
-      <p align="center"><strong>Formación Profesional</strong></p>
+      <img src="capturas/04-infraestructura.webp" alt="Sección Infraestructura y descripción de los espacios del instituto" width="500">
+      <p align="center"><strong>Infraestructura</strong></p>
     </td>
     <td>
-      <img src="img/noticias/mas-alla-del-codigo.jpeg" alt="Imagen incluida en los contenidos de Noticias" width="400">
-      <p align="center"><strong>Noticias</strong></p>
+      <img src="capturas/05-servicios.webp" alt="Sección Servicios para empresas con categorías y accesos a consulta" width="500">
+      <p align="center"><strong>Servicios para empresas</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="capturas/06-noticias.webp" alt="Sección Noticias con filtros por categoría y año, buscador y tarjetas de publicaciones" width="800">
+      <p align="center"><strong>Noticias e institucionales</strong></p>
     </td>
   </tr>
 </table>
